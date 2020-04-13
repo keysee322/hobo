@@ -1,5 +1,12 @@
 body
 { 	
+    -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently*/
+
 font-family: 'Montserrat',sans-serif;
     font-size: 15px;
     line-height: 1.6;
@@ -36,8 +43,9 @@ h1,h2,h3,h4,h5,h6 {
     width: 100%;
     height: 100vh;
     min-height: 700px;
-    background: url(pic.jpg) center no-repeat;
-    -webkit-background-size: cover;
+    background: url(pic1.jpg) center no-repeat;
+    background-position: center 30vh; /* Положение фона */
+    background-color: black;
     
 }
 /*header*/
@@ -59,6 +67,8 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .header_logo {
+
+
     font-size: 30px;
     font-weight: 700;
     color: black;
@@ -72,33 +82,38 @@ h1,h2,h3,h4,h5,h6 {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    margin: 0 15px;
+    padding: 20px 20px;
     color: midnightblue;
     text-decoration: none;
-    transition: color .2 linear;
+    background-image: linear-gradient(black, black);
+    background-position: 50% 105%;
+    background-repeat: no-repeat;
+    background-size: 100% 0px;
+    transition: linear .2s;
+}
+
+
+.nav_link:hover {
+    background-size: 220% 100%;
+    color: white;
 }
 /*Подчерк*/
 
 
-.nav_link:hover {
-    color: dimgrey;
-}
-.nav_link:hover:after {
-    display: block;
-}
+
 /*Button*/
 .btn {
     display:inline-block;
     vertical-align: top;
     border: 3px solid #fff;
     padding: 10px 15px;
-    font-size: 14 px;
+    font-size: 14px;
     font-weight: 700;
     color: #fff;
     text-transform: uppercase;
     text-decoration: none; 
-    transition: background .1s linear, color .1s linear;
-    margin-top: 30vh;
+    transition: background .2s linear, color .2s linear;
+    margin-top: 70vh;
    
 }
 .btn:hover {
