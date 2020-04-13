@@ -11,6 +11,7 @@ font-family: 'Montserrat',sans-serif;
     font-size: 15px;
     line-height: 1.6;
     color:#333;
+    margin: 0px;
 }	
 *,
 *:before,
@@ -65,7 +66,17 @@ h1,h2,h3,h4,h5,h6 {
     align-items: center;
     
 }
-
+.nav_img1{
+  position: absolute;
+  left:82vw;
+  top: 0px; 
+}
+.nav_img{
+  position: relative;
+  margin: 0px 10px;
+  top: 14px;
+  width: 30px;
+}
 .header_logo {
 
 
