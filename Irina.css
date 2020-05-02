@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+html{
+  font-family: "Noto Sans";
+}
+ nav.stroke ul li a{
+  position: relative;
+}
+nav.stroke ul li a:after{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '';
+  color: transparent;
+  background: black;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+
+.center {
+  text-align: center;
+}
+
+section {
+}
+
+/* NAVIGATION */
+nav {
+  width: 80%;
+  margin: 0 auto;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  color: #000;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #000;
+}
+
+h1{
+
+  font-size: 26px;
+  font-weight: bold;
+}
+
+a{
+  color: #000;
+    text-decoration: none;  
+}
+a:hover {
+  color: #1A224D;
+  text-decoration: none;  
+  outline: 0;
+}
+a:focus {
+  text-decoration: none;  
+  outline: 0;
+}
+.special:hover{
+  color: #000;
+   transition: 1s linear;
+}
+.navbar-brand {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10%
+}
+.navbar-right {
+margin-top: -38px;
+  position: relative;
+z-index: 0;
+left: -1%;
+font-size: 15px;
+font-weight: normal
+}
+
+li {
+  display: inline;
+  padding-right: 3%;
+}
+
+.navbar-inverse {
+  background: rgba(0,0,0,0);
+
+}
+
+
+.phone {
+  position: absolute;
+  top: 0px;
+  left: 80vw;
+  color: black;
+  font-size: 15px;
+  font-weight: normal;
+}
+#phone{
+  position: absolute;
+  top: 3px;
+  left: -25px;
+}
+.fake {
+
+}
+
+.first {
+  background-color: white;
+  background-image: url(1/fon1.png); 
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+    position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  min-height: 1000px;
+}
+#bruh{
+position: absolute;
+left: 7vw;
+}
