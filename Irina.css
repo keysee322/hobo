@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
 html{
   font-family: "Noto Sans";
+  font-size: 15px;
+    -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
  nav.stroke ul li a{
   position: relative;
@@ -141,4 +145,66 @@ li {
 #bruh{
 position: absolute;
 left: 7vw;
+}
+
+.left1{
+  height: 700px;
+  background-color: white;
+
+}
+.insideleft{
+  position: absolute;
+  width: 20%;
+  left: 12%;
+  margin-top: 10%;
+}
+h1{
+  font-size: 36px;
+}
+.insideright{
+  position: absolute;
+  right: calc(15%);
+  top: 12%;
+}
+.ramka{
+  position: absolute;
+  left: 0px;
+}
+#learnmore{
+  margin-top: 30px;
+}
+.strelka{
+  position: absolute;
+  margin-top: 11px;
+  margin-left: 10px;
+}
+.palka{
+
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+
+.second{
+  height: 700px;
+  background-color: white;
+
+}
+.insideright2{
+  position: absolute;
+  width: 20%;
+  right: calc(17%);
+  margin-top: 3%;
+}
+.insideleft2{
+  position: absolute;
+  width: 20%;
+  left: 12%;
+}
+.socialimg{
+  margin-bottom: -1px;
+  margin-left: 10px;
+}
+#social{
+  margin-top: 30px;
 }
