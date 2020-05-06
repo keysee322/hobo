@@ -186,7 +186,7 @@ h1{
 
 
 .second{
-  height: 700px;
+  height: 650px;
   background-color: white;
 
 }
@@ -207,4 +207,91 @@ h1{
 }
 #social{
   margin-top: 30px;
+}
+.third{
+  height: calc(47vw);
+  width: 100%;
+  background: white;
+}
+.left3{
+  width: 50%;
+  position: absolute;
+  left: 12%;
+  font-size: 30px;
+  line-height: 148.18%;
+  font-style: normal;
+font-weight: bold;
+}
+.right3{
+  margin-top: 6px;
+  text-align: right;
+  width: 50%;
+  position: absolute;
+  right: 17%;
+  font-size: 24px;
+  line-height: 148.18%;
+  font-style: normal;
+}
+.strelka1{
+  position: absolute;
+  margin-top: 18px;
+  margin-left: 10px;
+}
+.main3{
+  position: absolute;
+  width: 80vw;
+  height: 36vw;
+  background-color: white;
+  margin-left: 10vw;
+  margin-top: 100px;
+}
+#f1{
+  position: absolute;
+  height: 17.5vw;
+}
+#f2{
+  position: absolute;
+  height: 17.5vw;
+  left: calc(25% - 6.5vw); 
+}
+#f3{
+  position: absolute;
+  height: 17.5vw;
+  margin-top: 18.5vw;
+}
+#f4{
+  position: absolute;
+  height: 17.5vw;
+  left: calc(25% - 6.5vw); 
+  margin-top: 18.5vw;
+}
+#f5{
+  position: relative;
+  left: calc(50% - 16.4%); 
+  height: 100%;
+  margin-left:auto;
+  margin-right:auto
+}
+
+#f6{
+  position: absolute;
+  height: 17.5vw;
+  left: calc(75% - 6.2vw); 
+}
+#f7{
+  position: absolute;
+  height: 17.5vw;
+  left: calc(91.75% - 6.2vw); 
+}
+#f8{
+  position: absolute;
+  height: 17.5vw;
+  margin-top: 18.5vw;
+  left: calc(75% - 6.2vw); 
+}
+#f9{
+  position: absolute;
+  height: 17.5vw;
+  margin-top: 18.5vw;
+  left: calc(91.75% - 6.2vw); 
 }
