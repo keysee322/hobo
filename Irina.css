@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
 html{
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently */
   font-family: "Noto Sans";
   font-size: 15px;
     -webkit-font-smoothing: antialiased;
@@ -208,7 +214,7 @@ h1{
 #social{
   margin-top: 30px;
 }
-.third{
+.third, .four, .five{
   height: calc(47vw);
   width: 100%;
   background: white;
@@ -269,8 +275,14 @@ font-weight: bold;
   position: relative;
   left: calc(50% - 16.4%); 
   height: 100%;
-  margin-left:auto;
-  margin-right:auto
+  transition: linear 0.2s;
+}
+#f5:hover {
+  margin-top: -1.25%;
+  position: relative;
+  left: calc(49.23% - 16.4%); 
+  height: 105%;
+  z-index: 3;
 }
 
 #f6{
