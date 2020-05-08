@@ -11,6 +11,10 @@ html{
     -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
+  margin: 0px;
+}
+body{
+margin: 0px;
 }
  nav.stroke ul li a{
   position: relative;
@@ -25,7 +29,7 @@ nav.stroke ul li a:after{
   content: '';
   color: transparent;
   background: black;
-  height: 1px;
+  height: 2px;
 }
 nav.stroke ul li a:hover:after {
   width: 100%;
@@ -175,9 +179,25 @@ h1{
   left: calc(50% + 59px);
   top: 146px;
 }
-.ramka{
+.ramka, .ramka1{
   position: absolute;
   left: 0px;
+  top: 0px;
+}
+.ramka2{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.ramka3{
+  position: absolute;
+  left: 42px;
+  top: 0px;
+}
+.ramka4{
+  position: absolute;
+  left: 42px;
+  bottom: 0px;
 }
 #learnmore{
   margin-top: 30px;
@@ -217,8 +237,16 @@ h1{
 #social{
   margin-top: 30px;
 }
-.third, .four, .five{
+.third, .four {
   height: calc(819px);
+  width: 100%;
+  background: white;
+  display:inline-block;
+  margin: auto;
+}
+.five{
+  position: relative;
+  height: calc(1480px);
   width: 100%;
   background: white;
   display:inline-block;
@@ -262,17 +290,24 @@ font-weight: bold;
   position: absolute;
   height: 49%;
   left: 0px;
+  transition: linear 0.2s;
+}
+#f1:hover {
+    margin-top: -7.475px;
+  height: 51%;
+  margin-left: calc(-5.35px); 
+
 }
 #f2{
   position: absolute;
   height: 49%;
-  margin-left: calc(229px); 
+  left: calc(229px); 
    transition: linear 0.2s;
 }
 #f2:hover {
     margin-top: -7.475px;
   height: 51%;
-  margin-left: calc(229px - 5.35px); 
+  margin-left: calc(-5.35px); 
 
 }
 #f3{
@@ -280,12 +315,26 @@ font-weight: bold;
   height: 49%;
   bottom: 0vw;
   left: 0%;
+  transition: linear 0.2s;
+}
+#f3:hover {
+    margin-bottom: -7.475px;
+  height: 51%;
+  margin-left: calc(-5.35px); 
+
 }
 #f4{
   position: absolute;
   height: 49%;
   left: calc(229px); 
   bottom: 0vw;
+  transition: linear 0.2s;
+}
+#f4:hover {
+    margin-bottom: -7.475px;
+  height: 51%;
+  margin-left: calc(-5.35px); 
+
 }
 #f5{
   position: absolute;
@@ -294,10 +343,10 @@ font-weight: bold;
   transition: linear 0.2s;
 }
 #f5:hover {
-  margin-top: -15.325px;
+  margin-top: -6.13px;
   position: relative;
-  left: calc(50% - 232.575px); 
-  height: 105%;
+  left: calc(50% - 225.93px); 
+  height: 102%;
   z-index: 3;
 }
 
@@ -305,21 +354,220 @@ font-weight: bold;
   position: absolute;
   height: 49%;
   right: calc(229px); 
+  transition: linear 0.2s;
+}
+#f6:hover, #f7:hover {
+    margin-top: -7.475px;
+  height: 51%;
+  margin-right: calc(-5.35px); 
+
 }
 #f7{
   position: absolute;
   height: 49%;
   right: 0%; 
+  transition: linear 0.2s;
 }
+
 #f8{
   position: absolute;
   height: 49%;
   bottom: 0%;
   right: calc(229px); 
+  transition: linear 0.2s;
 }
 #f9{
   position: absolute;
   height: 49%;
   bottom: 0%;
   right: 0%;  
+  transition: linear 0.2s;
+}
+#f8:hover, #f9:hover {
+    margin-bottom: -7.475px;
+  height: 51%;
+  margin-right: calc(-5.35px); 
+
+}
+
+.main4{
+  position: absolute;
+  width: 1359px;
+  height: 613px;
+  background-color: white;
+  left: calc(50% - 679.5px);
+  margin-top: 728px;
+}
+
+#f11{
+  position: absolute;
+  height: 49%;
+  left: 458px;
+  transition: linear 0.2s;
+}
+#f11:hover {
+    margin-top: -7.475px;
+  height: 51%;
+  margin-left: calc(-5.35px); 
+
+}
+#f12{
+  position: absolute;
+  height: 49%;
+  left: calc(687px); 
+   transition: linear 0.2s;
+}
+#f12:hover {
+    margin-top: -7.475px;
+  height: 51%;
+  margin-left: calc(-5.35px); 
+
+}
+#f13{
+  position: absolute;
+  height: 49%;
+  bottom: 0vw;
+  left: 458px;
+  transition: linear 0.2s;
+}
+#f13:hover {
+    margin-bottom: -7.475px;
+  height: 51%;
+  margin-left: calc(-5.35px); 
+
+}
+#f14{
+  position: absolute;
+  height: 49%;
+  left: calc(687px); 
+  bottom: 0vw;
+  transition: linear 0.2s;
+}
+#f14:hover {
+    margin-bottom: -7.475px;
+  height: 51%;
+  margin-left: calc(-5.35px); 
+
+}
+#f15{
+  position: absolute;
+  left: calc(0); 
+  height: 100%;
+  transition: linear 0.2s;
+}
+#f15:hover {
+  margin-top: -6.13px;
+  position: absolute;
+  margin-left: calc(-5.35px); 
+  height: 102%;
+  z-index: 3;
+}
+
+#f16{
+  position: absolute;
+  right: calc(0px); 
+  height: 100%;
+  width: 444px;
+  transition: linear 0.2s;
+}
+#f16:hover {
+  width: 451.86px;
+  margin-top: -6.13px;
+  position: absolute;
+  margin-right: calc(-5.35px); 
+  height: 102%;
+  z-index: 3;
+}
+.up{
+  position: absolute;
+  background-color: rgba(233, 233, 233, 0.6);
+  width: 92px;
+  height: 1241px;
+  top: 100px;
+  z-index: 4;
+  right: calc(50% - 679.5px)
+}
+.arrow_up{
+  position: absolute;
+  left: calc(50% - 23.5px);
+  top: calc(50% - 13px);
+}
+.showmore{
+  position: absolute;
+  left: 50%;
+  width: 1359px;
+  left: calc(50% - 679.5px);
+  bottom: -71px;
+  background-color: #E9E9E9;
+  height: 56px;
+  border: 0px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.six{
+  position: relative;
+  height: 464px;
+  width: 100%;
+  background-color: #D8D8D8;
+}
+h1.sixh{
+  font-size: 24px;
+}
+.insideleft6{
+  position: absolute;
+  width: 372px;
+  left: calc(50% - 610px);
+  bottom: 176px;
+  font-size: 15px;
+}
+#learnmore6{
+  font-weight: bold;
+}
+
+.insideright6{
+  margin-top: 13px;
+  position: absolute;
+  left:50%;
+  width: 410px;
+  font-weight: normal;
+font-size: 15px;
+line-height: 148.18%;
+}
+.input{
+  padding-left: 15px;
+  height: 56px;
+  width: 400px;
+  margin-top: 30px;
+  border: 0px;
+}
+.order{
+  background-color: black;
+  font-weight: bold;
+font-size: 13px;
+line-height: 13px;
+width: 88px;
+height: 29px;
+color: white;
+margin-top: 30px;
+border: 0px;
+text-align: center;
+}
+.file{
+  position: absolute;
+  left: calc(560px);
+  top: calc(-42px + 50%);
+}
+.navbar-header1{
+  position: absolute;
+  bottom: 37px;
+  left: calc(50%-960px);
+  background-color: white;
+  width: 100%;
+}
+.kek{
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  height: 92px;
+  bottom: 0px
 }
