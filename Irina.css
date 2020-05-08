@@ -161,7 +161,7 @@ left: 7vw;
 .insideleft{
   position: absolute;
   width: 20%;
-  left: 12%;
+  left: 15%;
   margin-top: 10%;
 }
 h1{
@@ -169,7 +169,7 @@ h1{
 }
 .insideright{
   position: absolute;
-  right: calc(15%);
+  right: calc(18%);
   top: 12%;
 }
 .ramka{
@@ -199,13 +199,13 @@ h1{
 .insideright2{
   position: absolute;
   width: 20%;
-  right: calc(17%);
+  right: calc(20%);
   margin-top: 3%;
 }
 .insideleft2{
   position: absolute;
   width: 20%;
-  left: 12%;
+  left: 15%;
 }
 .socialimg{
   margin-bottom: -1px;
@@ -222,7 +222,7 @@ h1{
 .left3{
   width: 50%;
   position: absolute;
-  left: 12%;
+  left: 15%;
   font-size: 30px;
   line-height: 148.18%;
   font-style: normal;
@@ -233,7 +233,7 @@ font-weight: bold;
   text-align: right;
   width: 50%;
   position: absolute;
-  right: 17%;
+  right: 20%;
   font-size: 24px;
   line-height: 148.18%;
   font-style: normal;
@@ -246,30 +246,32 @@ font-weight: bold;
 .main3{
   position: absolute;
   width: 80vw;
-  height: 36vw;
+  height: 33vw;
   background-color: white;
   margin-left: 10vw;
   margin-top: 100px;
 }
 #f1{
   position: absolute;
-  height: 17.5vw;
+  height: 49%;
+  left: calc(2.25vw);
 }
 #f2{
   position: absolute;
-  height: 17.5vw;
-  left: calc(25% - 6.5vw); 
+  height: 49%;
+  left: calc(25% - 5.45vw); 
 }
 #f3{
   position: absolute;
-  height: 17.5vw;
-  margin-top: 18.5vw;
+  height: 49%;
+  top: 16.85vw;
+  left: calc(2.25vw);
 }
 #f4{
   position: absolute;
-  height: 17.5vw;
-  left: calc(25% - 6.5vw); 
-  margin-top: 18.5vw;
+  height: 49%;
+  left: calc(25% - 5.45vw); 
+  top: 16.85vw;
 }
 #f5{
   position: relative;
@@ -287,23 +289,23 @@ font-weight: bold;
 
 #f6{
   position: absolute;
-  height: 17.5vw;
-  left: calc(75% - 6.2vw); 
+  height: 49%;
+  left: calc(75% - 8.6vw); 
 }
 #f7{
   position: absolute;
-  height: 17.5vw;
-  left: calc(91.75% - 6.2vw); 
+  height: 49%;
+  left: calc(91.75% - 9.79vw); 
 }
 #f8{
   position: absolute;
-  height: 17.5vw;
-  margin-top: 18.5vw;
-  left: calc(75% - 6.2vw); 
+  height: 49%;
+  top: 16.85vw;
+  left: calc(75% - 8.6vw); 
 }
 #f9{
   position: absolute;
-  height: 17.5vw;
-  margin-top: 18.5vw;
-  left: calc(91.75% - 6.2vw); 
+  height: 49%;
+  top: 16.85vw;
+  left: calc(91.75% - 9.79vw);  
 }
