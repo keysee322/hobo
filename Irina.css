@@ -94,20 +94,23 @@ a:focus {
 .navbar-brand {
   font-size: 16px;
   font-weight: bold;
-  margin-left: 10%
+  margin-left: calc(50% - 571px)
 }
 .navbar-right {
 margin-top: -38px;
-  position: relative;
+  position: absolute;
+  width: 500px;
+  top: 31px;
 z-index: 0;
-left: -1%;
+left: calc(50% - 250px);
 font-size: 15px;
-font-weight: normal
+font-weight: normal;
+padding-inline-start: 20px;
 }
 
 li {
   display: inline;
-  padding-right: 3%;
+  padding-right: 30px;
 }
 
 .navbar-inverse {
@@ -119,7 +122,7 @@ li {
 .phone {
   position: absolute;
   top: 0px;
-  left: 80vw;
+  left: calc(50% + 467px);
   color: black;
   font-size: 15px;
   font-weight: normal;
@@ -150,7 +153,7 @@ li {
 }
 #bruh{
 position: absolute;
-left: 7vw;
+left: calc(50% - 610px);
 }
 
 .left1{
@@ -160,17 +163,17 @@ left: 7vw;
 }
 .insideleft{
   position: absolute;
-  width: 20%;
-  left: 15%;
-  margin-top: 10%;
+  width: 372px;
+  left: calc(50% - 610px);
+  top: 240px;
 }
 h1{
   font-size: 36px;
 }
 .insideright{
   position: absolute;
-  right: calc(18%);
-  top: 12%;
+  left: calc(50% + 59px);
+  top: 146px;
 }
 .ramka{
   position: absolute;
@@ -198,14 +201,14 @@ h1{
 }
 .insideright2{
   position: absolute;
-  width: 20%;
-  right: calc(20%);
-  margin-top: 3%;
+  width: 385px;
+  left: calc(50% + 200px);
+  margin-top: 100px;
 }
 .insideleft2{
   position: absolute;
-  width: 20%;
-  left: 15%;
+  width: 478px;
+  left: calc(50% - 610px);
 }
 .socialimg{
   margin-bottom: -1px;
@@ -215,14 +218,16 @@ h1{
   margin-top: 30px;
 }
 .third, .four, .five{
-  height: calc(47vw);
+  height: calc(819px);
   width: 100%;
   background: white;
+  display:inline-block;
+  margin: auto;
 }
 .left3{
   width: 50%;
   position: absolute;
-  left: 15%;
+  left: calc(50% - 610px);
   font-size: 30px;
   line-height: 148.18%;
   font-style: normal;
@@ -233,7 +238,7 @@ font-weight: bold;
   text-align: right;
   width: 50%;
   position: absolute;
-  right: 20%;
+  right: calc(50% - 572px);
   font-size: 24px;
   line-height: 148.18%;
   font-style: normal;
@@ -245,44 +250,53 @@ font-weight: bold;
 }
 .main3{
   position: absolute;
-  width: 80vw;
-  height: 33vw;
+  width: 1359px;
+  height: 613px;
   background-color: white;
-  margin-left: 10vw;
+        left: calc(50% - 679.5px);
+
+
   margin-top: 100px;
 }
 #f1{
   position: absolute;
   height: 49%;
-  left: calc(2.25vw);
+  left: 0px;
 }
 #f2{
   position: absolute;
   height: 49%;
-  left: calc(25% - 5.45vw); 
+  margin-left: calc(229px); 
+   transition: linear 0.2s;
+}
+#f2:hover {
+    margin-top: -7.475px;
+  height: 51%;
+  margin-left: calc(229px - 5.35px); 
+
 }
 #f3{
   position: absolute;
   height: 49%;
-  top: 16.85vw;
-  left: calc(2.25vw);
+  bottom: 0vw;
+  left: 0%;
 }
 #f4{
   position: absolute;
   height: 49%;
-  left: calc(25% - 5.45vw); 
-  top: 16.85vw;
+  left: calc(229px); 
+  bottom: 0vw;
 }
 #f5{
-  position: relative;
-  left: calc(50% - 16.4%); 
+  position: absolute;
+  left: calc(50% - 221.5px); 
   height: 100%;
   transition: linear 0.2s;
 }
 #f5:hover {
-  margin-top: -1.25%;
+  margin-top: -15.325px;
   position: relative;
-  left: calc(49.23% - 16.4%); 
+  left: calc(50% - 232.575px); 
   height: 105%;
   z-index: 3;
 }
@@ -290,22 +304,22 @@ font-weight: bold;
 #f6{
   position: absolute;
   height: 49%;
-  left: calc(75% - 8.6vw); 
+  right: calc(229px); 
 }
 #f7{
   position: absolute;
   height: 49%;
-  left: calc(91.75% - 9.79vw); 
+  right: 0%; 
 }
 #f8{
   position: absolute;
   height: 49%;
-  top: 16.85vw;
-  left: calc(75% - 8.6vw); 
+  bottom: 0%;
+  right: calc(229px); 
 }
 #f9{
   position: absolute;
   height: 49%;
-  top: 16.85vw;
-  left: calc(91.75% - 9.79vw);  
+  bottom: 0%;
+  right: 0%;  
 }
