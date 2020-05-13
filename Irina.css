@@ -238,19 +238,21 @@ h1{
   margin-top: 30px;
 }
 .third, .four {
-  height: calc(819px);
+
   width: 100%;
   background: white;
   display:inline-block;
-  margin: auto;
+
+}
+.four{
+    margin-top: 50px;
 }
 .five{
   position: relative;
-  height: calc(1480px);
   width: 100%;
   background: white;
   display:inline-block;
-  margin: auto;
+  margin-top: 50px;
 }
 .left3{
   width: 50%;
@@ -266,7 +268,7 @@ font-weight: bold;
   text-align: right;
   width: 50%;
   position: absolute;
-  right: calc(50% - 572px);
+  right: calc(50% - 567px);
   font-size: 24px;
   line-height: 148.18%;
   font-style: normal;
@@ -276,170 +278,323 @@ font-weight: bold;
   margin-top: 18px;
   margin-left: 10px;
 }
-.main3{
+.strelka2{
   position: absolute;
-  width: 1359px;
-  height: 613px;
-  background-color: white;
-        left: calc(50% - 679.5px);
-
-
-  margin-top: 100px;
+  margin-top: -8px;
+  margin-left: 60px;
 }
+
 #f1{
   position: absolute;
-  height: 49%;
+  height: 48.7%;
   left: 0px;
+  width: 15.65%;
   transition: linear 0.2s;
 }
 #f1:hover {
     margin-top: -7.475px;
-  height: 51%;
+    height: 51%;
+  width: 16.3%;
   margin-left: calc(-5.35px); 
 
 }
 #f2{
   position: absolute;
-  height: 49%;
-  left: calc(229px); 
+  height: 48.7%;
+  width: 15.65%;
+  left: calc(15.65% + 15px); 
    transition: linear 0.2s;
 }
 #f2:hover {
     margin-top: -7.475px;
-  height: 51%;
+    height: 51%;
+  width: 16.3%;
   margin-left: calc(-5.35px); 
 
 }
 #f3{
   position: absolute;
-  height: 49%;
+  height: 48.7%;
+  width: 15.65%;
   bottom: 0vw;
   left: 0%;
   transition: linear 0.2s;
 }
 #f3:hover {
-    margin-bottom: -7.475px;
+  margin-bottom: -7.475px;
   height: 51%;
+  width: 16.3%;
   margin-left: calc(-5.35px); 
 
 }
 #f4{
   position: absolute;
-  height: 49%;
-  left: calc(229px); 
+  height: 48.7%;
+  left: calc(15.65% + 15px); 
   bottom: 0vw;
+  width: 15.65%;
   transition: linear 0.2s;
 }
 #f4:hover {
     margin-bottom: -7.475px;
   height: 51%;
+  width: 16.3%;
   margin-left: calc(-5.35px); 
 
 }
 #f5{
   position: absolute;
-  left: calc(50% - 221.5px); 
+  left: calc(15.65% + 15.65% + 30px); 
   height: 100%;
+  width: 32.5%;
   transition: linear 0.2s;
 }
 #f5:hover {
   margin-top: -6.13px;
-  position: relative;
-  left: calc(50% - 225.93px); 
+  left: calc(50% - 16.5%); 
   height: 102%;
+  width: 33%;
   z-index: 3;
 }
 
 #f6{
   position: absolute;
-  height: 49%;
-  right: calc(229px); 
+  height: 48.7%;
+  width: 15.65%;
+  right: calc(15.65% + 15px); 
   transition: linear 0.2s;
 }
 #f6:hover, #f7:hover {
     margin-top: -7.475px;
   height: 51%;
+  width: 16.3%;
   margin-right: calc(-5.35px); 
 
 }
 #f7{
   position: absolute;
-  height: 49%;
+  height: 48.7%;
   right: 0%; 
+  width: 15.65%;
   transition: linear 0.2s;
 }
 
 #f8{
   position: absolute;
-  height: 49%;
+  height: 48.7%;
   bottom: 0%;
-  right: calc(229px); 
+  width: 15.65%;
+  right: calc(15.65% + 15px); 
   transition: linear 0.2s;
 }
 #f9{
   position: absolute;
-  height: 49%;
+  height: 48.7%;
   bottom: 0%;
   right: 0%;  
+  width: 15.65%;
   transition: linear 0.2s;
 }
 #f8:hover, #f9:hover {
     margin-bottom: -7.475px;
   height: 51%;
+  width: 16.3%;
   margin-right: calc(-5.35px); 
 
 }
-
-.main4{
+#d1{
   position: absolute;
-  width: 1359px;
-  height: 613px;
-  background-color: white;
-  left: calc(50% - 679.5px);
-  margin-top: 728px;
+  height: 48.7%;
+  left: 0px;
+  width: 15.65%;
+  transition: linear 0.2s;
+}
+#d1:hover {
+    margin-top: -7.475px;
+    height: 51%;
+  width: 16.3%;
+  margin-left: calc(-5.35px); 
+
+}
+#d2{
+  position: absolute;
+  height: 48.7%;
+  width: 15.65%;
+  left: calc(15.65% + 15px);
+   transition: linear 0.2s;
+}
+#d2:hover {
+    margin-top: -7.475px;
+    height: 51%;
+  width: 16.3%;
+  margin-left: calc(-5.35px); 
+
+}
+#d3{
+  position: absolute;
+  height: 48.7%;
+  width: 15.65%;
+  top: 0vw;
+  left: calc(15.65% + 15.65% + 30px); 
+  transition: linear 0.2s;
+}
+#d3:hover {
+margin-top: -7.475px;
+  height: 51%;
+  width: 16.3%;
+  margin-left: calc(-5.35px); 
+
+}
+#d4{
+  position: absolute;
+  height: 48.7%;
+  left: calc(15.65% + 15.65% + 15.65% + 45px); 
+  top: 0vw;
+  width: 15.65%;
+  transition: linear 0.2s;
+}
+#d4:hover {
+  margin-top: -7.475px;
+  height: 51%;
+  width: 16.3%;
+  margin-left: calc(-5.35px); 
+
+}
+#d5{
+  position: absolute;
+  left: calc(15.65% + 15.65% + 15.65% + 15.65% + 61px); 
+  height: 48.7%;
+  width: 15.65%;
+  transition: linear 0.2s;
+}
+#d5:hover {
+  margin-top: -7.475px;
+  height: 51%;
+  width: 16.3%;
+  margin-left: calc(-5.35px); 
+
 }
 
+#d6{
+  position: absolute;
+  height: 48.7%;
+  width: 15.65%;
+  right: calc(0px); 
+  transition: linear 0.2s;
+}
+#d6:hover, #d7:hover {
+    margin-top: -7.475px;
+  height: 51%;
+  width: 16.3%;
+  margin-right: calc(-5.35px); 
+
+}
+#d7{
+  position: absolute;
+  height: 48.7%;
+  right: 0%; 
+  width: 15.65%;
+  transition: linear 0.2s;
+}
+
+#d8{
+  position: absolute;
+  height: 48.7%;
+  bottom: 0%;
+  width: 15.65%;
+  left: calc(0px); 
+  transition: linear 0.2s;
+}
+#d8:hover {
+    margin-bottom: -7.475px;
+  height: 51%;
+  width: 16.3%;
+  margin-right: calc(-5.35px); 
+
+}
+.main3{
+  position: relative;
+  width: 1248px;
+  height: 545px;
+  margin-top:15px;
+  background-color: white;
+        left: calc(50% - 624px);
+    }
+    .main2{
+  position: relative;
+  width: 1248px;
+  height: 545px;
+  margin-top:15px;
+  background-color: white;
+        left: calc(50% - 624px);
+    }
+    .main1{
+  position: relative;
+  width: 1248px;
+  height: 545px;
+  margin-top:15px;
+  background-color: white;
+        left: calc(50% - 624px);
+    }
+#showmore{
+  position: relative;
+  width: 1248px;
+  height: 56px;
+  border: 0px;
+  margin-left: calc(50% - 624px);
+  margin-top: 15px;
+}
+#knopka1{
+  color: white;
+}
+.main5{
+  padding-top: 80px;
+}
 #f11{
   position: absolute;
-  height: 49%;
-  left: 458px;
+  left: calc(15.65% + 15.65% + 30px); 
+  height: 48.7%;
+  width: 15.65%;
   transition: linear 0.2s;
 }
 #f11:hover {
     margin-top: -7.475px;
   height: 51%;
   margin-left: calc(-5.35px); 
-
+  width: 16.3%;
 }
 #f12{
   position: absolute;
-  height: 49%;
-  left: calc(687px); 
+  height: 48.7%;
+  width: 15.65%;
+  left: calc(15.65% + 15.65% + 15.65% + 45px); 
    transition: linear 0.2s;
 }
 #f12:hover {
     margin-top: -7.475px;
   height: 51%;
   margin-left: calc(-5.35px); 
-
+  width: 16.3%;
 }
 #f13{
   position: absolute;
-  height: 49%;
+    height: 48.7%;
+  width: 15.65%;
   bottom: 0vw;
-  left: 458px;
+  left: calc(15.65% + 15.65% + 30px);
   transition: linear 0.2s;
 }
 #f13:hover {
     margin-bottom: -7.475px;
   height: 51%;
   margin-left: calc(-5.35px); 
-
+  width: 16.3%;
 }
 #f14{
   position: absolute;
-  height: 49%;
-  left: calc(687px); 
+  left: calc(15.65% + 15.65% + 15.65% + 45px); 
+    height: 48.7%;
+  width: 15.65%;
   bottom: 0vw;
   transition: linear 0.2s;
 }
@@ -447,37 +602,46 @@ font-weight: bold;
     margin-bottom: -7.475px;
   height: 51%;
   margin-left: calc(-5.35px); 
-
+  width: 16.3%;
 }
 #f15{
   position: absolute;
   left: calc(0); 
-  height: 100%;
+  height: 545px;
+  width: 32.5%;
   transition: linear 0.2s;
 }
 #f15:hover {
   margin-top: -6.13px;
-  position: absolute;
-  margin-left: calc(-5.35px); 
+  margin-left: calc(-3.35px); 
   height: 102%;
   z-index: 3;
+  width: 33%;
+
 }
 
 #f16{
   position: absolute;
   right: calc(0px); 
   height: 100%;
-  width: 444px;
+  width: 32.5%;
   transition: linear 0.2s;
 }
 #f16:hover {
-  width: 451.86px;
   margin-top: -6.13px;
   position: absolute;
-  margin-right: calc(-5.35px); 
+  margin-right: calc(-3.35px); 
   height: 102%;
   z-index: 3;
+  width: 33%;
+
 }
+
+.items{
+  position: relative;
+  margin-top: 545px;
+}
+
 .up{
   position: absolute;
   background-color: rgba(233, 233, 233, 0.6);
@@ -491,6 +655,11 @@ font-weight: bold;
   position: absolute;
   left: calc(50% - 23.5px);
   top: calc(50% - 13px);
+}
+button {
+  border:0px;
+  background-color: white;
+  font-size: 15px;
 }
 .showmore{
   position: absolute;

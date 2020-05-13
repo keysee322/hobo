@@ -64,13 +64,98 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   </div>
 
 
+<?php
+
+$dir = opendir('new_pic');
+$count = -1;
+while($file = readdir($dir)){
+    if($file == '.'){
+        continue;
+    }
+    $count++;
+}
+?>
+
+<script type="text/javascript">
+var N = '<?php echo $count;?>';
+document.write(N);
+var j=0;
+var k=1;
+var m3=true;
+    function AddItem() {
+
+        var z=k;
+        if (k<=N){
+        	if (m3==true){
+        	        var newimg;
+        var newdiv=document.createElement("div");
+        newdiv.setAttribute("class","main3");
+        document.getElementById("items").appendChild(newdiv);
+        for (var i = z; i <= 9+(z-1); i++) {
+        if (k<=N) {k++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic/"+i+".png");
+        if ((z-1)+9<=N){
+        newimg.setAttribute("id","f"+(i-z+1));
+    }
+    else {
+    	newimg.setAttribute("id","d"+(i-z+1));
+    }
+        document.getElementsByClassName("main3")[j+1].appendChild(newimg);
+    }
+}
+        
+
+        if (m3==false){
+        	        var newimg;
+        var newdiv=document.createElement("div");
+        newdiv.setAttribute("class","main3");
+        document.getElementById("items").appendChild(newdiv);
+        for (var i = z; i <= 6+(z-1); i++) {
+        if (k<=N) {k++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic/"+i+".png");
+                if ((z-1)+6<=N){
+        newimg.setAttribute("id","f1"+(i-z+1));
+    }
+        else {
+    	newimg.setAttribute("id","d"+(i-z+1));
+    }
+        document.getElementsByClassName("main3")[j+1].appendChild(newimg);
+}
+        }
+        m3=!(m3);
+        j+=1;
+    }
+
+    if (j == 1){
+        var newbut=document.createElement("input");
+        newbut.setAttribute("value","Показать еще");
+        newbut.setAttribute("id","showmore");
+        newbut.setAttribute("type","button");
+        newbut.setAttribute("onClick","AddItem()");
+        document.getElementById("knopka").appendChild(newbut);
+}else if (k>N){
+        var e2 = document.getElementById('showmore');
+        e2.parentNode.removeChild(e2);
+}
+
+    var el = document.getElementById('show');
+el.parentNode.removeChild(el);
+
+}
+</script>
+
 <section id="3"></section>
 <div class="third">
 
 <div class="left3">
 Портреты
 </div>
-<div class="right3">  <a href="#2">Показать всё <img class="strelka1" src="strelka.png"></a></div>
+<div class="right3">  
+	<button id="show" onClick="AddItem()">Показать ещё <img class="strelka2" src="strelka.png"></button>
+
+</div><div class="main5">
 <div class="main3">
 	<img id="f1" src="pics/1.png">
 	<img id="f2" src="pics/2.png">
@@ -85,68 +170,67 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 	
 
 </div>
-
+</div>
+<div id="items"></div>
+	<div id="knopka"></div><p id="knopka1">white</p>
 </div>
 
-
 <div class="four">
+
 <div class="left3">
 Роспись интерьера
 </div>
-<div class="right3">  <a href="#2">Показать всё <img class="strelka1" src="strelka.png"></a></div>
-<div class="main3">
-	<img id="f1" src="pics/11.png">
-	<img id="f2" src="pics/12.png">
-	<img id="f3" src="pics/13.png">
-	<img id="f4" src="pics/14.png">
-	<img id="f5" src="pics/15.png">
-	<img id="f6" src="pics/16.png">
-	<img id="f7" src="pics/17.png">
-	<img id="f8" src="pics/18.png">
-	<img id="f9" src="pics/19.png">
-	
-	
+<div class="right3">  
+    <button id="show" onClick="AddItem()">Показать ещё <img class="strelka2" src="strelka.png"></button>
+
+</div><div class="main5">
+<div class="main2">
+    <img id="f1" src="pics/11.png">
+    <img id="f2" src="pics/12.png">
+    <img id="f3" src="pics/13.png">
+    <img id="f4" src="pics/14.png">
+    <img id="f5" src="pics/15.png">
+    <img id="f6" src="pics/16.png">
+    <img id="f7" src="pics/17.png">
+    <img id="f8" src="pics/18.png">
+    <img id="f9" src="pics/19.png">
+    
+    
 
 </div>
-
+</div>
+<div id="items"></div>
+    <div id="knopka"></div><p id="knopka1">white</p>
 </div>
 
 <div class="five">
+
 <div class="left3">
 Роспись одежды
 </div>
-<div class="right3">  <a href="#2">Показать всё <img class="strelka1" src="strelka.png"></a></div>
-<a class="up" href="#1">
-	<img class="arrow_up" src="arrow_up.png">
-	</a>
-<div class="main3">
-	<img id="f1" src="pics/21.png">
-	<img id="f2" src="pics/22.png">
-	<img id="f3" src="pics/23.png">
-	<img id="f4" src="pics/24.png">
-	<img id="f5" src="pics/25.png">
-	<img id="f6" src="pics/26.png">
-	<img id="f7" src="pics/27.png">
-	<img id="f8" src="pics/28.png">
-	<img id="f9" src="pics/29.png">
-	
-	
+<div class="right3">  
+    <button id="show" onClick="AddItem()">Показать ещё <img class="strelka2" src="strelka.png"></button>
+
+</div><div class="main5">
+<div class="main1">
+    <img id="f1" src="pics/21.png">
+    <img id="f2" src="pics/22.png">
+    <img id="f3" src="pics/23.png">
+    <img id="f4" src="pics/24.png">
+    <img id="f5" src="pics/25.png">
+    <img id="f6" src="pics/26.png">
+    <img id="f7" src="pics/27.png">
+    <img id="f8" src="pics/28.png">
+    <img id="f9" src="pics/29.png">
+    
+    
 
 </div>
-
-<div class="main4">
-	<img id="f11" src="pics/26.png">
-	<img id="f12" src="pics/27.png">
-	<img id="f13" src="pics/28.png">
-	<img id="f14" src="pics/29.png">
-	<img id="f15" src="pics/27.png">
-	<img id="f16" src="pics/21.png">
-	
-	
-<button class="showmore"> Показать еще </button>
+</div>
+<div id="items"></div>
+    <div id="knopka"></div><p id="knopka1">white</p>
 </div>
 
-</div>
 <section id="4"></section>
  <div class="six">
  	<div class="insideleft6">
