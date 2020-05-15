@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>irina</title>
 	 <link rel="stylesheet" type="text/css" href="Irina.css">
+       <script src="Animate.js"></script>
 </head>
 <body>
 	<section id="1"></section>
@@ -74,6 +75,24 @@ while($file = readdir($dir)){
     }
     $count++;
 }
+
+$dir = opendir('new_pic1');
+$count1 = -1;
+while($file = readdir($dir)){
+    if($file == '.'){
+        continue;
+    }
+    $count1++;
+}
+
+$dir = opendir('new_pic2');
+$count2 = -1;
+while($file = readdir($dir)){
+    if($file == '.'){
+        continue;
+    }
+    $count2++;
+}
 ?>
 
 <script type="text/javascript">
@@ -82,6 +101,18 @@ document.write(N);
 var j=0;
 var k=1;
 var m3=true;
+
+            function makeEaseOut(timing) {
+      return function(timeFraction) {
+        return 1 - timing(1 - timeFraction);
+      }
+    }
+
+        function quad(timeFraction) {
+  return Math.pow(timeFraction, 10);
+}
+
+let quadEaseOut = makeEaseOut(quad);
     function AddItem() {
 
         var z=k;
@@ -91,17 +122,43 @@ var m3=true;
         var newdiv=document.createElement("div");
         newdiv.setAttribute("class","main3");
         document.getElementById("items").appendChild(newdiv);
+        if ((N-z) <= 6){
+              animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 272.5 + 'px';
+        }
+      });
+          } else {
+          animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 545 + 'px';
+        }
+      });}
+              setTimeout(kek ,200);
+                    function kek(){animate({
+        duration: 5000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.opacity = progress;
+        }
+      });}
+
         for (var i = z; i <= 9+(z-1); i++) {
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic/"+i+".png");
+
         if ((z-1)+9<=N){
         newimg.setAttribute("id","f"+(i-z+1));
     }
     else {
     	newimg.setAttribute("id","d"+(i-z+1));
     }
-        document.getElementsByClassName("main3")[j+1].appendChild(newimg);
+        document.getElementsByClassName("main3")[j].appendChild(newimg);
     }
 }
         
@@ -111,6 +168,31 @@ var m3=true;
         var newdiv=document.createElement("div");
         newdiv.setAttribute("class","main3");
         document.getElementById("items").appendChild(newdiv);
+         if ((N-z) <= 6){
+              animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 272.5 + 'px';
+        }
+      });
+          } else {
+          animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 545 + 'px';
+        }
+      });}
+              setTimeout(kek ,200);
+                    function kek(){animate({
+        duration: 5000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.opacity = progress;
+        }
+      });}
+
         for (var i = z; i <= 6+(z-1); i++) {
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
@@ -119,9 +201,10 @@ var m3=true;
         newimg.setAttribute("id","f1"+(i-z+1));
     }
         else {
-    	newimg.setAttribute("id","d"+(i-z+1));
+    	newimg.setAttribute("id","d1"+(i-z+1));
+       document.getElementsByClassName("main3")[j].style.height = "265px";
     }
-        document.getElementsByClassName("main3")[j+1].appendChild(newimg);
+        document.getElementsByClassName("main3")[j].appendChild(newimg);
 }
         }
         m3=!(m3);
@@ -144,6 +227,242 @@ var m3=true;
 el.parentNode.removeChild(el);
 
 }
+
+
+var N1 = '<?php echo $count;?>';
+document.write(N);
+var j1=0;
+var k1=1;
+var m31=true;
+    function AddItem1() {
+
+        var z1=k1;
+        if (k1<=N1){
+            if (m31==true){
+                    var newimg;
+        var newdiv=document.createElement("div");
+        newdiv.setAttribute("class","main2");
+        document.getElementById("items1").appendChild(newdiv);
+         if ((N1-z1) <= 6){
+              animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 272.5 + 'px';
+        }
+      });
+          } else {
+          animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 545 + 'px';
+        }
+      });}
+              setTimeout(kek ,200);
+                    function kek(){animate({
+        duration: 5000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.opacity = progress;
+        }
+      });}
+        for (var i = z1; i <= 9+(z1-1); i++) {
+        if (k1<=N1) {k1++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic1/"+i+".png");
+        if ((z1-1)+9<=N1){
+        newimg.setAttribute("id","f"+(i-z1+1));
+    }
+    else {
+        newimg.setAttribute("id","d"+(i-z1+1));
+    }
+        document.getElementsByClassName("main2")[j1].appendChild(newimg);
+    }
+}
+        
+
+        if (m31==false){
+                    var newimg;
+        var newdiv=document.createElement("div");
+        newdiv.setAttribute("class","main2");
+        document.getElementById("items1").appendChild(newdiv);
+                 if ((N1-z1) <= 6){
+              animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 272.5 + 'px';
+        }
+      });
+          } else {
+          animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 545 + 'px';
+        }
+      });}
+              setTimeout(kek ,200);
+                    function kek(){animate({
+        duration: 5000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.opacity = progress;
+        }
+      });}
+        for (var i = z1; i <= 6+(z1-1); i++) {
+        if (k1<=N1) {k1++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic1/"+i+".png");
+                if ((z1-1)+6<=N1){
+        newimg.setAttribute("id","f1"+(i-z1+1));
+    }
+        else {
+        newimg.setAttribute("id","d1"+(i-z1+1));
+       document.getElementsByClassName("main2")[j1].style.height = "265px";
+    }
+        document.getElementsByClassName("main2")[j1].appendChild(newimg);
+}
+        }
+        m31=!(m31);
+        j1+=1;
+    }
+
+    if (j1 == 1){
+        var newbut=document.createElement("input");
+        newbut.setAttribute("value","Показать еще");
+        newbut.setAttribute("id","showmore1");
+        newbut.setAttribute("type","button");
+        newbut.setAttribute("onClick","AddItem1()");
+        document.getElementById("knopka1").appendChild(newbut);
+}else if (k1>N1){
+        var e2 = document.getElementById('showmore1');
+        e2.parentNode.removeChild(e2);
+}
+
+    var el = document.getElementById('show1');
+el.parentNode.removeChild(el);
+
+}
+
+
+var N2 = '<?php echo $count;?>';
+document.write(N);
+var j2=0;
+var k2=1;
+var m32=true;
+    function AddItem2() {
+
+        var z2=k2;
+        if (k2<=N2){
+            if (m32==true){
+                    var newimg;
+        var newdiv=document.createElement("div");
+        newdiv.setAttribute("class","main1");
+        document.getElementById("items2").appendChild(newdiv);
+                 if ((N2-z2) <= 6){
+              animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 272.5 + 'px';
+        }
+      });
+          } else {
+          animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 545 + 'px';
+        }
+      });}
+              setTimeout(kek ,200);
+                    function kek(){animate({
+        duration: 5000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.opacity = progress;
+        }
+      });}
+        for (var i = z2; i <= 9+(z2-1); i++) {
+        if (k2<=N1) {k2++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic2/"+i+".png");
+        if ((z2-1)+9<=N2){
+        newimg.setAttribute("id","f"+(i-z2+1));
+    }
+    else {
+        newimg.setAttribute("id","d"+(i-z2+1));
+    }
+        document.getElementsByClassName("main1")[j2].appendChild(newimg);
+    }
+}
+        
+
+        if (m32==false){
+                    var newimg;
+        var newdiv=document.createElement("div");
+        newdiv.setAttribute("class","main1");
+        document.getElementById("items2").appendChild(newdiv);
+                 if ((N2-z2) <= 6){
+              animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 272.5 + 'px';
+        }
+      });
+          } else {
+          animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 545 + 'px';
+        }
+      });}
+              setTimeout(kek ,200);
+                    function kek(){animate({
+        duration: 5000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.opacity = progress;
+        }
+      });}
+        for (var i = z2; i <= 6+(z2-1); i++) {
+        if (k2<=N2) {k2++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic1/"+i+".png");
+                if ((z2-1)+6<=N2){
+        newimg.setAttribute("id","f1"+(i-z2+1));
+    }
+        else {
+        newimg.setAttribute("id","d1"+(i-z2+1));
+       document.getElementsByClassName("main1")[j2].style.height = "265px";
+    }
+        document.getElementsByClassName("main1")[j2].appendChild(newimg);
+}
+        }
+        m32=!(m32);
+        j2+=1;
+    }
+
+    if (j2 == 1){
+        var newbut=document.createElement("input");
+        newbut.setAttribute("value","Показать еще");
+        newbut.setAttribute("id","showmore2");
+        newbut.setAttribute("type","button");
+        newbut.setAttribute("onClick","AddItem2()");
+        document.getElementById("knopka2").appendChild(newbut);
+}else if (k2>N2){
+        var e2 = document.getElementById('showmore2');
+        e2.parentNode.removeChild(e2);
+}
+
+    var el = document.getElementById('show2');
+el.parentNode.removeChild(el);
+
+}
 </script>
 
 <section id="3"></section>
@@ -156,7 +475,7 @@ el.parentNode.removeChild(el);
 	<button id="show" onClick="AddItem()">Показать ещё <img class="strelka2" src="strelka.png"></button>
 
 </div><div class="main5">
-<div class="main3">
+<div class="main31">
 	<img id="f1" src="pics/1.png">
 	<img id="f2" src="pics/2.png">
 	<img id="f3" src="pics/3.png">
@@ -172,7 +491,7 @@ el.parentNode.removeChild(el);
 </div>
 </div>
 <div id="items"></div>
-	<div id="knopka"></div><p id="knopka1">white</p>
+	<div id="knopka"></div><p id="knopk">white</p>
 </div>
 
 <div class="four">
@@ -181,10 +500,10 @@ el.parentNode.removeChild(el);
 Роспись интерьера
 </div>
 <div class="right3">  
-    <button id="show" onClick="AddItem()">Показать ещё <img class="strelka2" src="strelka.png"></button>
+    <button id="show1" onClick="AddItem1()">Показать ещё <img class="strelka2" src="strelka.png"></button>
 
 </div><div class="main5">
-<div class="main2">
+<div class="main21">
     <img id="f1" src="pics/11.png">
     <img id="f2" src="pics/12.png">
     <img id="f3" src="pics/13.png">
@@ -199,8 +518,8 @@ el.parentNode.removeChild(el);
 
 </div>
 </div>
-<div id="items"></div>
-    <div id="knopka"></div><p id="knopka1">white</p>
+<div id="items1"></div>
+    <div id="knopka1"></div><p id="knopka1"></p>
 </div>
 
 <div class="five">
@@ -209,10 +528,10 @@ el.parentNode.removeChild(el);
 Роспись одежды
 </div>
 <div class="right3">  
-    <button id="show" onClick="AddItem()">Показать ещё <img class="strelka2" src="strelka.png"></button>
+    <button id="show2" onClick="AddItem2()">Показать ещё <img class="strelka2" src="strelka.png"></button>
 
 </div><div class="main5">
-<div class="main1">
+<div class="main11">
     <img id="f1" src="pics/21.png">
     <img id="f2" src="pics/22.png">
     <img id="f3" src="pics/23.png">
@@ -227,8 +546,8 @@ el.parentNode.removeChild(el);
 
 </div>
 </div>
-<div id="items"></div>
-    <div id="knopka"></div><p id="knopka1">white</p>
+<div id="items2"></div>
+    <div id="knopka2"></div><p id="knopk">white</p>
 </div>
 
 <section id="4"></section>
