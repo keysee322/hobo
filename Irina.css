@@ -690,7 +690,7 @@ line-height: 148.18%;
   width: 57px;
   right: -6px;
   top: -6.8px;
-  background: rgba(233, 233, 233, 0.6);
+  background: rgba(255, 255, 255, 0.6);
   opacity: 0;
 }
 #hide1{
@@ -700,7 +700,7 @@ line-height: 148.18%;
   width: 57px;
   right: -6px;
   top: -6.8px;
-  background: rgba(233, 233, 233, 0.6);
+  background: rgba(255, 255, 255, 0.6);
   opacity: 0;
 }
 #hide2{
@@ -710,19 +710,19 @@ line-height: 148.18%;
   width: 57px;
   right: -6px;
   top: -6.8px;
-  background: rgba(233, 233, 233, 0.6);
+  background: rgba(255, 255, 255, 0.6);
   opacity: 0;
 }
 #medium{
   position: absolute;
   top: 50%;
-    left: calc(50% - 20.5px);
+    left: calc(50% - 23px);
 
 }
 #medium1{
   position: absolute;
   top: 50%;
-    left: calc(50% - 20.5px);
+    left: calc(50% - 23px);
 
 }
 #showmore1{
@@ -890,9 +890,14 @@ button {
   height: 464px;
   width: 100%;
   background-color: #D8D8D8;
+  font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 150%;
 }
 h1.sixh{
   font-size: 24px;
+  margin-bottom: 31px;
 }
 .insideleft6{
   position: absolute;

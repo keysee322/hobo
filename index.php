@@ -55,7 +55,7 @@
       	
         <li class="active"><a class="special" href="#1">Главная</a></li>
         <li><a class="special" href="#2">О нас</a></li>
-        <li><a class="special" href="#3">Услуги</a></li>
+        <li><a class="special" href="#3">Портфолио</a></li>
         <li><a class="special" href="#6">Контакты</a></li>
       </ul>
       
@@ -69,14 +69,14 @@
 	<div class="insideleft">
 	<h1>Lorem ipsum dolor sit amet</h1>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-<p id="learnmore"><a href="#2">Узнать больше <img class="strelka" src="strelka.png"></a></p>
+<p id="learnmore"><a href="#2"> <section id="2"></section>Узнать больше <img class="strelka" src="strelka.png"></a></p>
 </div>
 <div class="insideright">
 	<img src="albert.png">
 	<img class="ramka" src="ramka.png">
 </div>
  </div>
- <section id="2"></section>
+
 <div class="second">
 <div class="insideleft2">
 	<img src="second.png">
@@ -1055,7 +1055,7 @@ function DelItems2() {
 Портреты
 </div>
 <div class="right3">  
-	<nav id="show"><a onClick="AddItem()" href="#31">Показать ещё <img class="strelka2" src="strelka.png"></a></nav>
+	<nav id="show"><a onClick="AddItem()">Показать ещё <img class="strelka2" src="strelka.png"></a></nav>
 
 </div><div class="main5">
 <div class="main31">
@@ -1083,7 +1083,7 @@ function DelItems2() {
 Роспись интерьера
 </div>
 <div class="right3">  
-    <nav id="show1"><a onClick="AddItem1()" href="#32">Показать ещё <img class="strelka2" src="strelka.png"></a></nav>
+    <nav id="show1"><a onClick="AddItem1()">Показать ещё <img class="strelka2" src="strelka.png"></a></nav>
 
 </div><div class="main5">
 <div class="main21">
@@ -1112,7 +1112,7 @@ function DelItems2() {
 Роспись одежды
 </div>
 <div class="right3">  
-    <nav id="show2"><a onClick="AddItem2()" href="#33">Показать ещё <img class="strelka2" src="strelka.png"></a></nav>
+    <nav id="show2"><a onClick="AddItem2()">Показать ещё <img class="strelka2" src="strelka.png"></a></nav>
 
 </div><div class="main5">
 <div class="main11">
