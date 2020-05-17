@@ -5,8 +5,42 @@
 	<title>irina</title>
 	 <link rel="stylesheet" type="text/css" href="Irina.css">
        <script src="animate.js"></script>
+       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 </head>
-<body>
+<body> 
+
+ <script type="text/javascript">
+/* $(document).ready(function(){
+    $("#show").on("click","button", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+            top += 100;
+        $('body,html').animate({scrollTop: top}, 200);
+    });
+});
+
+  $(document).ready(function(){
+    $("#show1").on("click","button", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+            top += 850;
+        $('body,html').animate({scrollTop: top}, 200);
+    });
+});
+
+    $(document).ready(function(){
+    $("#show2").on("click","button", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+            top += 1650;
+        $('body,html').animate({scrollTop: top}, 200);
+    });
+});
+    */
+</script>
 	<section id="1"></section>
  <div class="first" ><div class="fake">
 <div class="navbar navbar-inverse navbar-fixed-top"> 
@@ -22,7 +56,7 @@
         <li class="active"><a class="special" href="#1">Главная</a></li>
         <li><a class="special" href="#2">О нас</a></li>
         <li><a class="special" href="#3">Услуги</a></li>
-        <li><a class="special" href="#4">Контакты</a></li>
+        <li><a class="special" href="#6">Контакты</a></li>
       </ul>
       
     </nav>
@@ -62,8 +96,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 	<a href="https://vk.com"><img class="socialimg" src="vk.svg"></a>
 </p>
 </div>
-  </div>
 
+  </div>
+<section id="3"></section>
 
 <?php
 
@@ -97,11 +132,11 @@ while($file = readdir($dir)){
 
 <script type="text/javascript">
 var N = '<?php echo $count;?>';
-document.write(N);
+/*document.write(N2);*/
 var j=0;
 var k=1;
-var m3=true;
-
+var m3=false;
+var h1 = -15;
             function makeEaseOut(timing) {
       return function(timeFraction) {
         return 1 - timing(1 - timeFraction);
@@ -117,12 +152,64 @@ let quadEaseOut = makeEaseOut(quad);
 
         var z=k;
         if (k<=N){
+            
+if (j==0){
+            var x=document.createElement("a");
+        x.setAttribute("href","#3");
+        x.setAttribute("id","hide");
+        x.setAttribute("onClick","DelItems()");
+         var t = document.createElement("img");
+         t.setAttribute("id","medium");
+         t.setAttribute("src","arrow_up.png");
+          x.appendChild(t);
+        document.getElementsByClassName("main31")[0].appendChild(x);
+                      setTimeout(kek1 ,200);
+                    function kek1(){animate({
+        duration: 5000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide").style.opacity = progress;
+        }
+      });}
+                    setTimeout(kek2 ,200);
+     function kek2(){animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide").style.height = progress * 1121 + 'px';
+        }
+      });}
+} 
+h1+= 560;
+if ((j>0) && ((N-k) > 5)) {
+                       
+     animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide").style.height = progress * 576 + h1 + 'px';
+        }
+      });
+} else if ((j>0) && ((N-k) <= 5)) {
+                       
+     animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide").style.height = progress * 295 + h1 + 'px';
+        }
+      });
+}
+
+
+
+
         	if (m3==true){
         	        var newimg;
         var newdiv=document.createElement("div");
         newdiv.setAttribute("class","main3");
         document.getElementById("items").appendChild(newdiv);
-        if ((N-z) <= 6){
+        if ((N-k) <= 5){
               animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -209,7 +296,6 @@ let quadEaseOut = makeEaseOut(quad);
         }
         m3=!(m3);
         j+=1;
-    }
 
     if (j == 1){
         var newbut=document.createElement("input");
@@ -222,23 +308,251 @@ let quadEaseOut = makeEaseOut(quad);
         var e2 = document.getElementById('showmore');
         e2.parentNode.removeChild(e2);
 }
-
+if (j==1){
     var el = document.getElementById('show');
 el.parentNode.removeChild(el);
+}
+}
+}
+
+function DelItems() {
+
+        animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("items").style.height = -progress * (h1) + h1 + "px";
+        }
+      });
+
+        animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("items").style.opacity = -progress + 1;
+        }
+      });
+
+                        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("showmore").style.height = -progress * 56 + 56 + "px";
+        }
+      });
+
+                        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("showmore").style.marginTop = -progress * 15 + 15 + "px";
+        }
+      });
+
+                        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("showmore").style.opacity = -progress + 1;
+        }
+      });
+
+                        animate({
+        duration: 1400,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide").style.height = -progress * (h1) + h1 + "px";
+        }
+      });
+
+                        animate({
+        duration: 1300,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide").style.opacity = -progress + 1;
+        }
+      });
+
+      let blocks = document.getElementsByClassName( "main3" ); // находим элементы с классом block
+      for( let i = 0; i < blocks.length; i++){ // проходим циклом по всем элементам массивоподобного объекта
+        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementsByClassName("main3")[i].style.marginTop = -progress * 15 + 15 + "px";
+        }
+      });
+      }
+
+        setTimeout(Delete,1200);
+
+
+        function Delete() {
+
+        var e2;
+        for (var i=0; i<j; i++){
+            e2 = document.getElementsByClassName('main3')[0];
+            e2.parentNode.removeChild(e2);
+        }
+        if (k < N){
+        e3 = document.getElementById('showmore');
+            e3.parentNode.removeChild(e3);
+        }
+        var x=document.createElement("nav");
+        x.setAttribute("id","show");
+        document.getElementsByClassName("right3")[0].appendChild(x);
+        var t = document.createElement("a");
+        t.setAttribute("onClick", "AddItem()");
+        t.setAttribute("href", "#31");
+        document.getElementById("show").appendChild(t);
+        var y = document.createTextNode("Показать ещё");
+        t.appendChild(y);
+        var u = document.createElement("img");
+        u.setAttribute("src", "strelka.png");
+        u.setAttribute("class", "strelka2");
+        t.appendChild(u);
+        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("show").style.opacity = progress;
+        }
+      });
+        e2 = document.getElementById('hide');
+            e2.parentNode.removeChild(e2);
+        animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("items").style.opacity = 1;
+        }
+      });
+                animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("items").style.height = "auto";
+        }
+      });
+                     j=0;
+ k=1;
+ m3=false;
+ h1 = -15;
+
+}
 
 }
 
 
-var N1 = '<?php echo $count;?>';
-document.write(N);
+var N1 = '<?php echo $count1;?>';
+/*document.write(N1);*/
 var j1=0;
 var k1=1;
-var m31=true;
+var m31=false;
+var h2 = -15;
     function AddItem1() {
 
         var z1=k1;
         if (k1<=N1){
+            
+if (j1==0){
+            var x=document.createElement("a");
+        x.setAttribute("href","#4");
+        x.setAttribute("id","hide1");
+        x.setAttribute("onClick","DelItems1()");
+         var t = document.createElement("img");
+         t.setAttribute("id","medium1");
+         t.setAttribute("src","arrow_up.png");
+          x.appendChild(t);
+        document.getElementsByClassName("main21")[0].appendChild(x);
+                      setTimeout(kek1 ,200);
+                    function kek1(){animate({
+        duration: 5000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide1").style.opacity = progress;
+        }
+      });}
+                    setTimeout(kek2 ,200);
+     function kek2(){animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide1").style.height = progress * 1121 + 'px';
+        }
+      });}
+} 
+h2+= 560;
+if ((j1>0) && ((N1-k1) > 5)) {
+                       
+     animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide1").style.height = progress * 576 + h2 + 'px';
+        }
+      });
+} else if ((j1>0) && ((N1-k1) <= 5)) {
+                       
+     animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide1").style.height = progress * 295 + h2 + 'px';
+        }
+      });
+}
+
+
+
+
             if (m31==true){
+                    var newimg;
+        var newdiv=document.createElement("div");
+        newdiv.setAttribute("class","main2");
+        document.getElementById("items1").appendChild(newdiv);
+        if ((N1-k1) <= 5){
+              animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 272.5 + 'px';
+        }
+      });
+          } else {
+          animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 545 + 'px';
+        }
+      });}
+              setTimeout(kek ,200);
+                    function kek(){animate({
+        duration: 5000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.opacity = progress;
+        }
+      });}
+
+        for (var i = z1; i <= 9+(z1-1); i++) {
+        if (k1<=N1) {k1++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic1/"+i+".png");
+
+        if ((z1-1)+9<=N1){
+        newimg.setAttribute("id","f"+(i-z1+1));
+    }
+    else {
+        newimg.setAttribute("id","d"+(i-z1+1));
+    }
+        document.getElementsByClassName("main2")[j1].appendChild(newimg);
+    }
+}
+        
+
+        if (m31==false){
                     var newimg;
         var newdiv=document.createElement("div");
         newdiv.setAttribute("class","main2");
@@ -267,50 +581,7 @@ var m31=true;
           newdiv.style.opacity = progress;
         }
       });}
-        for (var i = z1; i <= 9+(z1-1); i++) {
-        if (k1<=N1) {k1++;} else {break;}
-        newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic1/"+i+".png");
-        if ((z1-1)+9<=N1){
-        newimg.setAttribute("id","f"+(i-z1+1));
-    }
-    else {
-        newimg.setAttribute("id","d"+(i-z1+1));
-    }
-        document.getElementsByClassName("main2")[j1].appendChild(newimg);
-    }
-}
-        
 
-        if (m31==false){
-                    var newimg;
-        var newdiv=document.createElement("div");
-        newdiv.setAttribute("class","main2");
-        document.getElementById("items1").appendChild(newdiv);
-                 if ((N1-z1) <= 6){
-              animate({
-        duration: 1500,
-        timing: quadEaseOut,
-        draw: function(progress) {
-          newdiv.style.height = progress * 272.5 + 'px';
-        }
-      });
-          } else {
-          animate({
-        duration: 1500,
-        timing: quadEaseOut,
-        draw: function(progress) {
-          newdiv.style.height = progress * 545 + 'px';
-        }
-      });}
-              setTimeout(kek ,200);
-                    function kek(){animate({
-        duration: 5000,
-        timing: quadEaseOut,
-        draw: function(progress) {
-          newdiv.style.opacity = progress;
-        }
-      });}
         for (var i = z1; i <= 6+(z1-1); i++) {
         if (k1<=N1) {k1++;} else {break;}
         newimg=document.createElement("img");
@@ -327,7 +598,6 @@ var m31=true;
         }
         m31=!(m31);
         j1+=1;
-    }
 
     if (j1 == 1){
         var newbut=document.createElement("input");
@@ -340,28 +610,210 @@ var m31=true;
         var e2 = document.getElementById('showmore1');
         e2.parentNode.removeChild(e2);
 }
-
+if (j1==1){
     var el = document.getElementById('show1');
 el.parentNode.removeChild(el);
+}
+}
+}
+
+function DelItems1() {
+
+        animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("items1").style.height = -progress * (h2) + h2 + "px";
+        }
+      });
+
+        animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("items1").style.opacity = -progress + 1;
+        }
+      });
+
+                        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("showmore1").style.height = -progress * 56 + 56 + "px";
+        }
+      });
+
+                        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("showmore1").style.marginTop = -progress * 15 + 15 + "px";
+        }
+      });
+
+                        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("showmore1").style.opacity = -progress + 1;
+        }
+      });
+
+                        animate({
+        duration: 1400,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide1").style.height = -progress * (h2) + h2 + "px";
+        }
+      });
+
+                        animate({
+        duration: 1300,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide1").style.opacity = -progress + 1;
+        }
+      });
+
+      let blocks = document.getElementsByClassName( "main2" ); // находим элементы с классом block
+      for( let i = 0; i < blocks.length; i++){ // проходим циклом по всем элементам массивоподобного объекта
+        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementsByClassName("main2")[i].style.marginTop = -progress * 15 + 15 + "px";
+        }
+      });
+      }
+
+        setTimeout(Delete1,1200);
+
+
+        function Delete1() {
+
+        var e2;
+        for (var i=0; i<j1; i++){
+            e2 = document.getElementsByClassName('main2')[0];
+            e2.parentNode.removeChild(e2);
+        }
+        if (k1 < N1){
+        e3 = document.getElementById('showmore1');
+            e3.parentNode.removeChild(e3);
+        }
+        var x=document.createElement("nav");
+        x.setAttribute("id","show1");
+        document.getElementsByClassName("right3")[1].appendChild(x);
+        var t = document.createElement("a");
+        t.setAttribute("onClick", "AddItem1()");
+        t.setAttribute("href", "#32");
+        document.getElementById("show1").appendChild(t);
+        var y = document.createTextNode("Показать ещё");
+        t.appendChild(y);
+        var u = document.createElement("img");
+        u.setAttribute("src", "strelka.png");
+        u.setAttribute("class", "strelka2");
+        t.appendChild(u);
+        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("show1").style.opacity = progress;
+        }
+      });
+        var e4 = document.getElementById("hide1");
+            e4.parentNode.removeChild(e4);
+        animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("items1").style.opacity = 1;
+        }
+      });
+                animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("items1").style.height = "auto";
+        }
+      });
+                     j1=0;
+ k1=1;
+ m31=false;
+ h2 = -15;
+
+}
 
 }
 
 
-var N2 = '<?php echo $count;?>';
-document.write(N);
+var N2 = '<?php echo $count2;?>';
+/*document.write(N2);*/
 var j2=0;
 var k2=1;
-var m32=true;
+var m32=false;
+var h3 = -15;
     function AddItem2() {
 
         var z2=k2;
         if (k2<=N2){
+            
+if (j2==0){
+            var x=document.createElement("a");
+        x.setAttribute("href","#5");
+        x.setAttribute("id","hide2");
+        x.setAttribute("onClick","DelItems2()");
+         var t = document.createElement("img");
+         t.setAttribute("id","medium");
+         t.setAttribute("src","arrow_up.png");
+          x.appendChild(t);
+        document.getElementsByClassName("main11")[0].appendChild(x);
+                      setTimeout(kek1 ,200);
+                    function kek1(){animate({
+        duration: 5000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide2").style.opacity = progress;
+        }
+      });}
+                    setTimeout(kek2 ,200);
+     function kek2(){animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide2").style.height = progress * 1121 + 'px';
+        }
+      });}
+} 
+h3+= 560;
+if ((j2>0) && ((N2-k2) > 5)) {
+                       
+     animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide2").style.height = progress * 576 + h3 + 'px';
+        }
+      });
+} else if ((j2>0) && ((N2-k2) <= 5)) {
+                       
+     animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide2").style.height = progress * 295 + h3 + 'px';
+        }
+      });
+}
+
+
+
+
             if (m32==true){
                     var newimg;
         var newdiv=document.createElement("div");
         newdiv.setAttribute("class","main1");
         document.getElementById("items2").appendChild(newdiv);
-                 if ((N2-z2) <= 6){
+        if ((N2-k2) <= 5){
               animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -385,10 +837,12 @@ var m32=true;
           newdiv.style.opacity = progress;
         }
       });}
+
         for (var i = z2; i <= 9+(z2-1); i++) {
-        if (k2<=N1) {k2++;} else {break;}
+        if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic2/"+i+".png");
+
         if ((z2-1)+9<=N2){
         newimg.setAttribute("id","f"+(i-z2+1));
     }
@@ -405,7 +859,7 @@ var m32=true;
         var newdiv=document.createElement("div");
         newdiv.setAttribute("class","main1");
         document.getElementById("items2").appendChild(newdiv);
-                 if ((N2-z2) <= 6){
+         if ((N2-z2) <= 6){
               animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -429,10 +883,11 @@ var m32=true;
           newdiv.style.opacity = progress;
         }
       });}
+
         for (var i = z2; i <= 6+(z2-1); i++) {
         if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic1/"+i+".png");
+        newimg.setAttribute("src","new_pic2/"+i+".png");
                 if ((z2-1)+6<=N2){
         newimg.setAttribute("id","f1"+(i-z2+1));
     }
@@ -445,7 +900,6 @@ var m32=true;
         }
         m32=!(m32);
         j2+=1;
-    }
 
     if (j2 == 1){
         var newbut=document.createElement("input");
@@ -458,21 +912,150 @@ var m32=true;
         var e2 = document.getElementById('showmore2');
         e2.parentNode.removeChild(e2);
 }
-
+if (j2==1){
     var el = document.getElementById('show2');
 el.parentNode.removeChild(el);
+}
+}
+}
+
+function DelItems2() {
+
+        animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("items2").style.height = -progress * (h3) + h3 + "px";
+        }
+      });
+
+        animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("items2").style.opacity = -progress + 1;
+        }
+      });
+
+                        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("showmore2").style.height = -progress * 56 + 56 + "px";
+        }
+      });
+
+                        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("showmore2").style.marginTop = -progress * 15 + 15 + "px";
+        }
+      });
+
+                        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("showmore2").style.opacity = -progress + 1;
+        }
+      });
+
+                        animate({
+        duration: 1400,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide2").style.height = -progress * (h3) + h3 + "px";
+        }
+      });
+
+                        animate({
+        duration: 1300,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide2").style.opacity = -progress + 1;
+        }
+      });
+
+      let blocks = document.getElementsByClassName( "main1" ); // находим элементы с классом block
+      for( let i = 0; i < blocks.length; i++){ // проходим циклом по всем элементам массивоподобного объекта
+        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementsByClassName("main1")[i].style.marginTop = -progress * 15 + 15 + "px";
+        }
+      });
+      }
+
+        setTimeout(Delete2,1200);
+
+
+        function Delete2() {
+
+        var e2;
+        for (var i=0; i<j2; i++){
+            e2 = document.getElementsByClassName('main1')[0];
+            e2.parentNode.removeChild(e2);
+        }
+        if (k2 < N2){
+        e3 = document.getElementById('showmore2');
+            e3.parentNode.removeChild(e3);
+        }
+        var x=document.createElement("nav");
+        x.setAttribute("id","show2");
+        document.getElementsByClassName("right3")[2].appendChild(x);
+        var t = document.createElement("a");
+        t.setAttribute("onClick", "AddItem2()");
+        t.setAttribute("href", "#33");
+        document.getElementById("show2").appendChild(t);
+        var y = document.createTextNode("Показать ещё");
+        t.appendChild(y);
+        var u = document.createElement("img");
+        u.setAttribute("src", "strelka.png");
+        u.setAttribute("class", "strelka2");
+        t.appendChild(u);
+        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("show2").style.opacity = progress;
+        }
+      });
+        var e4 = document.getElementById("hide2");
+            e4.parentNode.removeChild(e4);
+        animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("items2").style.opacity = 1;
+        }
+      });
+                animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("items2").style.height = "auto";
+        }
+      });
+                     j2=0;
+ k2=1;
+ m32=false;
+ h3 = -15;
+
+}
 
 }
 </script>
 
-<section id="3"></section>
+
 <div class="third">
 
 <div class="left3">
 Портреты
 </div>
 <div class="right3">  
-	<button id="show" onClick="AddItem()">Показать ещё <img class="strelka2" src="strelka.png"></button>
+	<nav id="show"><a onClick="AddItem()" href="#31">Показать ещё <img class="strelka2" src="strelka.png"></a></nav>
 
 </div><div class="main5">
 <div class="main31">
@@ -485,22 +1068,22 @@ el.parentNode.removeChild(el);
 	<img id="f7" src="pics/7.png">
 	<img id="f8" src="pics/8.png">
 	<img id="f9" src="pics/9.png">
-	
-	
+
 
 </div>
+    <section id="31"></section>
 </div>
 <div id="items"></div>
-	<div id="knopka"></div><p id="knopk">white</p>
+	<nav id="knopka"></nav>
 </div>
-
+<section id="4"></section>
 <div class="four">
 
 <div class="left3">
 Роспись интерьера
 </div>
 <div class="right3">  
-    <button id="show1" onClick="AddItem1()">Показать ещё <img class="strelka2" src="strelka.png"></button>
+    <nav id="show1"><a onClick="AddItem1()" href="#32">Показать ещё <img class="strelka2" src="strelka.png"></a></nav>
 
 </div><div class="main5">
 <div class="main21">
@@ -518,17 +1101,18 @@ el.parentNode.removeChild(el);
 
 </div>
 </div>
+<section id="32"></section>
 <div id="items1"></div>
     <div id="knopka1"></div><p id="knopka1"></p>
 </div>
-
+<section id="5"></section>
 <div class="five">
 
 <div class="left3">
 Роспись одежды
 </div>
 <div class="right3">  
-    <button id="show2" onClick="AddItem2()">Показать ещё <img class="strelka2" src="strelka.png"></button>
+    <nav id="show2"><a onClick="AddItem2()" href="#33">Показать ещё <img class="strelka2" src="strelka.png"></a></nav>
 
 </div><div class="main5">
 <div class="main11">
@@ -546,11 +1130,12 @@ el.parentNode.removeChild(el);
 
 </div>
 </div>
+<section id="33"></section>
 <div id="items2"></div>
     <div id="knopka2"></div><p id="knopk">white</p>
 </div>
 
-<section id="4"></section>
+<section id="6"></section>
  <div class="six">
  	<div class="insideleft6">
 	<h1 class="sixh">Lorem ipsum dolor sit amet</h1>
@@ -558,13 +1143,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <p id="learnmore6">От 2000 руб.</p>
 </div>
 <div class="insideright6">	
-	<input class="input" type="text" placeholder="Ваше имя"> </input>
-	<input class="input" type="tel" placeholder="Телефон"> </input>
-	<input class="input" type="email" placeholder="Email"> </input>
-	<button class="order">Заказать</button>
+    <form action="mail.php" method="POST">
+	<input required class="input" name="username" type="text" placeholder="Ваше имя"> </input>
+	<input required class="input" name="userphone" type="tel" placeholder="Телефон"> </input>
+	<input required class="input" name="email" type="email" placeholder="Email"> </input>
+	<button type="submit" class="order">Заказать</button>
 
 	<img class="file" src="file.png">
-
+</form>
 </div>
 <div class="kek">
     <div class="navbar-header1">
