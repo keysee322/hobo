@@ -403,7 +403,6 @@ function DelItems() {
         document.getElementsByClassName("right3")[0].appendChild(x);
         var t = document.createElement("a");
         t.setAttribute("onClick", "AddItem()");
-        t.setAttribute("href", "#31");
         document.getElementById("show").appendChild(t);
         var y = document.createTextNode("Показать ещё");
         t.appendChild(y);
@@ -705,7 +704,6 @@ function DelItems1() {
         document.getElementsByClassName("right3")[1].appendChild(x);
         var t = document.createElement("a");
         t.setAttribute("onClick", "AddItem1()");
-        t.setAttribute("href", "#32");
         document.getElementById("show1").appendChild(t);
         var y = document.createTextNode("Показать ещё");
         t.appendChild(y);
@@ -1007,7 +1005,6 @@ function DelItems2() {
         document.getElementsByClassName("right3")[2].appendChild(x);
         var t = document.createElement("a");
         t.setAttribute("onClick", "AddItem2()");
-        t.setAttribute("href", "#33");
         document.getElementById("show2").appendChild(t);
         var y = document.createTextNode("Показать ещё");
         t.appendChild(y);
