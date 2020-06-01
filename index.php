@@ -72,14 +72,14 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <p id="learnmore"><a href="#2"> <section id="2"></section>Узнать больше <img class="strelka" src="strelka.png"></a></p>
 </div>
 <div class="insideright">
-	<img src="albert.png">
+	<img id="albert" src="albert.png">
 	<img class="ramka" src="ramka.png">
 </div>
  </div>
 
 <div class="second">
 <div class="insideleft2">
-	<img src="second.png">
+	<img id="second" src="second.png">
 	<img class="ramka1" src="ramka1.png">
 	<img class="ramka2" src="ramka2.png">
 	<img class="ramka3" src="ramka3.png">
@@ -131,12 +131,18 @@ while($file = readdir($dir)){
 ?>
 
 <script type="text/javascript">
+    if (document.documentElement.clientWidth > 768) {
+
+
 var N = '<?php echo $count;?>';
 /*document.write(N2);*/
 var j=0;
 var k=1;
 var m3=false;
 var h1 = -15;
+var kek11111 = 40;
+
+
             function makeEaseOut(timing) {
       return function(timeFraction) {
         return 1 - timing(1 - timeFraction);
@@ -149,11 +155,14 @@ var h1 = -15;
 
 let quadEaseOut = makeEaseOut(quad);
     function AddItem() {
-
+kek11111 = 106;
         var z=k;
         if (k<=N){
-            
+            if ((costbool == true) && (costcount > 0))
+           document.getElementById("costbutton").style.marginTop = 106 + "px";
 if (j==0){
+
+  document.getElementById("cost").style.marginTop = 106 + "px";
             var x=document.createElement("a");
         x.setAttribute("href","#3");
         x.setAttribute("id","hide");
@@ -190,15 +199,26 @@ if ((j>0) && ((N-k) > 5)) {
           document.getElementById("hide").style.height = progress * 576 + h1 + 'px';
         }
       });
+     if ((N1-k1) < 9){
+     if(costbool == true && costcount > 0)
+     document.getElementById("costbutton").style.marginTop = 40 + "px";
+     document.getElementById("cost").style.marginTop = 40 + "px";
+     kek11111 = 40;
+   }
 } else if ((j>0) && ((N-k) <= 5)) {
                        
      animate({
-        duration: 1500,
+        duration: 750,
         timing: quadEaseOut,
         draw: function(progress) {
           document.getElementById("hide").style.height = progress * 295 + h1 + 'px';
         }
       });
+     if(costbool == true && costcount > 0)
+     document.getElementById("costbutton").style.marginTop = 40 + "px";
+     document.getElementById("cost").style.marginTop = 40 + "px";
+     kek11111 = 40;
+   
 }
 
 
@@ -316,7 +336,10 @@ el.parentNode.removeChild(el);
 }
 
 function DelItems() {
-
+  kek11111 = 40;
+          if ((costbool == true) && (costcount > 0))
+           document.getElementById("costbutton").style.marginTop = 40 + "px"; 
+          document.getElementById("cost").style.marginTop = 40 + "px";
         animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -388,7 +411,7 @@ function DelItems() {
 
 
         function Delete() {
-
+          
         var e2;
         for (var i=0; i<j; i++){
             e2 = document.getElementsByClassName('main3')[0];
@@ -449,12 +472,15 @@ var j1=0;
 var k1=1;
 var m31=false;
 var h2 = -15;
+var kek22222 = 40;
     function AddItem1() {
-
+      kek22222 = 106;
         var z1=k1;
         if (k1<=N1){
-            
+                        if ((costbool1 == true) && (costcount1 > 0))
+           document.getElementById("costbutton1").style.marginTop = 106 + "px";
 if (j1==0){
+  document.getElementById("cost1").style.marginTop = 106 + "px";
             var x=document.createElement("a");
         x.setAttribute("href","#4");
         x.setAttribute("id","hide1");
@@ -491,6 +517,12 @@ if ((j1>0) && ((N1-k1) > 5)) {
           document.getElementById("hide1").style.height = progress * 576 + h2 + 'px';
         }
       });
+     if ((N1-k1) < 9){
+     if(costbool1 == true && costcount1 > 0)
+     document.getElementById("costbutton1").style.marginTop = 40 + "px";
+     document.getElementById("cost1").style.marginTop = 40 + "px";
+     kek22222 = 40;
+   }
 } else if ((j1>0) && ((N1-k1) <= 5)) {
                        
      animate({
@@ -500,6 +532,11 @@ if ((j1>0) && ((N1-k1) > 5)) {
           document.getElementById("hide1").style.height = progress * 295 + h2 + 'px';
         }
       });
+     if(costbool1 == true && costcount1 > 0)
+     document.getElementById("costbutton1").style.marginTop = 40 + "px";
+     document.getElementById("cost1").style.marginTop = 40 + "px";
+     kek22222 = 40;
+   
 }
 
 
@@ -617,7 +654,11 @@ el.parentNode.removeChild(el);
 }
 
 function DelItems1() {
-
+  kek22222 = 40;
+            if ((costbool1 == true) && (costcount1 > 0))
+           document.getElementById("costbutton1").style.marginTop = 40 + "px"; 
+          document.getElementById("cost1").style.marginTop = 40 + "px";
+        
         animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -1043,6 +1084,439 @@ function DelItems2() {
 }
 
 }
+var costbool = true;
+var costcount = 0;
+
+function AddCost(){
+if (costcount == 0){
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost").style.height = progress * 530 + "px";
+        }
+      });
+
+    document.getElementById("insidecost").style.paddingTop = 55 + "px";
+
+
+
+  document.getElementById("cost").style.background = "#D8D8D8";
+
+  var x=document.createElement("div");
+  x.setAttribute("id","leftcost");
+  x1 = document.createTextNode("Масло");
+  document.getElementById("insidecost").appendChild(x);
+   document.getElementById("leftcost").appendChild(x1);
+
+   x=document.createElement("div");
+  x.setAttribute("class","leftcost1");
+  x1 = document.createTextNode("30х40 см");
+  document.getElementById("leftcost").appendChild(x);
+   document.getElementsByClassName("leftcost1")[0].appendChild(x1);
+   document.getElementsByClassName("leftcost1")[0].style.marginTop = 55 + "px";
+   x=document.createElement("div");
+  x.setAttribute("class","leftcost2");
+    x1 = document.createTextNode("6 500 руб.");
+      document.getElementById("leftcost").appendChild(x);
+   document.getElementsByClassName("leftcost2")[0].appendChild(x1);
+      document.getElementsByClassName("leftcost2")[0].style.marginTop = 55 + "px";
+
+      x=document.createElement("div");
+  x.setAttribute("class","leftcost1");
+  x1 = document.createTextNode("40х50 см");
+  document.getElementById("leftcost").appendChild(x);
+   document.getElementsByClassName("leftcost1")[1].appendChild(x1);
+   x=document.createElement("div");
+  x.setAttribute("class","leftcost2");
+    x1 = document.createTextNode("9 500 руб.");
+      document.getElementById("leftcost").appendChild(x);
+   document.getElementsByClassName("leftcost2")[1].appendChild(x1);
+
+   x=document.createElement("div");
+  x.setAttribute("class","leftcost1");
+  x1 = document.createTextNode("50х70 см");
+  document.getElementById("leftcost").appendChild(x);
+   document.getElementsByClassName("leftcost1")[2].appendChild(x1);
+   x=document.createElement("div");
+  x.setAttribute("class","leftcost2");
+    x1 = document.createTextNode("11 500 руб.");
+      document.getElementById("leftcost").appendChild(x);
+   document.getElementsByClassName("leftcost2")[2].appendChild(x1);
+
+   x=document.createElement("div");
+  x.setAttribute("class","leftcost1");
+  x1 = document.createTextNode("60х80 см");
+  document.getElementById("leftcost").appendChild(x);
+   document.getElementsByClassName("leftcost1")[3].appendChild(x1);
+   x=document.createElement("div");
+  x.setAttribute("class","leftcost2");
+    x1 = document.createTextNode("14 500 руб.");
+      document.getElementById("leftcost").appendChild(x);
+   document.getElementsByClassName("leftcost2")[3].appendChild(x1);
+
+
+
+
+  var x=document.createElement("div");
+  x.setAttribute("id","rightcost");
+  x1 = document.createTextNode("Карандаш");
+  document.getElementById("insidecost").appendChild(x);
+     document.getElementById("rightcost").appendChild(x1);
+
+x=document.createElement("div");
+  x.setAttribute("class","leftcost1");
+  x1 = document.createTextNode("30х40 см");
+  document.getElementById("rightcost").appendChild(x);
+   document.getElementsByClassName("leftcost1")[4].appendChild(x1);
+      document.getElementsByClassName("leftcost1")[4].style.marginTop = 55 + "px";
+   x=document.createElement("div");
+  x.setAttribute("class","leftcost2");
+    x1 = document.createTextNode("3 500 руб.");
+      document.getElementById("rightcost").appendChild(x);
+   document.getElementsByClassName("leftcost2")[4].appendChild(x1);
+      document.getElementsByClassName("leftcost2")[4].style.marginTop = 55 + "px";
+
+   x=document.createElement("div");
+  x.setAttribute("class","leftcost1");
+  x1 = document.createTextNode("40х50 см");
+  document.getElementById("rightcost").appendChild(x);
+   document.getElementsByClassName("leftcost1")[5].appendChild(x1);
+   x=document.createElement("div");
+  x.setAttribute("class","leftcost2");
+    x1 = document.createTextNode("4 500 руб.");
+      document.getElementById("rightcost").appendChild(x);
+   document.getElementsByClassName("leftcost2")[5].appendChild(x1);
+
+   x=document.createElement("div");
+  x.setAttribute("class","leftcost1");
+  x1 = document.createTextNode("50х70 см");
+  document.getElementById("rightcost").appendChild(x);
+   document.getElementsByClassName("leftcost1")[6].appendChild(x1);
+   x=document.createElement("div");
+  x.setAttribute("class","leftcost2");
+    x1 = document.createTextNode("6 200 руб.");
+      document.getElementById("rightcost").appendChild(x);
+   document.getElementsByClassName("leftcost2")[6].appendChild(x1);
+
+   x=document.createElement("div");
+  x.setAttribute("class","leftcost1");
+  x1 = document.createTextNode("60х80 см");
+  document.getElementById("rightcost").appendChild(x);
+   document.getElementsByClassName("leftcost1")[7].appendChild(x1);
+   x=document.createElement("div");
+  x.setAttribute("class","leftcost2");
+    x1 = document.createTextNode("7 200 руб.");
+      document.getElementById("rightcost").appendChild(x);
+   document.getElementsByClassName("leftcost2")[7].appendChild(x1);
+
+
+
+document.getElementById("costhyper").innerHTML = "Свернуть";
+  x=document.createElement("img");
+  x.setAttribute("id","downarrow1");
+  x.setAttribute("src","down_arrow.png");
+  document.getElementById("costhyper").appendChild(x);
+
+     x=document.createElement("a");
+  x.setAttribute("id","order");
+  x.setAttribute("href","#6");
+  x1 = document.createTextNode("Заказать");
+  document.getElementById("costhyperdiv").appendChild(x);
+  document.getElementById("order").appendChild(x1);
+  costcount++;
+} else {
+if (costbool == false){
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost").style.height = 530 + -progress * 530 + "px";
+        }
+      });
+  x=document.createElement("button");
+  x.setAttribute("id","costbutton");
+
+  x.setAttribute("onClick","AddCost()");
+  x1 = document.createTextNode("Стоимость");
+  document.getElementsByClassName("third")[0].appendChild(x);
+  document.getElementById("costbutton").appendChild(x1);
+  document.getElementById("costbutton").style.marginTop = kek11111 + "px";
+    x=document.createElement("img");
+  x.setAttribute("id","downarrow");
+  x.setAttribute("src","down_arrow.png");
+  document.getElementById("costbutton").appendChild(x);
+
+  setTimeout(appear,1400);
+
+
+  function appear(){
+animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("costbutton").style.opacity = progress;
+        }
+      });}
+
+} else {
+  e3 = document.getElementById('costbutton');
+            e3.parentNode.removeChild(e3);
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost").style.height = progress * 530 + "px";
+        }
+      });
+}
+
+}
+
+ costbool = !costbool;
+
+
+
+}
+
+
+var costbool1 = true;
+var costcount1 = 0;
+
+function AddCost1(){
+if (costcount1 == 0){
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost1").style.height = progress * 590 + "px";
+        }
+      });
+
+    document.getElementById("leftcostdown").style.paddingTop = 55 + "px";
+
+
+
+  document.getElementById("cost1").style.background = "#D8D8D8";
+
+  var x=document.createElement("div");
+  x.setAttribute("class","secondcost1");
+  x1 = document.createTextNode("Простая");
+  document.getElementById("leftcostdown").appendChild(x);
+   document.getElementsByClassName("secondcost1")[0].appendChild(x1);
+
+   x=document.createElement("div");
+  x.setAttribute("class","secondcost11");
+  x1 = document.createTextNode("трафаретная роспись");
+  document.getElementById("leftcostdown").appendChild(x);
+   document.getElementsByClassName("secondcost11")[0].appendChild(x1);
+   document.getElementsByClassName("secondcost11")[0].style.marginTop = 65 + "px";
+
+      x=document.createElement("div");
+  x.setAttribute("class","secondcost11");
+  x1 = document.createTextNode("нанесение логотипа");
+  document.getElementById("leftcostdown").appendChild(x);
+   document.getElementsByClassName("secondcost11")[1].appendChild(x1);
+   document.getElementsByClassName("secondcost11")[1].style.marginTop = 25 + "px";
+
+x=document.createElement("div");
+  x.setAttribute("class","secondcost11");
+  x1 = document.createTextNode("детская тематика");
+  document.getElementById("leftcostdown").appendChild(x);
+   document.getElementsByClassName("secondcost11")[2].appendChild(x1);
+   document.getElementsByClassName("secondcost11")[2].style.marginTop = 25 + "px";
+
+    x=document.createElement("div");
+  x.setAttribute("class","secondcost11");
+  x1 = document.createTextNode("простой пейзаж");
+  document.getElementById("leftcostdown").appendChild(x);
+   document.getElementsByClassName("secondcost11")[3].appendChild(x1);
+   document.getElementsByClassName("secondcost11")[3].style.marginTop = 25 + "px";
+
+   x=document.createElement("div");
+  x.setAttribute("class","secondcost11");
+  x1 = document.createTextNode("небо");
+  document.getElementById("leftcostdown").appendChild(x);
+   document.getElementsByClassName("secondcost11")[4].appendChild(x1);
+   document.getElementsByClassName("secondcost11")[4].style.marginTop = 25 + "px";
+
+      x=document.createElement("div");
+  x.setAttribute("class","secondcost1");
+  x1 = document.createTextNode("от 1 500 руб.");
+  document.getElementById("leftcostdown").appendChild(x);
+   document.getElementsByClassName("secondcost1")[1].appendChild(x1);
+   document.getElementsByClassName("secondcost1")[1].style.marginTop = 35 + "px";
+
+
+
+
+
+var x=document.createElement("div");
+  x.setAttribute("id","secondcost2");
+  x1 = document.createTextNode("Средняя");
+  document.getElementById("leftcostdown").appendChild(x);
+   document.getElementById("secondcost2").appendChild(x1);
+
+   x=document.createElement("div");
+  x.setAttribute("class","secondcost12");
+  x1 = document.createTextNode("детальная трафаретная роспись");
+  document.getElementById("secondcost2").appendChild(x);
+   document.getElementsByClassName("secondcost12")[0].appendChild(x1);
+   document.getElementsByClassName("secondcost12")[0].style.marginTop = 31 + "px";
+
+      x=document.createElement("div");
+  x.setAttribute("class","secondcost12");
+  x1 = document.createTextNode("нанесение логотипа с прорисовкой");
+  document.getElementById("secondcost2").appendChild(x);
+   document.getElementsByClassName("secondcost12")[1].appendChild(x1);
+   document.getElementsByClassName("secondcost12")[1].style.marginTop = 25 + "px";
+
+x=document.createElement("div");
+  x.setAttribute("class","secondcost12");
+  x1 = document.createTextNode("детская тематика с деталзиацией");
+  document.getElementById("secondcost2").appendChild(x);
+   document.getElementsByClassName("secondcost12")[2].appendChild(x1);
+   document.getElementsByClassName("secondcost12")[2].style.marginTop = 25 + "px";
+
+    x=document.createElement("div");
+  x.setAttribute("class","secondcost12");
+  x1 = document.createTextNode("пейзаж с архитектурой");
+  document.getElementById("secondcost2").appendChild(x);
+   document.getElementsByClassName("secondcost12")[3].appendChild(x1);
+   document.getElementsByClassName("secondcost12")[3].style.marginTop = 25 + "px";
+
+   x=document.createElement("div");
+  x.setAttribute("class","secondcost12");
+  x1 = document.createTextNode("детальная прорисовка неба");
+  document.getElementById("secondcost2").appendChild(x);
+   document.getElementsByClassName("secondcost12")[4].appendChild(x1);
+   document.getElementsByClassName("secondcost12")[4].style.marginTop = 25 + "px";
+
+      x=document.createElement("div");
+  x.setAttribute("id","secondcost21");
+  x1 = document.createTextNode("от 3 500 руб.");
+  document.getElementById("secondcost2").appendChild(x);
+   document.getElementById("secondcost21").appendChild(x1);
+   document.getElementById("secondcost21").style.marginTop = 35 + "px";
+
+
+
+
+   var x=document.createElement("div");
+  x.setAttribute("id","secondcost3");
+  x1 = document.createTextNode("Сложная");
+  document.getElementById("leftcostdown").appendChild(x);
+   document.getElementById("secondcost3").appendChild(x1);
+
+   x=document.createElement("div");
+  x.setAttribute("class","secondcost13");
+  x1 = document.createTextNode("художественная роспись");
+  document.getElementById("secondcost3").appendChild(x);
+   document.getElementsByClassName("secondcost13")[0].appendChild(x1);
+   document.getElementsByClassName("secondcost13")[0].style.marginTop = 31 + "px";
+
+      x=document.createElement("div");
+  x.setAttribute("class","secondcost13");
+  x1 = document.createTextNode("сложная архитектру");
+  document.getElementById("secondcost3").appendChild(x);
+   document.getElementsByClassName("secondcost13")[1].appendChild(x1);
+   document.getElementsByClassName("secondcost13")[1].style.marginTop = 25 + "px";
+
+x=document.createElement("div");
+  x.setAttribute("class","secondcost13");
+  x1 = document.createTextNode("фотореализм");
+  document.getElementById("secondcost3").appendChild(x);
+   document.getElementsByClassName("secondcost13")[2].appendChild(x1);
+   document.getElementsByClassName("secondcost13")[2].style.marginTop = 25 + "px";
+
+    x=document.createElement("div");
+  x.setAttribute("class","secondcost13");
+  x1 = document.createTextNode("3D рисунок");
+  document.getElementById("secondcost3").appendChild(x);
+   document.getElementsByClassName("secondcost13")[3].appendChild(x1);
+   document.getElementsByClassName("secondcost13")[3].style.marginTop = 25 + "px";
+
+      x=document.createElement("div");
+  x.setAttribute("id","secondcost31");
+  x1 = document.createTextNode("от 5 000 руб.");
+  document.getElementById("secondcost3").appendChild(x);
+   document.getElementById("secondcost31").appendChild(x1);
+   document.getElementById("secondcost31").style.marginTop = 95 + "px";
+
+   document.getElementById("costhyperdiv1").style.marginTop = 515 + "px";
+
+
+document.getElementById("costhyper1").innerHTML = "Свернуть";
+  x=document.createElement("img");
+  x.setAttribute("id","downarrow1");
+  x.setAttribute("src","down_arrow.png");
+  document.getElementById("costhyper1").appendChild(x);
+
+     x=document.createElement("a");
+  x.setAttribute("id","order1");
+  x.setAttribute("href","#6");
+  x1 = document.createTextNode("Заказать");
+  document.getElementById("costhyperdiv1").appendChild(x);
+  document.getElementById("order1").appendChild(x1);
+  costcount1++;
+} else {
+if (costbool1 == false){
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost1").style.height = 590 + -progress * 590 + "px";
+        }
+      });
+  x=document.createElement("button");
+  x.setAttribute("id","costbutton1");
+
+  x.setAttribute("onClick","AddCost1()");
+  x1 = document.createTextNode("Стоимость");
+  document.getElementsByClassName("four")[0].appendChild(x);
+  document.getElementById("costbutton1").appendChild(x1);
+  document.getElementById("costbutton1").style.marginTop = kek22222 + "px";
+    x=document.createElement("img");
+  x.setAttribute("id","downarrow");
+  x.setAttribute("src","down_arrow.png");
+  document.getElementById("costbutton1").appendChild(x);
+
+  setTimeout(appear,1400);
+
+
+  function appear(){
+animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("costbutton1").style.opacity = progress;
+        }
+      });}
+
+} else {
+  e3 = document.getElementById('costbutton1');
+            e3.parentNode.removeChild(e3);
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost1").style.height = progress * 590 + "px";
+        }
+      });
+}
+
+}
+
+ costbool1 = !costbool1;
+
+
+
+}
+}
+
+
+
+
 </script>
 
 
@@ -1065,6 +1539,7 @@ function DelItems2() {
 	<img id="f7" src="pics/7.png">
 	<img id="f8" src="pics/8.png">
 	<img id="f9" src="pics/9.png">
+    <img id="f10" src="pics/10.png">
 
 
 </div>
@@ -1072,6 +1547,17 @@ function DelItems2() {
 </div>
 <div id="items"></div>
 	<nav id="knopka"></nav>
+
+</div>
+<div id="cost">
+  <div id="insidecost">
+  
+
+</div>
+
+<div id="costhyperdiv"><a id="costhyper" onClick="AddCost()">Стоимость<img id="downarrow" src="down_arrow.png">
+</a></div>
+
 </div>
 <section id="4"></section>
 <div class="four">
@@ -1100,7 +1586,17 @@ function DelItems2() {
 </div>
 <section id="32"></section>
 <div id="items1"></div>
-    <div id="knopka1"></div><p id="knopka1"></p>
+    <div id="knopka1"></div>
+</div>
+<div id="cost1">
+  <div id="leftcostdown">
+  
+
+</div>
+
+<div id="costhyperdiv1"><a id="costhyper1" onClick="AddCost1()">Стоимость<img id="downarrow" src="down_arrow.png">
+</a></div>
+
 </div>
 <section id="5"></section>
 <div class="five">
@@ -1131,7 +1627,16 @@ function DelItems2() {
 <div id="items2"></div>
     <div id="knopka2"></div><p id="knopk">white</p>
 </div>
+<div id="cost2">
+  <div id="leftcostdown1">
+  
 
+</div>
+
+<div id="costhyperdiv2"><a id="costhyper2" onClick="AddCost2()">Стоимость<img id="downarrow" src="down_arrow.png">
+</a></div>
+
+</div>
 <section id="6"></section>
  <div class="six">
  	<div class="insideleft6">

@@ -246,7 +246,8 @@ h1{
 
 }
 .four{
-    margin-top: 100px;
+    padding-top: 100px;
+    z-index: 3;
 }
 .five{
   position: relative;
@@ -349,6 +350,7 @@ width: 1130px;
   height: 545px;
   width: 32.5%;
   transition: linear 0.2s;
+  z-index: 3;
 }
 #f5:hover {
   margin-top: -7.5px;
@@ -754,6 +756,8 @@ line-height: 148.18%;
 }
 .main5{
   padding-top: 80px;
+  background-color: white;
+  z-index: 3;
 }
 #f11{
   position: absolute;
@@ -956,4 +960,471 @@ text-align: center;
   background-color: white;
   height: 92px;
   bottom: 0px
+}
+#downarrow{
+  margin-left: 7px;
+  margin-bottom: 2px;
+}
+#downarrow1{
+  margin-left: 7px;
+  margin-bottom: 2px;
+  transform: rotate(180deg);
+}
+#cost, #cost1{
+  position: relative;
+  text-align: center;
+  height: 30px;
+  width: 100%;
+  margin-top: 40px;
+  z-index: 2;
+  overflow: hidden;
+
+}
+#costbutton{
+  position: absolute;
+  left: calc(50% - 52px);
+  margin-top: 40px;
+  opacity: 0;
+}
+#costhyperdiv{
+  cursor: pointer;
+  z-index: 2;
+}
+#costhyperdiv1{
+  cursor: pointer;
+  z-index: 2;
+}
+#costbutton1 {
+    position: absolute;
+    left: calc(50% - 52px);
+    margin-top: 40px;
+    opacity: 0;
+}
+#leftcost{
+  position: absolute;
+  left: calc(50% - 420px);
+  width: 400px;
+  height: 400px;
+  font-weight: bold;
+font-size: 23px;
+line-height: 148.18%;
+z-index: 2;
+}
+#leftcostdown{
+  position: absolute;
+  left: calc(50% - 720px);
+  width: 400px;
+  height: 400px;
+  font-weight: bold;
+font-size: 23px;
+line-height: 148.18%;
+z-index: 2;
+}
+#rightcost{
+  width: 400px;
+  height: 400px;
+  margin-left: calc(50% + 20px);
+  font-weight: bold;
+font-size: 23px;
+line-height: 148.18%;
+z-index: 2;
+}
+#insidecost, #insidecost1{
+    width: 1248px;
+    margin-left: calc(50% - 624px);
+    z-index: 2;
+}
+.leftcost1{
+  position: absolute;
+  margin-top: 40px;
+  font-weight: normal;
+font-size: 23px;
+line-height: 148.18%;
+margin-left: 68px;
+z-index: 2;
+}
+.leftcost2{
+    margin-top: 40px;
+  font-weight: normal;
+font-size: 23px;
+line-height: 148.18%;
+margin-left: 140px;
+z-index: 2;
+}
+#order, #order1{
+  margin-left: 30px;
+  font-weight: bold;
+  color: white;
+  border: solid black 1px;
+  padding: 5px 10px 5px 10px;
+  background-color: black;
+  z-index: 2;
+}
+
+.secondcost1{
+  text-align: left;
+  position: absolute;
+  left: calc(50% - 105px);
+  width: 400px;
+  height: 400px;
+  font-weight: bold;
+font-size: 23px;
+line-height: 148.18%;
+z-index: 2;
+}
+
+#secondcost2{
+  margin-left: 530px;
+  margin-top: -335px;
+  text-align: left;
+  width: 500px;
+  height: 400px;
+  font-weight: bold;
+font-size: 23px;
+line-height: 148.18%;
+z-index: 2;
+}
+
+#secondcost3{
+  margin-left: 1070px;
+  margin-top: -400px;
+  text-align: left;
+  width: 500px;
+  height: 400px;
+  font-weight: bold;
+font-size: 23px;
+line-height: 148.18%;
+z-index: 2;
+}
+
+
+.secondcost11{
+  text-align: left;
+  font-weight: normal;
+font-size: 23px;
+line-height: 148.18%;
+margin-left: 95px;
+letter-spacing: -0.04em;
+}
+
+
+.secondcost12{
+  text-align: left;
+  font-style: normal;
+  font-weight: normal;
+font-size: 23px;
+line-height: 148.18%;
+letter-spacing: -0.04em;
+}
+
+.secondcost13{
+  text-align: left;
+  font-style: normal;
+  font-weight: normal;
+font-size: 23px;
+line-height: 148.18%;
+letter-spacing: -0.04em;
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1300px){
+.navbar-brand {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: calc(50% - 250px)
+}
+.navbar-right {
+margin-top: -38px;
+  position: absolute;
+  width: 300px;
+  top: 31px;
+z-index: 0;
+left: calc(50% - 150px);
+font-size: 12px;
+font-weight: normal;
+padding-inline-start: 20px;
+}
+li {
+  display: inline;
+  padding-right: 0px;
+}
+.phone {
+    position: absolute;
+    top: 0px;
+    left: calc(50% + 150px + 100px);
+    color: black;
+    font-size: 13px;
+    font-weight: normal;
+}
+#bruh {
+    position: absolute;
+    left: calc(50% - 278px);
+    width: 18px;
+    height: 21px;
+}
+.ramka {
+    width: 265px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 265px;
+}
+#albert{
+  width: 265px;
+  height: 265px;
+}
+.insideright{
+  position: absolute;
+  left: calc(50% + 84px);
+  top: 146px;
+}
+h1 {
+    font-size: 24px;
+}
+.insideleft {
+    position: absolute;
+    width: 307px;
+    left: calc(50% - 278px);
+    top: 129px;
+    font-size: 12px;
+}
+.left1 {
+    height: 450px;
+    background-color: white;
+
+}
+#second{
+  width: 265px;
+  height: 265px;
+}
+.insideleft2{
+  position: absolute;
+  width: 265px;
+  left: calc(50% - 278px);
+
+
+}
+.ramka1{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 33px;
+  height: 100%;
+}
+.ramka2{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+    width: 33px;
+  height: 100%;
+}
+.ramka3{
+  position: absolute;
+  left: 33px;
+  top: 0px;
+  width: calc(100% - 66px);
+  height: 33px;
+}
+.ramka4{
+  position: absolute;
+  left: 33px;
+  bottom: 0px;
+    width: calc(100% - 66px);
+    height: 33px;
+}
+.insideright2 {
+    position: absolute;
+    width: 307px;
+    left: calc(50% + 44px);
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 150%;
+}
+.palka {
+    margin-bottom: 3px;
+    margin-left: 10px;
+}
+.socialimg {
+    margin-bottom: -1px;
+    margin-left: 10px;
+}
+.second {
+    height: 350px;
+    background-color: white;
+}
+.left3 {
+    width: 50%;
+    position: absolute;
+    left: calc(50% - 278px);
+    font-size: 18px;
+    line-height: 148.18%;
+    font-style: normal;
+    font-weight: bold;
+}
+.right3 {
+    margin-top: 6px;
+    text-align: right;
+    width: 1130px;
+    position: absolute;
+    right: calc(50% - 565px);
+    font-size: 12px;
+    line-height: 148.18%;
+    font-style: normal;
+}
+a {
+    color: #000;
+    text-decoration: none;
+    font-size: 12px;
+}
+.strelka2 {
+    position: absolute;
+    top: 10px;
+    left: calc(50% + 573px);
+}
+.main31 {
+    position: relative;
+    width: 695px;
+    height: 366px;
+    margin-top: 15px;
+    background-color: white;
+    left: calc(50% - 347.5px);
+}
+#f1{
+  position: absolute;
+  height: 178px;
+  width: calc(20% - 10px);
+  left: 0px;
+  transition: linear 0.2s;
+}
+#f1:hover {
+    margin-top: -7.475px;
+  height: 280px;
+  width: 16.3%;
+  margin-left: calc(-5.35px); 
+
+}
+#f2{
+  position: absolute;
+  height: 178px;
+  width: calc(20% - 10px);
+  left: calc(20%); 
+   transition: linear 0.2s;
+}
+#f2:hover {
+    margin-top: -7.475px;
+  height: 280px;
+  width: 16.3%;
+  margin-left: calc(-5.35px); 
+
+}
+#f3{
+  position: absolute;
+  height: 178px;
+  width: calc(20% - 10px);
+  top: 188px;
+  left: 0%;
+  transition: linear 0.2s;
+}
+#f3:hover {
+  margin-bottom: -7.475px;
+  height: 280px;
+  width: 16.3%;
+  margin-left: calc(-5.35px); 
+
+}
+#f4{
+  position: absolute;
+  left: calc(20%);
+  top: 188px;
+  height: 178px;
+  width: calc(20% - 10px);
+  transition: linear 0.2s;
+}
+#f4:hover {
+    margin-top: -7.475px;
+  height: 178px;
+  width: calc(20% - 10px);
+  margin-left: calc(-5.35px); 
+
+}
+#f5{
+  position: absolute;
+  left: calc(40%);
+  height: 178px;
+  width: calc(20% - 10px);
+  transition: linear 0.2s;
+}
+#f5:hover {
+  margin-top: -7.5px;
+  left: calc(50% - 16.5%); 
+  height: 178px;
+  width: 33.1%;
+  z-index: 3;
+}
+
+#f6{
+  position: absolute;
+  height: 178px;
+  width: calc(20% - 10px);
+    left: calc(60%);
+  transition: linear 0.2s;
+}
+#f6:hover, #f7:hover {
+    margin-top: -7.475px;
+  height: 280px;
+  width: 16.3%;
+  margin-right: calc(-5.35px); 
+
+}
+#f7{
+  position: absolute;;
+    left: calc(80%);
+  height: 178px;
+  width: calc(20% - 10px);
+  transition: linear 0.2s;
+}
+
+#f8{
+  position: absolute;
+  height: 178px;
+  width: calc(20% - 10px);
+  top: 188px;
+    left: calc(60%);
+  transition: linear 0.2s;
+}
+#f9{
+  position: absolute;
+   height: 178px;
+  width: calc(20% - 10px);
+  top: 188px;
+    left: calc(80%);
+  transition: linear 0.2s;
+}
+#f8:hover, #f9:hover {
+    margin-top: -7.475px;
+  height: 280px;
+  width: 16.3%;
+  margin-right: calc(-5.35px); 
+
+}
+#f10{
+  position: absolute;
+  left: calc(40%);
+  height: 178px;
+  width: calc(20% - 10px);
+  transition: linear 0.2s;
+  bottom: 0px;
+}
+#f10:hover {
+  margin-top: -7.5px;
+  left: calc(50% - 16.5%); 
+  height: 178px;
+  width: 33.1%;
+  z-index: 3;
+}
+
+
+
+
 }
