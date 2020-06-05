@@ -67,9 +67,9 @@
 </div>
 <div class="left1">
 	<div class="insideleft">
-	<h1>Lorem ipsum dolor sit amet</h1>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-<p id="learnmore"><a href="#2"> <section id="2"></section>Узнать больше <img class="strelka" src="strelka.png"></a></p>
+	<h1>Воплотим в вашем интерьере настоящее произведение искусства</h1>
+Воплотим в реальность любую Вашу идею от росписи одежды, до фактурного панно на стенах.
+<p id="learnmore"><a id="learnmore" href="#2"> <section id="2"></section>Узнать больше <img class="strelka" src="strelka.png"></a></p>
 </div>
 <div class="insideright">
 	<img id="albert" src="albert.png">
@@ -87,7 +87,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </div>
 <div class="insideright2">
 	<h1>О нас</h1>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+<p>Мы опытные художники с профильным образованием. Наша команда работает в любых направлениях изобразительного искусства. Предлагаем исполенение портретов разных художественных стилей.</p>
+Представляем свои услуги в Москве и Подмосковье.
 <p id="social">Социальные сети<img class="palka" src="palka.png"> 
 	<a href="https://telegram.org"><img class="socialimg" src="tel.svg"></a>
 	<a href="https://www.whatsapp.com"><img class="socialimg" src="wut.svg"></a>
@@ -128,10 +129,19 @@ while($file = readdir($dir)){
     }
     $count2++;
 }
+
+$dir = opendir('new_pic3');
+$count3 = -1;
+while($file = readdir($dir)){
+    if($file == '.'){
+        continue;
+    }
+    $count3++;
+}
 ?>
 
 <script type="text/javascript">
-    if (document.documentElement.clientWidth > 768) {
+    if (document.documentElement.clientWidth > 1300) {
 
 
 var N = '<?php echo $count;?>';
@@ -1084,6 +1094,329 @@ function DelItems2() {
 }
 
 }
+
+//////////////////////////////////////////////////////////////////////////
+var N3 = '<?php echo $count3;?>';
+
+var j3=0;
+var k3=1;
+var m33=false;
+var h4 = -15;
+var kek44444 = 40;
+
+
+    function AddItem3() {
+kek44444 = 106;
+        var z3=k3;
+        if (k3<=N3){
+            if ((costbool3 == true) && (costcount3 > 0))
+           document.getElementById("costbutton3").style.marginTop = 106 + "px";
+if (j3==0){
+
+  document.getElementById("cost3").style.marginTop = 106 + "px";
+            var x=document.createElement("a");
+        x.setAttribute("href","#61");
+        x.setAttribute("id","hide3");
+        x.setAttribute("onClick","DelItems3()");
+         var t = document.createElement("img");
+         t.setAttribute("id","medium3");
+         t.setAttribute("src","arrow_up.png");
+          x.appendChild(t);
+        document.getElementsByClassName("main01")[0].appendChild(x);
+                      setTimeout(kek1 ,200);
+                    function kek1(){animate({
+        duration: 5000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide3").style.opacity = progress;
+        }
+      });}
+                    setTimeout(kek2 ,200);
+     function kek2(){animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide3").style.height = progress * 1121 + 'px';
+        }
+      });}
+} 
+h4+= 560;
+if ((j3>0) && ((N3-k3) > 5)) {
+                       
+     animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide3").style.height = progress * 576 + h4 + 'px';
+        }
+      });
+     if ((N3-k3) < 9){
+     if(costbool3 == true && costcount3 > 0)
+     document.getElementById("costbutton3").style.marginTop = 40 + "px";
+     document.getElementById("cost3").style.marginTop = 40 + "px";
+     kek44444 = 40;
+   }
+} else if ((j3>0) && ((N3-k3) <= 5)) {
+                       
+     animate({
+        duration: 750,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide3").style.height = progress * 295 + h4 + 'px';
+        }
+      });
+     if(costbool3 == true && costcount3 > 0)
+     document.getElementById("costbutton3").style.marginTop = 40 + "px";
+     document.getElementById("cost3").style.marginTop = 40 + "px";
+     kek44444 = 40;
+   
+}
+
+
+
+
+          if (m33==true){
+                  var newimg;
+        var newdiv=document.createElement("div");
+        newdiv.setAttribute("class","main0");
+        document.getElementById("items3").appendChild(newdiv);
+        if ((N3-k3) <= 5){
+              animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 272.5 + 'px';
+        }
+      });
+          } else {
+          animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 545 + 'px';
+        }
+      });}
+              setTimeout(kek ,200);
+                    function kek(){animate({
+        duration: 5000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.opacity = progress;
+        }
+      });}
+
+        for (var i = z3; i <= 9+(z3-1); i++) {
+        if (k3<=N3) {k3++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic3/"+i+".png");
+
+        if ((z3-1)+9<=N3){
+        newimg.setAttribute("id","f"+(i-z3+1));
+    }
+    else {
+      newimg.setAttribute("id","d"+(i-z3+1));
+    }
+        document.getElementsByClassName("main0")[j3].appendChild(newimg);
+    }
+}
+        
+
+        if (m33==false){
+                  var newimg;
+        var newdiv=document.createElement("div");
+        newdiv.setAttribute("class","main0");
+        document.getElementById("items3").appendChild(newdiv);
+         if ((N3-z3) <= 6){
+              animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 272.5 + 'px';
+        }
+      });
+          } else {
+          animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 545 + 'px';
+        }
+      });}
+              setTimeout(kek ,200);
+                    function kek(){animate({
+        duration: 5000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.opacity = progress;
+        }
+      });}
+
+        for (var i = z3; i <= 6+(z3-1); i++) {
+        if (k3<=N3) {k3++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic3/"+i+".png");
+                if ((z3-1)+6<=N3){
+        newimg.setAttribute("id","f1"+(i-z3+1));
+    }
+        else {
+      newimg.setAttribute("id","d1"+(i-z3+1));
+       document.getElementsByClassName("main0")[j3].style.height = "265px";
+    }
+        document.getElementsByClassName("main0")[j3].appendChild(newimg);
+}
+        }
+        m33=!(m33);
+        j3+=1;
+
+    if (j3 == 1){
+        var newbut=document.createElement("input");
+        newbut.setAttribute("value","Показать еще");
+        newbut.setAttribute("id","showmore3");
+        newbut.setAttribute("type","button");
+        newbut.setAttribute("onClick","AddItem3()");
+        document.getElementById("knopka3").appendChild(newbut);
+}else if (k3>N3){
+        var e2 = document.getElementById('showmore3');
+        e2.parentNode.removeChild(e2);
+}
+if (j3==1){
+    var el = document.getElementById('show3');
+el.parentNode.removeChild(el);
+}
+}
+}
+
+function DelItems3() {
+  kek44444 = 40;
+          if ((costbool3 == true) && (costcount3 > 0))
+           document.getElementById("costbutton3").style.marginTop = 40 + "px"; 
+          document.getElementById("cost3").style.marginTop = 40 + "px";
+        animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("items3").style.height = -progress * (h4) + h4 + "px";
+        }
+      });
+
+        animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("items3").style.opacity = -progress + 1;
+        }
+      });
+
+                        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("showmore3").style.height = -progress * 56 + 56 + "px";
+        }
+      });
+
+                        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("showmore3").style.marginTop = -progress * 15 + 15 + "px";
+        }
+      });
+
+                        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("showmore3").style.opacity = -progress + 1;
+        }
+      });
+
+                        animate({
+        duration: 1400,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide3").style.height = -progress * (h4) + h4 + "px";
+        }
+      });
+
+                        animate({
+        duration: 1300,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide3").style.opacity = -progress + 1;
+        }
+      });
+
+      let blocks = document.getElementsByClassName( "main0" ); // находим элементы с классом block
+      for( let i = 0; i < blocks.length; i++){ // проходим циклом по всем элементам массивоподобного объекта
+        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementsByClassName("main0")[i].style.marginTop = -progress * 15 + 15 + "px";
+        }
+      });
+      }
+
+        setTimeout(Delete3,1200);
+
+
+        function Delete3() {
+          
+        var e2;
+        for (var i=0; i<j3; i++){
+            e2 = document.getElementsByClassName('main0')[0];
+            e2.parentNode.removeChild(e2);
+        }
+        if (k3 < N3){
+        e3 = document.getElementById('showmore3');
+            e3.parentNode.removeChild(e3);
+        }
+        var x=document.createElement("nav");
+        x.setAttribute("id","show3");
+        document.getElementsByClassName("right3")[3].appendChild(x);
+        var t = document.createElement("a");
+        t.setAttribute("onClick", "AddItem3()");
+        document.getElementById("show3").appendChild(t);
+        var y = document.createTextNode("Показать ещё");
+        t.appendChild(y);
+        var u = document.createElement("img");
+        u.setAttribute("src", "strelka.png");
+        u.setAttribute("class", "strelka2");
+        t.appendChild(u);
+        animate({
+        duration: 1000,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("show3").style.opacity = progress;
+        }
+      });
+        e2 = document.getElementById('hide3');
+            e2.parentNode.removeChild(e2);
+        animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("items3").style.opacity = 1;
+        }
+      });
+                animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("items3").style.height = "auto";
+        }
+      });
+                     j3=0;
+ k3=1;
+ m33=false;
+ h4 = -15;
+
+}
+
+} 
+
+
 var costbool = true;
 var costcount = 0;
 
@@ -1282,6 +1615,10 @@ animate({
 
 var costbool1 = true;
 var costcount1 = 0;
+var costbool2 = true;
+var costcount2 = 0;
+var costbool3 = true;
+var costcount3 = 0;
 
 function AddCost1(){
 if (costcount1 == 0){
@@ -1625,7 +1962,7 @@ animate({
 </div>
 <section id="33"></section>
 <div id="items2"></div>
-    <div id="knopka2"></div><p id="knopk">white</p>
+    <div id="knopka2"></div>
 </div>
 <div id="cost2">
   <div id="leftcostdown1">
@@ -1637,6 +1974,46 @@ animate({
 </a></div>
 
 </div>
+<section id="61"></section>
+<div class="six1">
+
+<div class="left3">
+Рельефное панно
+</div>
+<div class="right3">  
+    <nav id="show3"><a onClick="AddItem3()">Показать ещё <img class="strelka2" src="strelka.png"></a></nav>
+
+</div><div class="main5">
+<div class="main01">
+    <img id="f1" src="pics/31.png">
+    <img id="f2" src="pics/32.png">
+    <img id="f3" src="pics/33.png">
+    <img id="f4" src="pics/34.png">
+    <img id="f5" src="pics/35.png">
+    <img id="f6" src="pics/36.png">
+    <img id="f7" src="pics/37.png">
+    <img id="f8" src="pics/38.png">
+    <img id="f9" src="pics/39.png">
+    
+    
+
+</div>
+</div>
+<section id="34"></section>
+<div id="items3"></div>
+    <div id="knopka3"></div>
+</div>
+<div id="cost3">
+  <div id="leftcostdown3">
+  
+
+</div>
+
+<div id="costhyperdiv3"><a id="costhyper2" onClick="AddCost3()">Стоимость<img id="downarrow" src="down_arrow.png">
+</a></div>
+
+</div>
+
 <section id="6"></section>
  <div class="six">
  	<div class="insideleft6">

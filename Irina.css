@@ -16,6 +16,7 @@ html{
 body{
 margin: 0px;
 transition: linear 1s;
+font-size: 18px;
 }
  nav.stroke ul li a{
   position: relative;
@@ -170,10 +171,11 @@ left: calc(50% - 610px);
   position: absolute;
   width: 372px;
   left: calc(50% - 610px);
-  top: 240px;
+  top: 200px;
 }
 h1{
   font-size: 36px;
+  width: 541px;
 }
 .insideright{
   position: absolute;
@@ -202,6 +204,7 @@ h1{
 }
 #learnmore{
   margin-top: 30px;
+  font-size: 15px;
 }
 .strelka{
   position: absolute;
@@ -222,8 +225,8 @@ h1{
 }
 .insideright2{
   position: absolute;
-  width: 385px;
-  left: calc(50% + 200px);
+  width: 465px;
+  left: calc(50% + 120px);
   margin-top: 100px;
 }
 .insideleft2{
@@ -250,6 +253,14 @@ h1{
     z-index: 3;
 }
 .five{
+  position: relative;
+  width: 100%;
+  background: white;
+  display:inline-block;
+  margin-top: 100px;
+}
+
+.six1{
   position: relative;
   width: 100%;
   background: white;
@@ -599,7 +610,7 @@ left: calc(15.65% + 15px);
 }
 
 
-.main31{
+.main31, .main01{
   position: relative;
   width: 1248px;
   height: 545px;
@@ -652,27 +663,24 @@ left: calc(15.65% + 15px);
   background-color: white;
         left: calc(50% - 624px);
     }
-#show{
+    .main0{
+  position: relative;
+  width: 1248px;
+  height: 545px;
+  margin-top:15px;
+  background-color: white;
+        left: calc(50% - 624px);
+        opacity: 0;
+
+    }
+#show, #show1, #show2, #show3{
   float: right;
   left: calc(50% - 400px);
   width: 150px;
   cursor: pointer;
   font-size: 15px;
 }
-#show1{
-  float: right;
-  left: calc(50% - 400px);
-  width: 150px;
-  cursor: pointer;
-  font-size: 15px;
-}
-#show2{
-  float: right;
-  left: calc(50% - 400px);
-  width: 150px;
-  cursor: pointer;
-  font-size: 15px;
-}
+
 #showmore{
   position: absolute;
   width: 1248px;
@@ -685,7 +693,7 @@ font-weight: bold;
 font-size: 15px;
 line-height: 148.18%;
 }
-#hide{
+#hide, #hide3{
   z-index: 10;
   position: absolute;
   height: auto;
@@ -715,7 +723,7 @@ line-height: 148.18%;
   background: rgba(255, 255, 255, 0.6);
   opacity: 0;
 }
-#medium{
+#medium, #medium3{
   position: absolute;
   top: 50%;
     left: calc(50% - 23px);
@@ -739,7 +747,7 @@ font-weight: bold;
 font-size: 15px;
 line-height: 148.18%;
 }
-#showmore2{
+#showmore2, #showmore3{
   position: absolute;
   width: 1248px;
   height: 56px;
@@ -949,8 +957,7 @@ text-align: center;
 }
 .navbar-header1{
   position: absolute;
-  bottom: 37px;
-  left: calc(50%-960px);
+  bottom: 17px;
   background-color: white;
   width: 100%;
 }
@@ -1132,7 +1139,7 @@ letter-spacing: -0.04em;
 .navbar-brand {
   font-size: 14px;
   font-weight: bold;
-  margin-left: calc(50% - 250px)
+  margin-left: calc(50% - 320px)
 }
 .navbar-right {
 margin-top: -38px;
@@ -1159,7 +1166,7 @@ li {
 }
 #bruh {
     position: absolute;
-    left: calc(50% - 278px);
+    left: calc(50% - 346px);
     width: 18px;
     height: 21px;
 }
@@ -1181,11 +1188,12 @@ li {
 }
 h1 {
     font-size: 24px;
+    width: 241px;
 }
 .insideleft {
     position: absolute;
     width: 307px;
-    left: calc(50% - 278px);
+    left: calc(50% - 346px);
     top: 129px;
     font-size: 12px;
 }
@@ -1201,7 +1209,7 @@ h1 {
 .insideleft2{
   position: absolute;
   width: 265px;
-  left: calc(50% - 278px);
+  left: calc(50% - 346px);
 
 
 }
@@ -1256,7 +1264,7 @@ h1 {
 .left3 {
     width: 50%;
     position: absolute;
-    left: calc(50% - 278px);
+    left: calc(50% - 346px);
     font-size: 18px;
     line-height: 148.18%;
     font-style: normal;
@@ -1267,7 +1275,7 @@ h1 {
     text-align: right;
     width: 1130px;
     position: absolute;
-    right: calc(50% - 565px);
+    right: calc(50% - 278px);
     font-size: 12px;
     line-height: 148.18%;
     font-style: normal;
@@ -1282,7 +1290,7 @@ a {
     top: 10px;
     left: calc(50% + 573px);
 }
-.main31 {
+.main31, .main21, .main11, .main01 {
     position: relative;
     width: 695px;
     height: 366px;
@@ -1290,6 +1298,7 @@ a {
     background-color: white;
     left: calc(50% - 347.5px);
 }
+
 #f1{
   position: absolute;
   height: 178px;
@@ -1423,8 +1432,60 @@ a {
   width: 33.1%;
   z-index: 3;
 }
-
-
-
-
+h1.sixh {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.insideleft6{
+  font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 150%;
+width: 304px;
+left: calc(50% - 346px);
+margin-bottom: -65px;
+}
+.input {
+    padding-left: 15px;
+width: 245px;
+height: 38px;
+    margin-top: 19px;
+    border: 0px;
+    font-size: 12px;
+}
+.six {
+    margin-top: 56px;
+    position: relative;
+    height: 344px;
+    width: 100%;
+    background-color: #D8D8D8;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 150%;
+}
+#learnmore6 {
+    font-weight: bold;
+    margin-top: 22px;
+}
+.kek {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    height: 52px;
+    bottom: 0px;
+}
+.insideright6{
+      margin-top: 16px;
+      width: 350px;
+}
+.order {
+    margin-top: 19px;
+}
+.file{
+  position: absolute;
+  left: calc(296px);
+  width: 42px;
+  top: calc(-15px + 50%);
+}
 }
