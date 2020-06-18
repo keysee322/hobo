@@ -36,7 +36,10 @@ nav.stroke ul li a:after{
 nav.stroke ul li a:hover:after {
   width: 100%;
 }
-
+#c20{
+  margin-bottom: -2px;
+  margin-right: 7px;
+}
 
 .center {
   text-align: center;
@@ -100,15 +103,21 @@ a:focus {
 .navbar-brand {
   font-size: 16px;
   font-weight: bold;
-  margin-left: calc(50% - 571px)
+  margin-left: calc(50% - 574px)
+}
+.active1{
+  margin-left: 74px;
+}
+#social1{
+  margin-left: 150px;
 }
 .navbar-right {
 margin-top: -38px;
   position: absolute;
-  width: 500px;
+  width: 700px;
   top: 31px;
 z-index: 0;
-left: calc(50% - 250px);
+left: calc(50% - 350px);
 font-size: 15px;
 font-weight: normal;
 padding-inline-start: 20px;
@@ -124,11 +133,17 @@ li {
 
 }
 
-
+#end{
+  display: inline;
+}
+.socialimg1{
+  margin-right: -5px;
+  margin-bottom: -1px;
+}
 .phone {
   position: absolute;
   top: 0px;
-  left: calc(50% + 467px);
+  left: calc(50% + 457px);
   color: black;
   font-size: 15px;
   font-weight: normal;
@@ -159,7 +174,15 @@ li {
 }
 #bruh{
 position: absolute;
-left: calc(50% - 610px);
+left: calc(50% - 605px);
+top: 6px;
+}
+p#bruh1{
+font-style: normal;
+font-weight: normal;
+font-size: 9px;
+line-height: 119.18%;
+margin-top: 2px;
 }
 
 .left1{
@@ -211,7 +234,7 @@ h1{
   margin-top: 11px;
   margin-left: 10px;
 }
-.palka{
+.palka, .palka1{
 
   margin-bottom: 5px;
   margin-left: 10px;
@@ -408,6 +431,15 @@ width: 1130px;
   right: 0%;  
   width: 15.65%;
   transition: linear 0.2s;
+}
+#f10{
+  position: absolute;
+  left: calc(40%);
+  height: 0px;
+  width: calc(20% - 10px);
+  transition: linear 0.2s;
+  bottom: 0px;
+  opacity: 0;
 }
 #f8:hover, #f9:hover {
     margin-top: -7.475px;
@@ -977,7 +1009,7 @@ text-align: center;
   margin-bottom: 2px;
   transform: rotate(180deg);
 }
-#cost, #cost1{
+#cost, #cost1, #cost2, #cost3{
   position: relative;
   text-align: center;
   height: 30px;
@@ -997,11 +1029,15 @@ text-align: center;
   cursor: pointer;
   z-index: 2;
 }
-#costhyperdiv1{
+#costhyper{
+  font-size: 15px;
+}
+#costhyperdiv1, #costhyperdiv2, #costhyperdiv3{
   cursor: pointer;
   z-index: 2;
+  font-size: 15px;
 }
-#costbutton1 {
+#costbutton1, #costbutton2, #costbutton3 {
     position: absolute;
     left: calc(50% - 52px);
     margin-top: 40px;
@@ -1018,6 +1054,16 @@ line-height: 148.18%;
 z-index: 2;
 }
 #leftcostdown{
+  position: absolute;
+  left: calc(50% - 720px);
+  width: 400px;
+  height: 400px;
+  font-weight: bold;
+font-size: 23px;
+line-height: 148.18%;
+z-index: 2;
+}
+#leftcostdown1{
   position: absolute;
   left: calc(50% - 720px);
   width: 400px;
@@ -1058,7 +1104,7 @@ line-height: 148.18%;
 margin-left: 140px;
 z-index: 2;
 }
-#order, #order1{
+#order, #order1, #order2, #order3{
   margin-left: 30px;
   font-weight: bold;
   color: white;
@@ -1079,10 +1125,42 @@ font-size: 23px;
 line-height: 148.18%;
 z-index: 2;
 }
+.thirdcost1{
+  text-align: left;
+  position: absolute;
+  left: calc(50% - 105px);
+  width: 400px;
+  height: 400px;
+  font-weight: bold;
+font-size: 23px;
+line-height: 148.18%;
+z-index: 2;
+}
+.fourcost1{
+  text-align: left;
+  position: absolute;
+  left: calc(50% - 355px);
+  width: 400px;
+  font-weight: bold;
+font-size: 23px;
+line-height: 148.18%;
+z-index: 2;
+}
 
 #secondcost2{
   margin-left: 530px;
   margin-top: -335px;
+  text-align: left;
+  width: 500px;
+  height: 400px;
+  font-weight: bold;
+font-size: 23px;
+line-height: 148.18%;
+z-index: 2;
+}
+#thirdcost2{
+  margin-left: 450px;
+  margin-top: -512px;
   text-align: left;
   width: 500px;
   height: 400px;
@@ -1103,6 +1181,40 @@ font-size: 23px;
 line-height: 148.18%;
 z-index: 2;
 }
+#thirdcost3{
+  margin-left: 736px;
+  margin-top: -400px;
+  text-align: left;
+  width: 500px;
+  height: 400px;
+  font-weight: bold;
+font-size: 23px;
+line-height: 148.18%;
+z-index: 2;
+}
+#thirdcost4{
+  margin-left: 996px;
+  margin-top: -400px;
+  text-align: left;
+  width: 500px;
+  height: 400px;
+  font-weight: bold;
+font-size: 23px;
+line-height: 148.18%;
+z-index: 2;
+}
+
+#thirdcost5{
+  margin-left: 996px;
+  margin-top: -205px;
+  text-align: left;
+  width: 500px;
+  height: 400px;
+  font-weight: bold;
+font-size: 23px;
+line-height: 148.18%;
+z-index: 2;
+}
 
 
 .secondcost11{
@@ -1113,7 +1225,22 @@ line-height: 148.18%;
 margin-left: 95px;
 letter-spacing: -0.04em;
 }
-
+.thirdcost11{
+  text-align: left;
+  font-weight: bold;
+font-size: 23px;
+line-height: 148.18%;
+margin-left: 95px;
+letter-spacing: -0.04em;
+}
+.fourcost11{
+  text-align: left;
+  font-weight: normal;
+font-size: 23px;
+line-height: 148.18%;
+margin-left: calc(50% - 30px);
+letter-spacing: -0.04em;
+}
 
 .secondcost12{
   text-align: left;
@@ -1123,8 +1250,34 @@ font-size: 23px;
 line-height: 148.18%;
 letter-spacing: -0.04em;
 }
+.thirdcost12{
+  margin-left: -13px;
+  text-align: left;
+  font-style: normal;
+  font-weight: normal;
+font-size: 23px;
+line-height: 148.18%;
+letter-spacing: -0.04em;
+}
 
 .secondcost13{
+  text-align: left;
+  font-style: normal;
+  font-weight: normal;
+font-size: 23px;
+line-height: 148.18%;
+letter-spacing: -0.04em;
+}
+.thirdcost13{
+  margin-left: -13px;
+  text-align: left;
+  font-style: normal;
+  font-weight: normal;
+font-size: 23px;
+line-height: 148.18%;
+letter-spacing: -0.04em;
+}
+.thirdcost14{
   text-align: left;
   font-style: normal;
   font-weight: normal;
@@ -1144,13 +1297,24 @@ letter-spacing: -0.04em;
 .navbar-right {
 margin-top: -38px;
   position: absolute;
-  width: 300px;
-  top: 31px;
+  width: 600px;
 z-index: 0;
-left: calc(50% - 150px);
+left: calc(50% - 305px);
 font-size: 12px;
 font-weight: normal;
 padding-inline-start: 20px;
+}
+#c20 {
+    margin-bottom: -3px;
+    margin-right: 7px;
+}
+#social1 {
+    margin-left: 20px;
+    margin-right: 100px;
+    margin-top: 3px;
+}
+.active1{
+
 }
 li {
   display: inline;
@@ -1159,7 +1323,7 @@ li {
 .phone {
     position: absolute;
     top: 0px;
-    left: calc(50% + 150px + 100px);
+    left: calc(50% + 190px);
     color: black;
     font-size: 13px;
     font-weight: normal;
@@ -1249,13 +1413,23 @@ h1 {
     font-size: 12px;
     line-height: 150%;
 }
+.palka1 {
+    margin-bottom: 3px;
+    margin-left: 10px;
+    width: 20px;
+}
 .palka {
     margin-bottom: 3px;
     margin-left: 10px;
 }
+
 .socialimg {
     margin-bottom: -1px;
     margin-left: 10px;
+}
+.socialimg1 {
+    margin-right: -12px;
+    margin-bottom: -1px;
 }
 .second {
     height: 350px;
@@ -1273,7 +1447,7 @@ h1 {
 .right3 {
     margin-top: 6px;
     text-align: right;
-    width: 1130px;
+    width: 330px;
     position: absolute;
     right: calc(50% - 278px);
     font-size: 12px;
@@ -1284,11 +1458,16 @@ a {
     color: #000;
     text-decoration: none;
     font-size: 12px;
+
+}
+#costhyper{
+  margin-left: -10px;
+  font-size: 12px;
 }
 .strelka2 {
     position: absolute;
     top: 10px;
-    left: calc(50% + 573px);
+    left: calc(50% + 173px);
 }
 .main31, .main21, .main11, .main01 {
     position: relative;
@@ -1423,7 +1602,8 @@ a {
   height: 178px;
   width: calc(20% - 10px);
   transition: linear 0.2s;
-  bottom: 0px;
+  top: 188px;
+  opacity: 1;
 }
 #f10:hover {
   margin-top: -7.5px;
@@ -1442,14 +1622,15 @@ font-weight: normal;
 font-size: 12px;
 line-height: 150%;
 width: 304px;
+bottom: 200px;
 left: calc(50% - 346px);
 margin-bottom: -65px;
 }
 .input {
     padding-left: 15px;
 width: 245px;
-height: 38px;
-    margin-top: 19px;
+height: 40px;
+    margin-top: 20px;
     border: 0px;
     font-size: 12px;
 }
@@ -1472,12 +1653,14 @@ height: 38px;
     position: absolute;
     width: 100%;
     background-color: white;
-    height: 52px;
+    height: 62px;
     bottom: 0px;
+    padding-top: 20px;
 }
 .insideright6{
       margin-top: 16px;
       width: 350px;
+      bottom: 130px;
 }
 .order {
     margin-top: 19px;
@@ -1487,5 +1670,179 @@ height: 38px;
   left: calc(296px);
   width: 42px;
   top: calc(-15px + 50%);
+}
+
+#f11{
+  position: absolute;
+  left: calc(15.65% + 15.65% + 30px); 
+  height: 178px;
+  width: 33.1%;
+  transition: linear 0.2s;
+}
+#f11:hover {
+    margin-top: -7.475px;
+  height: 178px;
+  width: 33.1%;
+  margin-left: calc(-5.35px); 
+}
+#f12{
+  position: absolute;
+  height: 265px;
+  width: 15.65%;
+  left: calc(15.65% + 15.65% + 15.65% + 45px); 
+   transition: linear 0.2s;
+}
+#f12:hover {
+    margin-top: -7.475px;
+  height: 280px;
+  margin-left: calc(-5.35px); 
+  width: 16.3%;
+}
+#f13{
+  position: absolute;
+  height: 265px;
+  width: 15.65%;
+  top: 280px;
+  left: calc(15.65% + 15.65% + 30px);
+  transition: linear 0.2s;
+}
+#f13:hover {
+    margin-top: -7.475px;
+  height: 280px;
+  margin-left: calc(-5.35px); 
+  width: 16.3%;
+}
+#f14{
+  position: absolute;
+  left: calc(15.65% + 15.65% + 15.65% + 45px); 
+  height: 265px;
+  width: 15.65%;
+  top: 280px;
+  transition: linear 0.2s;
+}
+#f14:hover {
+    margin-top: -7.475px;
+  height: 280px;
+  margin-left: calc(-5.35px); 
+  width: 16.3%;
+}
+#f15{
+  position: absolute;
+  left: calc(0); 
+  height: 545px;
+  width: 32.5%;
+  transition: linear 0.2s;
+}
+#f15:hover {
+  margin-top: -6.13px;
+  margin-left: calc(-3.35px); 
+  height: 560px;
+  z-index: 3;
+  width: 33%;
+
+}
+
+#f16{
+  position: absolute;
+  right: calc(0px); 
+  height: 545px;
+  width: 32.5%;
+  transition: linear 0.2s;
+}
+#f16:hover {
+  margin-top: -6.13px;
+  position: absolute;
+  margin-right: calc(-3.35px); 
+  height: 560px;
+  z-index: 3;
+  width: 33%;
+
+}
+    .main3, .main2, .main1{
+    position: relative;
+    width: 695px;
+    height: 366px;
+    margin-top: 10px;
+    background-color: white;
+    left: calc(50% - 347.5px);
+
+    }
+  #showmore{
+    width: 685px;
+        left: calc(50% - 347.5px);
+        font-size: 12px;
+  }
+  .main5{
+  padding-top: 40px;
+  background-color: white;
+  z-index: 3;
+}
+#leftcost{
+  position: absolute;
+  left: calc(50% - 400px);
+  width: 400px;
+  height: 350px;
+  font-weight: bold;
+font-size: 18px;
+line-height: 148.18%;
+z-index: 2;
+}
+#leftcostdown{
+  position: absolute;
+  left: calc(50% - 720px);
+  width: 400px;
+  height: 400px;
+  font-weight: bold;
+font-size: 18px;
+line-height: 148.18%;
+z-index: 2;
+}
+#rightcost{
+  width: 400px;
+  height: 350px;
+  margin-left: calc(50% + 0px);
+  font-weight: bold;
+font-size: 18px;
+line-height: 148.18%;
+z-index: 2;
+}
+.leftcost1{
+  position: absolute;
+  margin-top: 40px;
+  font-weight: normal;
+font-size: 18px;
+line-height: 148.18%;
+margin-left: 68px;
+z-index: 2;
+}
+.leftcost2{
+    margin-top: 40px;
+  font-weight: normal;
+font-size: 18px;
+line-height: 148.18%;
+margin-left: 140px;
+z-index: 2;
+}
+#costbutton {
+    position: absolute;
+    left: calc(50% - 50.5px);
+    margin-top: 40px;
+    font-size: 12px;
+    opacity: 0;
+    font-family: "Noto Sans";
+}
+#cost, #cost1 {
+    position: relative;
+    text-align: center;
+    height: 30px;
+    width: 100%;
+    margin-top: 20px;
+    z-index: 2;
+    overflow: hidden;
+}
+.four, .five, .six {
+    margin-top: 0px;
+    padding-top: 60px;
+    z-index: 3;
 }
 }

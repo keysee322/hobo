@@ -6,6 +6,7 @@
 	 <link rel="stylesheet" type="text/css" href="Irina.css">
        <script src="animate.js"></script>
        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+       <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 </head>
 <body> 
 
@@ -46,7 +47,7 @@
 <div class="navbar navbar-inverse navbar-fixed-top"> 
   <div class="container1">
     <div class="navbar-header">
-      <div class="navbar-brand"><img id="bruh" src="bruh.svg"> Name_name <div>
+      <div class="navbar-brand"><img id="bruh" src="bruh.svg"> Painting Workshop <p id="bruh1">Мастерская живописи</p><div>
       
     </div>
     <div class="navbar-right">
@@ -62,7 +63,7 @@
     </nav>
     </div>
 
-    <a class="phone" href="#"><img id="phone" src="phone.svg">+8801744430440</a>
+    <a class="phone" href="#">Тел.: +7 (929) 632-26-41</a>
 </div>
 </div>
 <div class="left1">
@@ -141,7 +142,10 @@ while($file = readdir($dir)){
 ?>
 
 <script type="text/javascript">
-    if (document.documentElement.clientWidth > 1300) {
+
+
+    
+
 
 
 var N = '<?php echo $count;?>';
@@ -190,23 +194,35 @@ if (j==0){
           document.getElementById("hide").style.opacity = progress;
         }
       });}
+                    var hideheigh= 0;
+if (document.documentElement.clientWidth >= 1300)
+hideheigh= 1121;
+if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
+hideheigh= 757;
                     setTimeout(kek2 ,200);
      function kek2(){animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("hide").style.height = progress * 1121 + 'px';
+          document.getElementById("hide").style.height = progress * hideheigh + 'px';
         }
       });}
 } 
-h1+= 560;
+if (document.documentElement.clientWidth >= 1300)
+h1+= 565;
+if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
+h1+= 386;
+if (document.documentElement.clientWidth >= 1300)
+hideheigh1= 560;
+if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
+hideheigh1= 376;
 if ((j>0) && ((N-k) > 5)) {
                        
      animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("hide").style.height = progress * 576 + h1 + 'px';
+          document.getElementById("hide").style.height = progress * hideheigh1 + h1 + 'px';
         }
       });
      if ((N1-k1) < 9){
@@ -248,13 +264,25 @@ if ((j>0) && ((N-k) > 5)) {
         }
       });
           } else {
+          if (document.documentElement.clientWidth >= 1300){
           animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
           newdiv.style.height = progress * 545 + 'px';
         }
-      });}
+      });
+        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 786){
+          animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 366 + 'px';
+        }
+      });
+        
+        }
+        }
               setTimeout(kek ,200);
                     function kek(){animate({
         duration: 5000,
@@ -263,7 +291,7 @@ if ((j>0) && ((N-k) > 5)) {
           newdiv.style.opacity = progress;
         }
       });}
-
+if (document.documentElement.clientWidth > 1300){
         for (var i = z; i <= 9+(z-1); i++) {
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
@@ -277,6 +305,21 @@ if ((j>0) && ((N-k) > 5)) {
     }
         document.getElementsByClassName("main3")[j].appendChild(newimg);
     }
+  } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+              for (var i = z; i <= 10+(z-1); i++) {
+        if (k<=N) {k++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic/"+i+".png");
+                if ((z-1)+10<=N){
+        newimg.setAttribute("id","f"+(i-z+1));
+    }
+        else {
+      newimg.setAttribute("id","f"+(i-z+1));
+       document.getElementsByClassName("main3")[j].style.height = "265px";
+    }
+        document.getElementsByClassName("main3")[j].appendChild(newimg);
+}
+  }
 }
         
 
@@ -294,13 +337,25 @@ if ((j>0) && ((N-k) > 5)) {
         }
       });
           } else {
+            if (document.documentElement.clientWidth > 1300){
           animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
           newdiv.style.height = progress * 545 + 'px';
         }
-      });}
+      });
+        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+          animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 366 + 'px';
+        }
+      });
+        
+        }
+      }
               setTimeout(kek ,200);
                     function kek(){animate({
         duration: 5000,
@@ -309,7 +364,7 @@ if ((j>0) && ((N-k) > 5)) {
           newdiv.style.opacity = progress;
         }
       });}
-
+if (document.documentElement.clientWidth > 1300){
         for (var i = z; i <= 6+(z-1); i++) {
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
@@ -322,6 +377,21 @@ if ((j>0) && ((N-k) > 5)) {
        document.getElementsByClassName("main3")[j].style.height = "265px";
     }
         document.getElementsByClassName("main3")[j].appendChild(newimg);
+}
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+          for (var i = z; i <= 10+(z-1); i++) {
+        if (k<=N) {k++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic/"+i+".png");
+                if ((z-1)+10<=N){
+        newimg.setAttribute("id","f"+(i-z+1));
+    }
+        else {
+      newimg.setAttribute("id","f"+(i-z+1));
+       document.getElementsByClassName("main3")[j].style.height = "265px";
+    }
+        document.getElementsByClassName("main3")[j].appendChild(newimg);
+}
 }
         }
         m3=!(m3);
@@ -389,7 +459,7 @@ function DelItems() {
           document.getElementById("showmore").style.opacity = -progress + 1;
         }
       });
-
+        if (document.documentElement.clientWidth > 1300){
                         animate({
         duration: 1400,
         timing: quadEaseOut,
@@ -397,7 +467,15 @@ function DelItems() {
           document.getElementById("hide").style.height = -progress * (h1) + h1 + "px";
         }
       });
-
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
+                        animate({
+        duration: 1400,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hide").style.height = -progress * (h1) + h1 + "px";
+        }
+      });
+}
                         animate({
         duration: 1300,
         timing: quadEaseOut,
@@ -508,12 +586,17 @@ if (j1==0){
           document.getElementById("hide1").style.opacity = progress;
         }
       });}
+var hideheigh1= 0;
+if (document.documentElement.clientWidth >= 1300)
+hideheigh1= 1121;
+if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
+hideheigh1= 757;
                     setTimeout(kek2 ,200);
      function kek2(){animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("hide1").style.height = progress * 1121 + 'px';
+          document.getElementById("hide1").style.height = progress * hideheigh1 + 'px';
         }
       });}
 } 
@@ -801,6 +884,7 @@ var j2=0;
 var k2=1;
 var m32=false;
 var h3 = -15;
+var kek33333 = 40;
     function AddItem2() {
 
         var z2=k2;
@@ -1422,6 +1506,7 @@ var costcount = 0;
 
 function AddCost(){
 if (costcount == 0){
+  if (document.documentElement.clientWidth >= 1300) {
   animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -1429,6 +1514,16 @@ if (costcount == 0){
           document.getElementById("cost").style.height = progress * 530 + "px";
         }
       });
+  } else if (document.documentElement.clientWidth >= 768 && document.documentElement.clientWidth < 1300) {
+      animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost").style.height = progress * 480 + "px";
+        }
+      });
+  }
+
 
     document.getElementById("insidecost").style.paddingTop = 55 + "px";
 
@@ -1560,6 +1655,24 @@ document.getElementById("costhyper").innerHTML = "Свернуть";
   costcount++;
 } else {
 if (costbool == false){
+
+  if (document.documentElement.clientWidth >= 1300) {
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost").style.height = 530 + -progress * 530 + "px";
+        }
+      });
+  } else if (document.documentElement.clientWidth >= 768 && document.documentElement.clientWidth < 1300) {
+      animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost").style.height = 480 + -progress * 480 + "px";
+        }
+      });
+  }
   animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -1574,7 +1687,13 @@ if (costbool == false){
   x1 = document.createTextNode("Стоимость");
   document.getElementsByClassName("third")[0].appendChild(x);
   document.getElementById("costbutton").appendChild(x1);
-  document.getElementById("costbutton").style.marginTop = kek11111 + "px";
+  
+  if (document.documentElement.clientWidth >= 1300) {
+    document.getElementById("costbutton").style.marginTop = kek11111 + "px";
+  } else if (document.documentElement.clientWidth >= 768 && document.documentElement.clientWidth < 1300) {
+    document.getElementById("costbutton").style.marginTop = (kek11111 - 10) + "px";
+    document.getElementsByClassName("four")[0].style.paddingTop = 90 + "px";
+  }
     x=document.createElement("img");
   x.setAttribute("id","downarrow");
   x.setAttribute("src","down_arrow.png");
@@ -1595,6 +1714,8 @@ animate({
 } else {
   e3 = document.getElementById('costbutton');
             e3.parentNode.removeChild(e3);
+
+            if (document.documentElement.clientWidth >= 1300) {
   animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -1602,6 +1723,16 @@ animate({
           document.getElementById("cost").style.height = progress * 530 + "px";
         }
       });
+  } else if (document.documentElement.clientWidth >= 768 && document.documentElement.clientWidth < 1300) {
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost").style.height = progress * 480 + "px";
+        }
+      });
+  }
+
 }
 
 }
@@ -1796,7 +1927,7 @@ document.getElementById("costhyper1").innerHTML = "Свернуть";
   document.getElementById("costhyperdiv1").appendChild(x);
   document.getElementById("order1").appendChild(x1);
   costcount1++;
-} else {
+} else {                                      // открывается скобка на 1624 строке
 if (costbool1 == false){
   animate({
         duration: 1500,
@@ -1849,10 +1980,425 @@ animate({
 
 
 }
+
+// скобка, закрывающая if (>1300px)
+
+
+function AddCost2(){
+if (costcount2 == 0){
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost2").style.height = progress * 726 + "px";
+        }
+      });
+
+    document.getElementById("leftcostdown1").style.paddingTop = 55 + "px";
+
+
+
+  document.getElementById("cost2").style.background = "#D8D8D8";
+
+  var x=document.createElement("div");
+  x.setAttribute("class","thirdcost1");
+  x1 = document.createTextNode("");
+  document.getElementById("leftcostdown1").appendChild(x);
+   document.getElementsByClassName("thirdcost1")[0].appendChild(x1);
+
+   x=document.createElement("div");
+  x.setAttribute("class","thirdcost11");
+  x1 = document.createTextNode("свитшот, худи и т.д.");
+  document.getElementById("leftcostdown1").appendChild(x);
+   document.getElementsByClassName("thirdcost11")[0].appendChild(x1);
+   document.getElementsByClassName("thirdcost11")[0].style.marginTop = 65 + "px";
+
+      x=document.createElement("div");
+  x.setAttribute("class","thirdcost11");
+  x1 = document.createTextNode("джинсовые шорты");
+  document.getElementById("leftcostdown1").appendChild(x);
+   document.getElementsByClassName("thirdcost11")[1].appendChild(x1);
+   document.getElementsByClassName("thirdcost11")[1].style.marginTop = 25 + "px";
+
+x=document.createElement("div");
+  x.setAttribute("class","thirdcost11");
+  x1 = document.createTextNode("кожаные куртки");
+  document.getElementById("leftcostdown1").appendChild(x);
+   document.getElementsByClassName("thirdcost11")[2].appendChild(x1);
+   document.getElementsByClassName("thirdcost11")[2].style.marginTop = 25 + "px";
+
+    x=document.createElement("div");
+  x.setAttribute("class","thirdcost11");
+  x1 = document.createTextNode("куртки (ткань)");
+  document.getElementById("leftcostdown1").appendChild(x);
+   document.getElementsByClassName("thirdcost11")[3].appendChild(x1);
+   document.getElementsByClassName("thirdcost11")[3].style.marginTop = 25 + "px";
+
+   x=document.createElement("div");
+  x.setAttribute("class","thirdcost11");
+  x1 = document.createTextNode("джинсовки");
+  document.getElementById("leftcostdown1").appendChild(x);
+   document.getElementsByClassName("thirdcost11")[4].appendChild(x1);
+   document.getElementsByClassName("thirdcost11")[4].style.marginTop = 25 + "px";
+
+   x=document.createElement("div");
+  x.setAttribute("class","thirdcost11");
+  x1 = document.createTextNode("футболки");
+  document.getElementById("leftcostdown1").appendChild(x);
+   document.getElementsByClassName("thirdcost11")[5].appendChild(x1);
+   document.getElementsByClassName("thirdcost11")[5].style.marginTop = 25 + "px";
+
+      x=document.createElement("div");
+  x.setAttribute("class","thirdcost11");
+  x1 = document.createTextNode("джинсы");
+  document.getElementById("leftcostdown1").appendChild(x);
+   document.getElementsByClassName("thirdcost11")[6].appendChild(x1);
+   document.getElementsByClassName("thirdcost11")[6].style.marginTop = 25 + "px";
+
+      x=document.createElement("div");
+  x.setAttribute("class","thirdcost11");
+  x1 = document.createTextNode("пальто");
+  document.getElementById("leftcostdown1").appendChild(x);
+   document.getElementsByClassName("thirdcost11")[7].appendChild(x1);
+   document.getElementsByClassName("thirdcost11")[7].style.marginTop = 25 + "px";
+
+
+
+
+
+var x=document.createElement("div");
+  x.setAttribute("id","thirdcost2");
+  x1 = document.createTextNode("Мужская");
+  document.getElementById("leftcostdown1").appendChild(x);
+   document.getElementById("thirdcost2").appendChild(x1);
+
+   x=document.createElement("div");
+  x.setAttribute("class","thirdcost12");
+  x1 = document.createTextNode("от 2 100 руб.");
+  document.getElementById("thirdcost2").appendChild(x);
+   document.getElementsByClassName("thirdcost12")[0].appendChild(x1);
+   document.getElementsByClassName("thirdcost12")[0].style.marginTop = 31 + "px";
+
+      x=document.createElement("div");
+  x.setAttribute("class","thirdcost12");
+  x1 = document.createTextNode("от 1 500 руб.");
+  document.getElementById("thirdcost2").appendChild(x);
+   document.getElementsByClassName("thirdcost12")[1].appendChild(x1);
+   document.getElementsByClassName("thirdcost12")[1].style.marginTop = 25 + "px";
+
+x=document.createElement("div");
+  x.setAttribute("class","thirdcost12");
+  x1 = document.createTextNode("от 2 500 руб.");
+  document.getElementById("thirdcost2").appendChild(x);
+   document.getElementsByClassName("thirdcost12")[2].appendChild(x1);
+   document.getElementsByClassName("thirdcost12")[2].style.marginTop = 25 + "px";
+
+    x=document.createElement("div");
+  x.setAttribute("class","thirdcost12");
+  x1 = document.createTextNode("от 2 100 руб.");
+  document.getElementById("thirdcost2").appendChild(x);
+   document.getElementsByClassName("thirdcost12")[3].appendChild(x1);
+   document.getElementsByClassName("thirdcost12")[3].style.marginTop = 25 + "px";
+
+   x=document.createElement("div");
+  x.setAttribute("class","thirdcost12");
+  x1 = document.createTextNode("от 2 100 руб.");
+  document.getElementById("thirdcost2").appendChild(x);
+   document.getElementsByClassName("thirdcost12")[4].appendChild(x1);
+   document.getElementsByClassName("thirdcost12")[4].style.marginTop = 25 + "px";
+
+   x=document.createElement("div");
+  x.setAttribute("class","thirdcost12");
+  x1 = document.createTextNode("от 1 100 руб.");
+  document.getElementById("thirdcost2").appendChild(x);
+   document.getElementsByClassName("thirdcost12")[5].appendChild(x1);
+   document.getElementsByClassName("thirdcost12")[5].style.marginTop = 25 + "px";
+
+      x=document.createElement("div");
+  x.setAttribute("class","thirdcost12");
+  x1 = document.createTextNode("от 1 300 руб.");
+  document.getElementById("thirdcost2").appendChild(x);
+   document.getElementsByClassName("thirdcost12")[6].appendChild(x1);
+   document.getElementsByClassName("thirdcost12")[6].style.marginTop = 25 + "px";
+
+   x=document.createElement("div");
+  x.setAttribute("class","thirdcost12");
+  x1 = document.createTextNode("от 3 000 руб.");
+  document.getElementById("thirdcost2").appendChild(x);
+   document.getElementsByClassName("thirdcost12")[7].appendChild(x1);
+   document.getElementsByClassName("thirdcost12")[7].style.marginTop = 25 + "px";
+
+
+
+   var x=document.createElement("div");
+  x.setAttribute("id","thirdcost3");
+  x1 = document.createTextNode("Женская");
+  document.getElementById("leftcostdown1").appendChild(x);
+   document.getElementById("thirdcost3").appendChild(x1);
+
+   x=document.createElement("div");
+  x.setAttribute("class","thirdcost13");
+  x1 = document.createTextNode("от 1 500 руб.");
+  document.getElementById("thirdcost3").appendChild(x);
+   document.getElementsByClassName("thirdcost13")[0].appendChild(x1);
+   document.getElementsByClassName("thirdcost13")[0].style.marginTop = 31 + "px";
+
+      x=document.createElement("div");
+  x.setAttribute("class","thirdcost13");
+  x1 = document.createTextNode("от 1 000 руб.");
+  document.getElementById("thirdcost3").appendChild(x);
+   document.getElementsByClassName("thirdcost13")[1].appendChild(x1);
+   document.getElementsByClassName("thirdcost13")[1].style.marginTop = 25 + "px";
+
+x=document.createElement("div");
+  x.setAttribute("class","thirdcost13");
+  x1 = document.createTextNode("от 2 500 руб.");
+  document.getElementById("thirdcost3").appendChild(x);
+   document.getElementsByClassName("thirdcost13")[2].appendChild(x1);
+   document.getElementsByClassName("thirdcost13")[2].style.marginTop = 25 + "px";
+
+    x=document.createElement("div");
+  x.setAttribute("class","thirdcost13");
+  x1 = document.createTextNode("от 1 800 руб.");
+  document.getElementById("thirdcost3").appendChild(x);
+   document.getElementsByClassName("thirdcost13")[3].appendChild(x1);
+   document.getElementsByClassName("thirdcost13")[3].style.marginTop = 25 + "px";
+
+    x=document.createElement("div");
+  x.setAttribute("class","thirdcost13");
+  x1 = document.createTextNode("от 1 800 руб.");
+  document.getElementById("thirdcost3").appendChild(x);
+   document.getElementsByClassName("thirdcost13")[4].appendChild(x1);
+   document.getElementsByClassName("thirdcost13")[4].style.marginTop = 25 + "px";
+
+       x=document.createElement("div");
+  x.setAttribute("class","thirdcost13");
+  x1 = document.createTextNode("от 800 руб.");
+  document.getElementById("thirdcost3").appendChild(x);
+   document.getElementsByClassName("thirdcost13")[5].appendChild(x1);
+   document.getElementsByClassName("thirdcost13")[5].style.marginTop = 25 + "px";
+
+       x=document.createElement("div");
+  x.setAttribute("class","thirdcost13");
+  x1 = document.createTextNode("от 1 000 руб.");
+  document.getElementById("thirdcost3").appendChild(x);
+   document.getElementsByClassName("thirdcost13")[6].appendChild(x1);
+   document.getElementsByClassName("thirdcost13")[6].style.marginTop = 25 + "px";
+
+       x=document.createElement("div");
+  x.setAttribute("class","thirdcost13");
+  x1 = document.createTextNode("от 3 000 руб.");
+  document.getElementById("thirdcost3").appendChild(x);
+   document.getElementsByClassName("thirdcost13")[7].appendChild(x1);
+   document.getElementsByClassName("thirdcost13")[7].style.marginTop = 25 + "px";
+
+  var x=document.createElement("div");
+  x.setAttribute("id","thirdcost4");
+  x1 = document.createTextNode("Разное");
+  document.getElementById("leftcostdown1").appendChild(x);
+   document.getElementById("thirdcost4").appendChild(x1);
+
+   x=document.createElement("div");
+  x.setAttribute("class","thirdcost14");
+  x1 = document.createTextNode("cумки, кошельки от 1 000 руб.");
+  document.getElementById("thirdcost4").appendChild(x);
+   document.getElementsByClassName("thirdcost14")[0].appendChild(x1);
+   document.getElementsByClassName("thirdcost14")[0].style.marginTop = 31 + "px";
+
+      x=document.createElement("div");
+  x.setAttribute("class","thirdcost14");
+  x1 = document.createTextNode("обувь от 1 200 руб.");
+  document.getElementById("thirdcost4").appendChild(x);
+   document.getElementsByClassName("thirdcost14")[1].appendChild(x1);
+   document.getElementsByClassName("thirdcost14")[1].style.marginTop = 25 + "px";
+
+  var x=document.createElement("div");
+  x.setAttribute("id","thirdcost5");
+  x1 = document.createTextNode("Детское");
+  document.getElementById("leftcostdown1").appendChild(x);
+   document.getElementById("thirdcost5").appendChild(x1);
+
+   x=document.createElement("div");
+  x.setAttribute("class","thirdcost14");
+  x1 = document.createTextNode("всё от 500 руб.");
+  document.getElementById("thirdcost5").appendChild(x);
+   document.getElementsByClassName("thirdcost14")[2].appendChild(x1);
+   document.getElementsByClassName("thirdcost14")[2].style.marginTop = 31 + "px";
+
+
+
+   document.getElementById("costhyperdiv2").style.marginTop = 650 + "px";
+
+
+document.getElementById("costhyper2").innerHTML = "Свернуть";
+  x=document.createElement("img");
+  x.setAttribute("id","downarrow1");
+  x.setAttribute("src","down_arrow.png");
+  document.getElementById("costhyper2").appendChild(x);
+
+     x=document.createElement("a");
+  x.setAttribute("id","order2");
+  x.setAttribute("href","#6");
+  x1 = document.createTextNode("Заказать");
+  document.getElementById("costhyperdiv2").appendChild(x);
+  document.getElementById("order2").appendChild(x1);
+  costcount2++;
+} else {                                    // открывается скобка на 1624 строке
+if (costbool2 == false){
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost2").style.height = 726 + -progress * 726 + "px";
+        }
+      });
+  x=document.createElement("button");
+  x.setAttribute("id","costbutton2");
+
+  x.setAttribute("onClick","AddCost2()");
+  x1 = document.createTextNode("Стоимость");
+  document.getElementsByClassName("five")[0].appendChild(x);
+  document.getElementById("costbutton2").appendChild(x1);
+  document.getElementById("costbutton2").style.marginTop = kek33333 + "px";
+    x=document.createElement("img");
+  x.setAttribute("id","downarrow");
+  x.setAttribute("src","down_arrow.png");
+  document.getElementById("costbutton2").appendChild(x);
+
+  setTimeout(appear,1400);
+
+
+  function appear(){
+animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("costbutton2").style.opacity = progress;
+        }
+      });
 }
 
+} else {
+  e3 = document.getElementById('costbutton2');
+            e3.parentNode.removeChild(e3);
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost2").style.height = progress * 726 + "px";
+        }
+      });
+}
+
+}
+
+ costbool2 = !costbool2;
 
 
+
+}
+
+function AddCost3(){
+if (costcount3 == 0){
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost3").style.height = progress * 213 + "px";
+        }
+      });
+
+    document.getElementById("leftcostdown2").style.paddingTop = 55 + "px";
+
+
+
+  document.getElementById("cost3").style.background = "#D8D8D8";
+
+  var x=document.createElement("div");
+  x.setAttribute("class","fourcost1");
+  x1 = document.createTextNode("От 5 000 руб. до 15 000 руб.");
+  document.getElementById("leftcostdown2").appendChild(x);
+   document.getElementsByClassName("fourcost1")[0].appendChild(x1);
+
+   x=document.createElement("div");
+  x.setAttribute("class","fourcost11");
+  x1 = document.createTextNode("в зависимости от сложности и формата");
+  document.getElementById("leftcostdown2").appendChild(x);
+   document.getElementsByClassName("fourcost11")[0].appendChild(x1);
+
+
+
+
+   document.getElementById("costhyperdiv3").style.marginTop = 55 + "px";
+
+
+document.getElementById("costhyper3").innerHTML = "Свернуть";
+  x=document.createElement("img");
+  x.setAttribute("id","downarrow1");
+  x.setAttribute("src","down_arrow.png");
+  document.getElementById("costhyper3").appendChild(x);
+
+     x=document.createElement("a");
+  x.setAttribute("id","order3");
+  x.setAttribute("href","#6");
+  x1 = document.createTextNode("Заказать");
+  document.getElementById("costhyperdiv3").appendChild(x);
+  document.getElementById("order3").appendChild(x1);
+  costcount3++;
+} else {                                    // открывается скобка на 1624 строке
+if (costbool3 == false){
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost3").style.height = 213 + -progress * 213 + "px";
+        }
+      });
+  x=document.createElement("button");
+  x.setAttribute("id","costbutton3");
+
+  x.setAttribute("onClick","AddCost3()");
+  x1 = document.createTextNode("Стоимость");
+  document.getElementsByClassName("six1")[0].appendChild(x);
+  document.getElementById("costbutton3").appendChild(x1);
+  document.getElementById("costbutton3").style.marginTop = kek33333 + "px";
+    x=document.createElement("img");
+  x.setAttribute("id","downarrow");
+  x.setAttribute("src","down_arrow.png");
+  document.getElementById("costbutton3").appendChild(x);
+
+  setTimeout(appear,1400);
+
+
+  function appear(){
+animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("costbutton3").style.opacity = progress;
+        }
+      });
+}
+
+} else {
+  e3 = document.getElementById('costbutton3');
+            e3.parentNode.removeChild(e3);
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost3").style.height = progress * 213 + "px";
+        }
+      });
+}
+
+}
+
+ costbool3 = !costbool3;
+
+
+
+}
 
 </script>
 
@@ -1876,7 +2422,7 @@ animate({
 	<img id="f7" src="pics/7.png">
 	<img id="f8" src="pics/8.png">
 	<img id="f9" src="pics/9.png">
-    <img id="f10" src="pics/10.png">
+  <img id="f10" src="pics/10.png">
 
 
 </div>
@@ -1916,7 +2462,7 @@ animate({
     <img id="f7" src="pics/17.png">
     <img id="f8" src="pics/18.png">
     <img id="f9" src="pics/19.png">
-    
+    <img id="f10" src="pics/20.png">
     
 
 </div>
@@ -1955,7 +2501,7 @@ animate({
     <img id="f7" src="pics/27.png">
     <img id="f8" src="pics/28.png">
     <img id="f9" src="pics/29.png">
-    
+    <img id="f10" src="pics/30.png">
     
 
 </div>
@@ -2004,12 +2550,12 @@ animate({
     <div id="knopka3"></div>
 </div>
 <div id="cost3">
-  <div id="leftcostdown3">
+  <div id="leftcostdown2">
   
 
 </div>
 
-<div id="costhyperdiv3"><a id="costhyper2" onClick="AddCost3()">Стоимость<img id="downarrow" src="down_arrow.png">
+<div id="costhyperdiv3"><a id="costhyper3" onClick="AddCost3()">Стоимость<img id="downarrow" src="down_arrow.png">
 </a></div>
 
 </div>
@@ -2033,22 +2579,26 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </div>
 <div class="kek">
     <div class="navbar-header1">
-      <div class="navbar-brand"><img id="bruh" src="bruh.svg"> Name_name <div>
+      <div class="navbar-brand"><img id="bruh" src="bruh.svg"> Painting Workshop <p id="bruh1">Мастерская живописи</p><div>
       
     </div>
     <div class="navbar-right">
-      <nav class="stroke">
+      <nav class="stroke1">
       <ul class="navbar-right" align="center">
-        <li class="active"><a class="special" href="#1">Главная</a></li>
-        <li><a class="special" href="#2">О нас</a></li>
-        <li><a class="special" href="#3">Услуги</a></li>
-        <li><a class="special" href="#4">Контакты</a></li>
+        <li class="active1"><img id="c20" src="(c).svg">2020</li>
+        <li id="social1"><p>Социальные сети<img class="palka1" src="palka.png"> 
+  <a id="end" href="https://telegram.org"><img class="socialimg1" src="tel.svg"></a>
+  <a id="end" href="https://www.whatsapp.com"><img class="socialimg1" src="wut.svg"></a>
+  <a id="end" href="https://www.instagram.com"><img class="socialimg1" src="insta.svg"></a>
+  <a id="end" href="www.facebook.com"><img class="socialimg1" src="facebook.svg"></a>
+  <a id="end" href="https://vk.com"><img class="socialimg1" src="vk.svg"></a>
+</p></li>
       </ul>
       
     </nav>
     </div>
 
-    <a class="phone" href="#"><img id="phone" src="phone.svg">+8801744430440</a>
+    <a class="phone" href="#">Тел.: +7 (929) 632-26-41</a>
 </div>
 </div>
 </div>
