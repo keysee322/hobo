@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+@font-face{
+  font-family: HelveticaNeueCyr;
+  src: url(HelveticaNeueCyr-Roman.otf);
+}
 html{
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none;   /* Chrome/Safari/Opera */
@@ -6,7 +10,7 @@ html{
   -moz-user-select: none;      /* Firefox */
   -ms-user-select: none;       /* Internet Explorer/Edge */
   user-select: none;           /* Non-prefixed version, currently */
-  font-family: "Noto Sans";
+  font-family: "HelveticaNeueCyr";
   font-size: 15px;
     -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
@@ -137,8 +141,8 @@ li {
   display: inline;
 }
 .socialimg1{
-  margin-right: -5px;
-  margin-bottom: -1px;
+  margin-right: 8px;
+  margin-top: -5px;
 }
 .phone {
   position: absolute;
@@ -945,13 +949,14 @@ h1.sixh{
 }
 .insideleft6{
   position: absolute;
-  width: 372px;
+  width: 383px;
   left: calc(50% - 610px);
   bottom: 176px;
   font-size: 15px;
 }
 #learnmore6{
   font-weight: bold;
+  margin-top: 10px;
 }
 
 .insideright6{
@@ -1621,7 +1626,7 @@ h1.sixh {
 font-weight: normal;
 font-size: 12px;
 line-height: 150%;
-width: 304px;
+width: 385px;
 bottom: 200px;
 left: calc(50% - 346px);
 margin-bottom: -65px;

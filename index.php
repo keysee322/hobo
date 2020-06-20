@@ -885,12 +885,18 @@ var k2=1;
 var m32=false;
 var h3 = -15;
 var kek33333 = 40;
+
     function AddItem2() {
+kek33333 = 106;
 
         var z2=k2;
         if (k2<=N2){
             
 if (j2==0){
+  document.getElementById("cost2").style.marginTop = 106 + "px";
+  if(document.getElementById('costbutton2')){
+  document.getElementById("costbutton2").style.marginTop = 106 + "px";
+}
             var x=document.createElement("a");
         x.setAttribute("href","#5");
         x.setAttribute("id","hide2");
@@ -1042,6 +1048,9 @@ if ((j2>0) && ((N2-k2) > 5)) {
         newbut.setAttribute("onClick","AddItem2()");
         document.getElementById("knopka2").appendChild(newbut);
 }else if (k2>N2){
+          document.getElementById("cost2").style.marginTop = 40 + "px";
+          var kek33333 = 40;
+          document.getElementById("costbutton2").style.marginTop = 40 + "px";
         var e2 = document.getElementById('showmore2');
         e2.parentNode.removeChild(e2);
 }
@@ -1050,10 +1059,11 @@ if (j2==1){
 el.parentNode.removeChild(el);
 }
 }
+alert(kek33333);
 }
 
 function DelItems2() {
-
+kek33333 = 40;
         animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -1699,12 +1709,12 @@ if (costbool == false){
   x.setAttribute("src","down_arrow.png");
   document.getElementById("costbutton").appendChild(x);
 
-  setTimeout(appear,1400);
+  setTimeout(appear,1200);
 
 
   function appear(){
 animate({
-        duration: 1500,
+        duration: 700,
         timing: quadEaseOut,
         draw: function(progress) {
           document.getElementById("costbutton").style.opacity = progress;
@@ -1949,12 +1959,12 @@ if (costbool1 == false){
   x.setAttribute("src","down_arrow.png");
   document.getElementById("costbutton1").appendChild(x);
 
-  setTimeout(appear,1400);
+  setTimeout(appear,1200);
 
 
   function appear(){
 animate({
-        duration: 1500,
+        duration: 700,
         timing: quadEaseOut,
         draw: function(progress) {
           document.getElementById("costbutton1").style.opacity = progress;
@@ -1964,6 +1974,7 @@ animate({
 } else {
   e3 = document.getElementById('costbutton1');
             e3.parentNode.removeChild(e3);
+            document.getElementById("cost1").style.height = 106 + "px";
   animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -1986,6 +1997,7 @@ animate({
 
 function AddCost2(){
 if (costcount2 == 0){
+  alert(kek33333);
   animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -2259,18 +2271,21 @@ if (costbool2 == false){
   x1 = document.createTextNode("Стоимость");
   document.getElementsByClassName("five")[0].appendChild(x);
   document.getElementById("costbutton2").appendChild(x1);
+  if (document.getElementById('showmore2'))
+   kek33333 = 104;
+ else kek33333 = 40;
   document.getElementById("costbutton2").style.marginTop = kek33333 + "px";
     x=document.createElement("img");
   x.setAttribute("id","downarrow");
   x.setAttribute("src","down_arrow.png");
   document.getElementById("costbutton2").appendChild(x);
 
-  setTimeout(appear,1400);
+  setTimeout(appear,1200);
 
 
   function appear(){
 animate({
-        duration: 1500,
+        duration: 700,
         timing: quadEaseOut,
         draw: function(progress) {
           document.getElementById("costbutton2").style.opacity = progress;
@@ -2281,6 +2296,7 @@ animate({
 } else {
   e3 = document.getElementById('costbutton2');
             e3.parentNode.removeChild(e3);
+
   animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -2361,18 +2377,18 @@ if (costbool3 == false){
   x1 = document.createTextNode("Стоимость");
   document.getElementsByClassName("six1")[0].appendChild(x);
   document.getElementById("costbutton3").appendChild(x1);
-  document.getElementById("costbutton3").style.marginTop = kek33333 + "px";
+  document.getElementById("costbutton3").style.marginTop = kek44444 + "px";
     x=document.createElement("img");
   x.setAttribute("id","downarrow");
   x.setAttribute("src","down_arrow.png");
   document.getElementById("costbutton3").appendChild(x);
 
-  setTimeout(appear,1400);
+  setTimeout(appear,1200);
 
 
   function appear(){
 animate({
-        duration: 1500,
+        duration: 700,
         timing: quadEaseOut,
         draw: function(progress) {
           document.getElementById("costbutton3").style.opacity = progress;
@@ -2563,9 +2579,13 @@ animate({
 <section id="6"></section>
  <div class="six">
  	<div class="insideleft6">
-	<h1 class="sixh">Lorem ipsum dolor sit amet</h1>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-<p id="learnmore6">От 2000 руб.</p>
+  <h1 class="sixh">Контакты</h1>
+Предоставляем свои услуги в Москве и Подмосковье. По всем вопросам Вы можете связаться с нами по телефону 8 (929) 632-26-4 или 8 (925) 310-51-15 или написать нам в социальных сетях
+<p id="learnmore6">  <a id="end" href="https://telegram.org"><img class="socialimg1" src="tel.svg"></a>
+  <a id="end" href="https://www.whatsapp.com"><img class="socialimg1" src="wut.svg"></a>
+  <a id="end" href="https://www.instagram.com"><img class="socialimg1" src="insta.svg"></a>
+  <a id="end" href="www.facebook.com"><img class="socialimg1" src="facebook.svg"></a>
+  <a id="end" href="https://vk.com"><img class="socialimg1" src="vk.svg"></a></p>
 </div>
 <div class="insideright6">	
     <form action="mail.php" method="POST">
@@ -2583,16 +2603,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       
     </div>
     <div class="navbar-right">
-      <nav class="stroke1">
+      <nav class="stroke">
       <ul class="navbar-right" align="center">
-        <li class="active1"><img id="c20" src="(c).svg">2020</li>
-        <li id="social1"><p>Социальные сети<img class="palka1" src="palka.png"> 
-  <a id="end" href="https://telegram.org"><img class="socialimg1" src="tel.svg"></a>
-  <a id="end" href="https://www.whatsapp.com"><img class="socialimg1" src="wut.svg"></a>
-  <a id="end" href="https://www.instagram.com"><img class="socialimg1" src="insta.svg"></a>
-  <a id="end" href="www.facebook.com"><img class="socialimg1" src="facebook.svg"></a>
-  <a id="end" href="https://vk.com"><img class="socialimg1" src="vk.svg"></a>
-</p></li>
+                <li class="active"><a class="special" href="#1">Главная</a></li>
+        <li><a class="special" href="#2">О нас</a></li>
+        <li><a class="special" href="#3">Портфолио</a></li>
       </ul>
       
     </nav>
