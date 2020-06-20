@@ -73,7 +73,7 @@
 <p id="learnmore"><a id="learnmore" href="#2"> <section id="2"></section>Узнать больше <img class="strelka" src="strelka.png"></a></p>
 </div>
 <div class="insideright">
-	<img id="albert" src="albert.png">
+	<img id="albert" src="alber.png">
 	<img class="ramka" src="ramka.png">
 </div>
  </div>
@@ -421,7 +421,7 @@ function DelItems() {
            document.getElementById("costbutton").style.marginTop = 40 + "px"; 
           document.getElementById("cost").style.marginTop = 40 + "px";
         animate({
-        duration: 1500,
+        duration: 2500,
         timing: quadEaseOut,
         draw: function(progress) {
           document.getElementById("items").style.height = -progress * (h1) + h1 + "px";
@@ -753,7 +753,7 @@ function DelItems1() {
           document.getElementById("cost1").style.marginTop = 40 + "px";
         
         animate({
-        duration: 1500,
+        duration: 2500,
         timing: quadEaseOut,
         draw: function(progress) {
           document.getElementById("items1").style.height = -progress * (h2) + h2 + "px";
@@ -1065,7 +1065,7 @@ alert(kek33333);
 function DelItems2() {
 kek33333 = 40;
         animate({
-        duration: 1500,
+        duration: 2500,
         timing: quadEaseOut,
         draw: function(progress) {
           document.getElementById("items2").style.height = -progress * (h3) + h3 + "px";
@@ -1386,7 +1386,7 @@ function DelItems3() {
            document.getElementById("costbutton3").style.marginTop = 40 + "px"; 
           document.getElementById("cost3").style.marginTop = 40 + "px";
         animate({
-        duration: 1500,
+        duration: 2500,
         timing: quadEaseOut,
         draw: function(progress) {
           document.getElementById("items3").style.height = -progress * (h4) + h4 + "px";
