@@ -391,7 +391,7 @@ width: 1130px;
 }
 #f5:hover {
   margin-top: -7.5px;
-  left: calc(50% - 16.5%); 
+  margin-left: -4px;
   height: 560px;
   width: 33.1%;
   z-index: 3;
@@ -1356,7 +1356,7 @@ li {
 }
 h1 {
     font-size: 24px;
-    width: 241px;
+    width: 100%;
 }
 .insideleft {
     position: absolute;
@@ -1432,8 +1432,8 @@ h1 {
     margin-left: 10px;
 }
 .socialimg1 {
-    margin-right: -12px;
-    margin-bottom: -1px;
+    margin-right: 8px;
+    margin-top: -5px;
 }
 .second {
     height: 350px;
@@ -1453,7 +1453,7 @@ h1 {
     text-align: right;
     width: 330px;
     position: absolute;
-    right: calc(50% - 278px);
+    right: calc(50% - 338px);
     font-size: 12px;
     line-height: 148.18%;
     font-style: normal;
@@ -1488,9 +1488,9 @@ a {
   transition: linear 0.2s;
 }
 #f1:hover {
-    margin-top: -7.475px;
-  height: 280px;
-  width: 16.3%;
+    margin-top: -5.475px;
+  height: 188px;
+  width: calc(20%);
   margin-left: calc(-5.35px); 
 
 }
@@ -1502,9 +1502,9 @@ a {
    transition: linear 0.2s;
 }
 #f2:hover {
-    margin-top: -7.475px;
-  height: 280px;
-  width: 16.3%;
+    margin-top: -5.475px;
+  height: 188px;
+  width: calc(20%);
   margin-left: calc(-5.35px); 
 
 }
@@ -1512,65 +1512,67 @@ a {
   position: absolute;
   height: 178px;
   width: calc(20% - 10px);
-  top: 188px;
-  left: 0%;
+  top: 0px;
+  left: 40%;
   transition: linear 0.2s;
 }
 #f3:hover {
-  margin-bottom: -7.475px;
-  height: 280px;
-  width: 16.3%;
+    margin-top: -5.475px;
+  height: 188px;
+  width: calc(20%);
   margin-left: calc(-5.35px); 
 
 }
 #f4{
   position: absolute;
-  left: calc(20%);
-  top: 188px;
+  left: calc(60%);
+  top: 0px;
   height: 178px;
   width: calc(20% - 10px);
   transition: linear 0.2s;
 }
 #f4:hover {
-    margin-top: -7.475px;
-  height: 178px;
-  width: calc(20% - 10px);
+    margin-top: -5.475px;
+  height: 188px;
+  width: calc(20%);
   margin-left: calc(-5.35px); 
 
 }
 #f5{
   position: absolute;
-  left: calc(40%);
+  left: calc(80%);
   height: 178px;
   width: calc(20% - 10px);
   transition: linear 0.2s;
 }
 #f5:hover {
-  margin-top: -7.5px;
-  left: calc(50% - 16.5%); 
-  height: 178px;
-  width: 33.1%;
-  z-index: 3;
+    margin-top: -5.475px;
+  height: 188px;
+  width: calc(20%);
+  margin-left: calc(-5.35px); 
+
 }
 
 #f6{
   position: absolute;
   height: 178px;
   width: calc(20% - 10px);
-    left: calc(60%);
+    left: calc(0%);
+    top: 188px;
   transition: linear 0.2s;
 }
 #f6:hover, #f7:hover {
-    margin-top: -7.475px;
-  height: 280px;
-  width: 16.3%;
-  margin-right: calc(-5.35px); 
+    margin-top: -5.475px;
+  height: 188px;
+  width: calc(20%);
+  margin-left: calc(-5.35px); 
 
 }
 #f7{
   position: absolute;;
-    left: calc(80%);
+    left: calc(20%);
   height: 178px;
+  top: 188px;
   width: calc(20% - 10px);
   transition: linear 0.2s;
 }
@@ -1580,7 +1582,7 @@ a {
   height: 178px;
   width: calc(20% - 10px);
   top: 188px;
-    left: calc(60%);
+    left: calc(40%);
   transition: linear 0.2s;
 }
 #f9{
@@ -1588,19 +1590,20 @@ a {
    height: 178px;
   width: calc(20% - 10px);
   top: 188px;
-    left: calc(80%);
+    left: calc(60%);
   transition: linear 0.2s;
 }
 #f8:hover, #f9:hover {
-    margin-top: -7.475px;
-  height: 280px;
-  width: 16.3%;
-  margin-right: calc(-5.35px); 
+    margin-top: -5.475px;
+  height: 188px;
+  width: calc(20%);
+  margin-left: calc(-5.35px); 
+
 
 }
 #f10{
   position: absolute;
-  left: calc(40%);
+  left: calc(80%);
   height: 178px;
   width: calc(20% - 10px);
   transition: linear 0.2s;
@@ -1608,11 +1611,11 @@ a {
   opacity: 1;
 }
 #f10:hover {
-  margin-top: -7.5px;
-  left: calc(50% - 16.5%); 
-  height: 178px;
-  width: 33.1%;
-  z-index: 3;
+    margin-top: -5.475px;
+  height: 188px;
+  width: calc(20%);
+  margin-left: calc(-5.35px); 
+
 }
 h1.sixh {
     font-size: 18px;
@@ -1623,10 +1626,10 @@ h1.sixh {
 font-weight: normal;
 font-size: 12px;
 line-height: 150%;
-width: 385px;
+width: 315px;
 bottom: 200px;
 left: calc(50% - 346px);
-margin-bottom: -65px;
+margin-bottom: -45px;
 }
 .input {
     padding-left: 15px;
@@ -1649,7 +1652,8 @@ height: 40px;
 }
 #learnmore6 {
     font-weight: bold;
-    margin-top: 22px;
+    margin-top: 10px;
+
 }
 .kek {
     position: absolute;
@@ -1769,7 +1773,7 @@ height: 40px;
     left: calc(50% - 347.5px);
 
     }
-  #showmore{
+  #showmore, #showmore1, #showmore2, #showmore3{
     width: 685px;
         left: calc(50% - 347.5px);
         font-size: 12px;
