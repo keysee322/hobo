@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>irina</title>
-	 <link rel="stylesheet" type="text/css" href="irina.css">
+	 <link rel="stylesheet" type="text/css" href="Irina.css">
        <script src="animate.js"></script>
        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -63,7 +63,7 @@
     </nav>
     </div>
 
-    <a class="phone" href="#">Тел.: +7 (929) 632-26-41</a>
+    <a class="phone">Тел.: +7 (929) 632-26-41</a>
 </div>
 </div>
 <div class="left1">
@@ -2613,7 +2613,7 @@ animate({
     </nav>
     </div>
 
-    <a class="phone" href="#">Тел.: +7 (929) 632-26-41</a>
+    <a class="phone">Тел.: +7 (929) 632-26-41</a>
 </div>
 </div>
 </div>

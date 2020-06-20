@@ -308,7 +308,7 @@ font-weight: bold;
   text-align: right;
 width: 1130px;
     position: absolute;
-    right: calc(50% - 565px);
+    right: calc(-625px + 50%);
   font-size: 24px;
   line-height: 148.18%;
   font-style: normal;
@@ -319,9 +319,8 @@ width: 1130px;
   margin-left: 10px;
 }
 .strelka2{
-  position: absolute;
-  top: 18px;
-  left: calc(50% + 573px);
+    margin-bottom: -10px;
+    margin-left: 5px;
 }
 
 #f1{
@@ -712,7 +711,7 @@ left: calc(15.65% + 15px);
 #show, #show1, #show2, #show3{
   float: right;
   left: calc(50% - 400px);
-  width: 150px;
+  width: 300px;
   cursor: pointer;
   font-size: 15px;
 }
@@ -1470,9 +1469,7 @@ a {
   font-size: 12px;
 }
 .strelka2 {
-    position: absolute;
-    top: 10px;
-    left: calc(50% + 173px);
+    margin-bottom: -10px;
 }
 .main31, .main21, .main11, .main01 {
     position: relative;
