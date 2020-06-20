@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>irina</title>
-	 <link rel="stylesheet" type="text/css" href="Irina.css">
+	 <link rel="stylesheet" type="text/css" href="irina.css">
        <script src="animate.js"></script>
        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
