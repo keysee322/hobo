@@ -594,15 +594,19 @@ var j1=0;
 var k1=1;
 var m31=false;
 var h2 = -15;
-var kek22222 = 40;
+
     function AddItem1() {
-      kek22222 = 106;
+
         var z1=k1;
         if (k1<=N1){
-                        if ((costbool1 == true) && (costcount1 > 0))
-           document.getElementById("costbutton1").style.marginTop = 106 + "px";
+
 if (j1==0){
-  document.getElementById("cost1").style.marginTop = 106 + "px";
+  document.getElementById('cost1').style.marginTop = 100 + 'px';
+
+if (costcount1 > 0 && costbool1 == true)
+  document.getElementById('costbutton1').style.marginTop = 100 + 'px';
+
+
             var x=document.createElement("a");
         x.setAttribute("href","#4");
         x.setAttribute("id","hide1");
@@ -655,7 +659,6 @@ if ((j1>0) && ((N1-k1) > 5)) {
      if(costbool1 == true && costcount1 > 0)
      document.getElementById("costbutton1").style.marginTop = 40 + "px";
      document.getElementById("cost1").style.marginTop = 40 + "px";
-     kek22222 = 40;
    }
 } else if ((j1>0) && ((N1-k1) <= 5)) {
                        
@@ -669,7 +672,6 @@ if ((j1>0) && ((N1-k1) > 5)) {
      if(costbool1 == true && costcount1 > 0)
      document.getElementById("costbutton1").style.marginTop = 40 + "px";
      document.getElementById("cost1").style.marginTop = 40 + "px";
-     kek22222 = 40;
    
 }
 
@@ -677,16 +679,26 @@ if ((j1>0) && ((N1-k1) > 5)) {
 
 
             if (m31==true){
+          var lastheighsmall1;
+          var countheigh1;
+          if (document.documentElement.clientWidth > 1300){
+            lastheighsmall1 = 272.5;
+            countheigh1 = 5;
+          }
+          else {
+            lastheighsmall1 = 183;
+            countheigh1 = 4
+          }
                     var newimg;
         var newdiv=document.createElement("div");
         newdiv.setAttribute("class","main2");
         document.getElementById("items1").appendChild(newdiv);
-        if ((N1-k1) <= 5){
+        if ((N1-k1) <= countheigh1){
               animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          newdiv.style.height = progress * 272.5 + 'px';
+          newdiv.style.height = progress * lastheighsmall1 + 'px';
         }
       });
           } else {
@@ -749,16 +761,26 @@ if (document.documentElement.clientWidth > 1300){
         
 
         if (m31==false){
+          var lastheighsmall1;
+          var countheigh1;
+          if (document.documentElement.clientWidth > 1300){
+            lastheighsmall1 = 272.5;
+            countheigh1 = 6;
+          }
+          else {
+            lastheighsmall1 = 183;
+            countheigh1 = 4
+          }
                     var newimg;
         var newdiv=document.createElement("div");
         newdiv.setAttribute("class","main2");
         document.getElementById("items1").appendChild(newdiv);
-         if ((N1-z1) <= 6){
+         if ((N1-z1) <= countheigh1){
               animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          newdiv.style.height = progress * 272.5 + 'px';
+          newdiv.style.height = progress * lastheighsmall1 + 'px';
         }
       });
           } else {
@@ -831,6 +853,9 @@ if (document.documentElement.clientWidth > 1300){
 }else if (k1>N1){
         var e2 = document.getElementById('showmore1');
         e2.parentNode.removeChild(e2);
+          document.getElementById("cost1").style.marginTop = 40 + "px";
+           if ($('#costbutton1').length == 1)
+            document.getElementById("costbutton1").style.marginTop = 40 + "px";
 }
 if (j1==1){
     var el = document.getElementById('show1');
@@ -840,7 +865,6 @@ el.parentNode.removeChild(el);
 }
 
 function DelItems1() {
-  kek22222 = 40;
             if ((costbool1 == true) && (costcount1 > 0))
            document.getElementById("costbutton1").style.marginTop = 40 + "px"; 
           document.getElementById("cost1").style.marginTop = 40 + "px";
@@ -977,19 +1001,15 @@ var j2=0;
 var k2=1;
 var m32=false;
 var h3 = -15;
-var kek33333 = 40;
 
     function AddItem2() {
-kek33333 = 106;
 
         var z2=k2;
         if (k2<=N2){
-            
+                        if ((costbool2 == true) && (costcount2 > 0))
+           document.getElementById("costbutton2").style.marginTop = 106 + "px";
 if (j2==0){
   document.getElementById("cost2").style.marginTop = 106 + "px";
-  if(document.getElementById('costbutton2')){
-  document.getElementById("costbutton2").style.marginTop = 106 + "px";
-}
             var x=document.createElement("a");
         x.setAttribute("href","#5");
         x.setAttribute("id","hide2");
@@ -1007,25 +1027,40 @@ if (j2==0){
           document.getElementById("hide2").style.opacity = progress;
         }
       });}
+var hideheigh2= 0;
+if (document.documentElement.clientWidth >= 1300)
+hideheigh2= 1121;
+if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
+hideheigh2= 757;
                     setTimeout(kek2 ,200);
      function kek2(){animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("hide2").style.height = progress * 1121 + 'px';
+          document.getElementById("hide2").style.height = progress * hideheigh2 + 'px';
         }
       });}
 } 
-h3+= 560;
+if (document.documentElement.clientWidth >= 1300)
+h3+= 565;
+hideheigh2= 560;
+if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
+  hideheigh2= 376;
+h3+= 386;
 if ((j2>0) && ((N2-k2) > 5)) {
                        
      animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("hide2").style.height = progress * 576 + h3 + 'px';
+          document.getElementById("hide2").style.height = progress * hideheigh2 + h3 + 'px';
         }
       });
+     if ((N2-k2) < 9){
+     if(costbool2 == true && costcount2 > 0)
+     document.getElementById("costbutton2").style.marginTop = 40 + "px";
+     document.getElementById("cost2").style.marginTop = 40 + "px";
+   }
 } else if ((j2>0) && ((N2-k2) <= 5)) {
                        
      animate({
@@ -1035,32 +1070,57 @@ if ((j2>0) && ((N2-k2) > 5)) {
           document.getElementById("hide2").style.height = progress * 295 + h3 + 'px';
         }
       });
+     if(costbool2 == true && costcount2 > 0)
+     document.getElementById("costbutton2").style.marginTop = 40 + "px";
+     document.getElementById("cost2").style.marginTop = 40 + "px";
+
 }
 
 
 
 
             if (m32==true){
+              var lastheighsmall2;
+          var countheigh2;
+          if (document.documentElement.clientWidth >= 1300){
+            lastheighsmall2 = 272.5;
+            countheigh2 = 5;
+          }
+          else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768){
+            lastheighsmall2 = 183;
+            countheigh2 = 4
+          }
                     var newimg;
         var newdiv=document.createElement("div");
         newdiv.setAttribute("class","main1");
         document.getElementById("items2").appendChild(newdiv);
-        if ((N2-k2) <= 5){
+        if ((N2-k2) <= countheigh2){
               animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          newdiv.style.height = progress * 272.5 + 'px';
+          newdiv.style.height = progress * lastheighsmall2 + 'px';
         }
       });
           } else {
+            if (document.documentElement.clientWidth >= 1300){
           animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
           newdiv.style.height = progress * 545 + 'px';
         }
-      });}
+      });
+        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768){
+          animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 366 + 'px';
+        }
+      });
+        }
+      }
               setTimeout(kek ,200);
                     function kek(){animate({
         duration: 5000,
@@ -1069,7 +1129,7 @@ if ((j2>0) && ((N2-k2) > 5)) {
           newdiv.style.opacity = progress;
         }
       });}
-
+if (document.documentElement.clientWidth > 1300){
         for (var i = z2; i <= 9+(z2-1); i++) {
         if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
@@ -1083,30 +1143,66 @@ if ((j2>0) && ((N2-k2) > 5)) {
     }
         document.getElementsByClassName("main1")[j2].appendChild(newimg);
     }
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
+              for (var i = z2; i <= 10+(z2-1); i++) {
+        if (k2<=N2) {k2++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic2/"+i+".png");
+                if ((z2-1)+10<=N2){
+        newimg.setAttribute("id","f"+(i-z2+1));
+    }
+        else {
+      newimg.setAttribute("id","f"+(i-z2+1));
+       document.getElementsByClassName("main1")[j2].style.height = "265px";
+    }
+        document.getElementsByClassName("main1")[j2].appendChild(newimg);
+}
+  }
 }
         
 
         if (m32==false){
+          var lastheighsmall2;
+          var countheigh2;
+          if (document.documentElement.clientWidth > 1300){
+            lastheighsmall2 = 272.5;
+            countheigh2 = 6;
+          }
+          else {
+            lastheighsmall2 = 183;
+            countheigh2 = 4
+          }
                     var newimg;
         var newdiv=document.createElement("div");
         newdiv.setAttribute("class","main1");
         document.getElementById("items2").appendChild(newdiv);
-         if ((N2-z2) <= 6){
+         if ((N2-z2) <= countheigh2){
               animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          newdiv.style.height = progress * 272.5 + 'px';
+          newdiv.style.height = progress * lastheighsmall2 + 'px';
         }
       });
           } else {
+            if (document.documentElement.clientWidth > 1300){
           animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
           newdiv.style.height = progress * 545 + 'px';
         }
-      });}
+      });
+        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+          animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 366 + 'px';
+        }
+      });
+        }
+      }
               setTimeout(kek ,200);
                     function kek(){animate({
         duration: 5000,
@@ -1115,7 +1211,7 @@ if ((j2>0) && ((N2-k2) > 5)) {
           newdiv.style.opacity = progress;
         }
       });}
-
+if (document.documentElement.clientWidth > 1300){
         for (var i = z2; i <= 6+(z2-1); i++) {
         if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
@@ -1129,7 +1225,22 @@ if ((j2>0) && ((N2-k2) > 5)) {
     }
         document.getElementsByClassName("main1")[j2].appendChild(newimg);
 }
-        }
+        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+          for (var i = z2; i <= 10+(z2-1); i++) {
+        if (k2<=N2) {k2++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic2/"+i+".png");
+                if ((z2-1)+10<=N2){
+        newimg.setAttribute("id","f"+(i-z2+1));
+    }
+        else {
+      newimg.setAttribute("id","f"+(i-z2+1));
+       document.getElementsByClassName("main1")[j2].style.height = "265px";
+    }
+        document.getElementsByClassName("main1")[j2].appendChild(newimg);
+}
+}
+      }
         m32=!(m32);
         j2+=1;
 
@@ -1141,9 +1252,6 @@ if ((j2>0) && ((N2-k2) > 5)) {
         newbut.setAttribute("onClick","AddItem2()");
         document.getElementById("knopka2").appendChild(newbut);
 }else if (k2>N2){
-          document.getElementById("cost2").style.marginTop = 40 + "px";
-          var kek33333 = 40;
-          document.getElementById("costbutton2").style.marginTop = 40 + "px";
         var e2 = document.getElementById('showmore2');
         e2.parentNode.removeChild(e2);
 }
@@ -1292,13 +1400,12 @@ var kek44444 = 40;
 
 
     function AddItem3() {
-kek44444 = 106;
+
         var z3=k3;
         if (k3<=N3){
             if ((costbool3 == true) && (costcount3 > 0))
            document.getElementById("costbutton3").style.marginTop = 106 + "px";
 if (j3==0){
-
   document.getElementById("cost3").style.marginTop = 106 + "px";
             var x=document.createElement("a");
         x.setAttribute("href","#61");
@@ -1317,30 +1424,41 @@ if (j3==0){
           document.getElementById("hide3").style.opacity = progress;
         }
       });}
+var hideheigh3= 0;
+if (document.documentElement.clientWidth >= 1300)
+hideheigh3= 1121;
+if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
+hideheigh3= 757;
                     setTimeout(kek2 ,200);
      function kek2(){animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("hide3").style.height = progress * 1121 + 'px';
+          document.getElementById("hide3").style.height = progress * hideheigh3 + 'px';
         }
       });}
 } 
-h4+= 560;
+if (document.documentElement.clientWidth >= 1300)
+h4+= 565;
+if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
+h4+= 386;
+if (document.documentElement.clientWidth >= 1300)
+hideheigh3= 560;
+if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
+hideheigh3= 376;
 if ((j3>0) && ((N3-k3) > 5)) {
                        
      animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("hide3").style.height = progress * 576 + h4 + 'px';
+          document.getElementById("hide3").style.height = progress * hideheigh3 + h4 + 'px';
         }
       });
      if ((N3-k3) < 9){
      if(costbool3 == true && costcount3 > 0)
      document.getElementById("costbutton3").style.marginTop = 40 + "px";
      document.getElementById("cost3").style.marginTop = 40 + "px";
-     kek44444 = 40;
    }
 } else if ((j3>0) && ((N3-k3) <= 5)) {
                        
@@ -1354,7 +1472,6 @@ if ((j3>0) && ((N3-k3) > 5)) {
      if(costbool3 == true && costcount3 > 0)
      document.getElementById("costbutton3").style.marginTop = 40 + "px";
      document.getElementById("cost3").style.marginTop = 40 + "px";
-     kek44444 = 40;
    
 }
 
@@ -1362,26 +1479,47 @@ if ((j3>0) && ((N3-k3) > 5)) {
 
 
           if (m33==true){
+          var lastheighsmall3;
+          var countheigh3;
+          if (document.documentElement.clientWidth >= 1300){
+            lastheighsmall3 = 272.5;
+            countheigh3 = 5;
+          }
+          else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768){
+            lastheighsmall3 = 183;
+            countheigh3 = 4
+          }
                   var newimg;
         var newdiv=document.createElement("div");
         newdiv.setAttribute("class","main0");
         document.getElementById("items3").appendChild(newdiv);
-        if ((N3-k3) <= 5){
+        if ((N3-k3) <= countheigh3){
               animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          newdiv.style.height = progress * 272.5 + 'px';
+          newdiv.style.height = progress * lastheighsmall3 + 'px';
         }
       });
           } else {
+            if (document.documentElement.clientWidth >= 1300){
           animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
           newdiv.style.height = progress * 545 + 'px';
         }
-      });}
+      });
+        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768){
+          animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 366 + 'px';
+        }
+      });
+        }
+      }
               setTimeout(kek ,200);
                     function kek(){animate({
         duration: 5000,
@@ -1391,6 +1529,7 @@ if ((j3>0) && ((N3-k3) > 5)) {
         }
       });}
 
+if (document.documentElement.clientWidth > 1300){
         for (var i = z3; i <= 9+(z3-1); i++) {
         if (k3<=N3) {k3++;} else {break;}
         newimg=document.createElement("img");
@@ -1400,24 +1539,51 @@ if ((j3>0) && ((N3-k3) > 5)) {
         newimg.setAttribute("id","f"+(i-z3+1));
     }
     else {
-      newimg.setAttribute("id","d"+(i-z3+1));
+        newimg.setAttribute("id","d"+(i-z3+1));
     }
         document.getElementsByClassName("main0")[j3].appendChild(newimg);
     }
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
+              for (var i = z3; i <= 10+(z3-1); i++) {
+        if (k3<=N3) {k3++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic3/"+i+".png");
+                if ((z3-1)+10<=N3){
+        newimg.setAttribute("id","f"+(i-z3+1));
+    }
+        else {
+      newimg.setAttribute("id","f"+(i-z3+1));
+       document.getElementsByClassName("main0")[j3].style.height = "265px";
+    }
+        document.getElementsByClassName("main0")[j3].appendChild(newimg);
+}
+  }
 }
         
 
         if (m33==false){
+                    var lastheighsmall3;
+          var countheigh3;
+          if (document.documentElement.clientWidth > 1300){
+            lastheighsmall3 = 272.5;
+            lastheighlarge3 = 545;
+            countheigh3 = 6;
+          }
+          else {
+            lastheighsmall3 = 183;
+            lastheighlarge3 = 366;
+            countheigh3 = 4
+          }
                   var newimg;
         var newdiv=document.createElement("div");
         newdiv.setAttribute("class","main0");
         document.getElementById("items3").appendChild(newdiv);
-         if ((N3-z3) <= 6){
+         if ((N3-z3) <= countheigh3){
               animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          newdiv.style.height = progress * 272.5 + 'px';
+          newdiv.style.height = progress * lastheighsmall3 + 'px';
         }
       });
           } else {
@@ -1425,7 +1591,7 @@ if ((j3>0) && ((N3-k3) > 5)) {
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          newdiv.style.height = progress * 545 + 'px';
+          newdiv.style.height = progress * lastheighlarge3 + 'px';
         }
       });}
               setTimeout(kek ,200);
@@ -1437,6 +1603,7 @@ if ((j3>0) && ((N3-k3) > 5)) {
         }
       });}
 
+ if (document.documentElement.clientWidth > 1300){
         for (var i = z3; i <= 6+(z3-1); i++) {
         if (k3<=N3) {k3++;} else {break;}
         newimg=document.createElement("img");
@@ -1445,12 +1612,27 @@ if ((j3>0) && ((N3-k3) > 5)) {
         newimg.setAttribute("id","f1"+(i-z3+1));
     }
         else {
-      newimg.setAttribute("id","d1"+(i-z3+1));
+        newimg.setAttribute("id","d1"+(i-z3+1));
        document.getElementsByClassName("main0")[j3].style.height = "265px";
     }
         document.getElementsByClassName("main0")[j3].appendChild(newimg);
 }
-        }
+        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+          for (var i = z3; i <= 10+(z3-1); i++) {
+        if (k3<=N3) {k3++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic3/"+i+".png");
+                if ((z3-1)+10<=N3){
+        newimg.setAttribute("id","f"+(i-z3+1));
+    }
+        else {
+      newimg.setAttribute("id","f"+(i-z3+1));
+       document.getElementsByClassName("main0")[j3].style.height = "265px";
+    }
+        document.getElementsByClassName("main0")[j3].appendChild(newimg);
+}
+}
+      }
         m33=!(m33);
         j3+=1;
 
@@ -1853,6 +2035,7 @@ var costcount3 = 0;
 
 function AddCost1(){
 if (costcount1 == 0){
+  if (document.documentElement.clientWidth >= 1300) {
   animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -1860,6 +2043,15 @@ if (costcount1 == 0){
           document.getElementById("cost1").style.height = progress * 590 + "px";
         }
       });
+  } else if (document.documentElement.clientWidth >= 768 && document.documentElement.clientWidth < 1300) {
+      animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost1").style.height = progress * 480 + "px";
+        }
+      });
+  }
 
     document.getElementById("leftcostdown").style.paddingTop = 55 + "px";
 
@@ -1878,7 +2070,11 @@ if (costcount1 == 0){
   x1 = document.createTextNode("трафаретная роспись");
   document.getElementById("leftcostdown").appendChild(x);
    document.getElementsByClassName("secondcost11")[0].appendChild(x1);
+   if (document.documentElement.clientWidth >= 1300)
    document.getElementsByClassName("secondcost11")[0].style.marginTop = 65 + "px";
+if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
+     document.getElementsByClassName("secondcost11")[0].style.marginTop = 51 + "px";
+
 
       x=document.createElement("div");
   x.setAttribute("class","secondcost11");
@@ -1914,6 +2110,8 @@ x=document.createElement("div");
   document.getElementById("leftcostdown").appendChild(x);
    document.getElementsByClassName("secondcost1")[1].appendChild(x1);
    document.getElementsByClassName("secondcost1")[1].style.marginTop = 35 + "px";
+   if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
+   document.getElementsByClassName("secondcost1")[1].style.marginLeft = -23 + "px";
 
 
 
@@ -1924,6 +2122,8 @@ var x=document.createElement("div");
   x1 = document.createTextNode("Средняя");
   document.getElementById("leftcostdown").appendChild(x);
    document.getElementById("secondcost2").appendChild(x1);
+   if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
+   document.getElementById("secondcost2").style.textAlign = "center";
 
    x=document.createElement("div");
   x.setAttribute("class","secondcost12");
@@ -2009,10 +2209,17 @@ x=document.createElement("div");
   x1 = document.createTextNode("от 5 000 руб.");
   document.getElementById("secondcost3").appendChild(x);
    document.getElementById("secondcost31").appendChild(x1);
-   document.getElementById("secondcost31").style.marginTop = 95 + "px";
+      if (document.documentElement.clientWidth >= 1300)
+   document.getElementById("secondcost31").style.marginTop = 94 + "px";
+if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
+        document.getElementById("secondcost31").style.marginTop = 80 + "px";
 
+
+
+      if (document.documentElement.clientWidth >= 1300)
    document.getElementById("costhyperdiv1").style.marginTop = 515 + "px";
-
+if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
+   document.getElementById("costhyperdiv1").style.marginTop = 415 + "px";
 
 document.getElementById("costhyper1").innerHTML = "Свернуть";
   x=document.createElement("img");
@@ -2029,6 +2236,7 @@ document.getElementById("costhyper1").innerHTML = "Свернуть";
   costcount1++;
 } else {                                      // открывается скобка на 1624 строке
 if (costbool1 == false){
+  if (document.documentElement.clientWidth >= 1300) {
   animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -2036,6 +2244,15 @@ if (costbool1 == false){
           document.getElementById("cost1").style.height = 590 + -progress * 590 + "px";
         }
       });
+  } else if (document.documentElement.clientWidth >= 768 && document.documentElement.clientWidth < 1300) {
+      animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost1").style.height = 480 + -progress * 480 + "px";
+        }
+      });
+  }
   x=document.createElement("button");
   x.setAttribute("id","costbutton1");
 
@@ -2043,11 +2260,15 @@ if (costbool1 == false){
   x1 = document.createTextNode("Стоимость");
   document.getElementsByClassName("four")[0].appendChild(x);
   document.getElementById("costbutton1").appendChild(x1);
-  document.getElementById("costbutton1").style.marginTop = kek22222 + "px";
+
     x=document.createElement("img");
   x.setAttribute("id","downarrow");
   x.setAttribute("src","down_arrow.png");
   document.getElementById("costbutton1").appendChild(x);
+ if ($('#showmore1').length == 1)
+    document.getElementById("costbutton1").style.marginTop = 100 + 'px';
+  else 
+        document.getElementById("costbutton1").style.marginTop = 40 + 'px';
 
   setTimeout(appear,1200);
 
@@ -2065,6 +2286,7 @@ animate({
   e3 = document.getElementById('costbutton1');
             e3.parentNode.removeChild(e3);
             document.getElementById("cost1").style.height = 106 + "px";
+  if (document.documentElement.clientWidth >= 1300) {
   animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -2072,6 +2294,15 @@ animate({
           document.getElementById("cost1").style.height = progress * 590 + "px";
         }
       });
+  } else if (document.documentElement.clientWidth >= 768 && document.documentElement.clientWidth < 1300) {
+      animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost1").style.height = progress * 480 + "px";
+        }
+      });
+  }
 }
 
 }
@@ -2087,7 +2318,7 @@ animate({
 
 function AddCost2(){
 if (costcount2 == 0){
-
+if (document.documentElement.clientWidth >= 1300){
   animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -2097,7 +2328,17 @@ if (costcount2 == 0){
       });
 
     document.getElementById("leftcostdown1").style.paddingTop = 55 + "px";
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768){
+    animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost2").style.height = progress * 526 + "px";
+        }
+      });
 
+    document.getElementById("leftcostdown1").style.paddingTop = 35 + "px";
+}
 
 
   document.getElementById("cost2").style.background = "#D8D8D8";
@@ -2328,8 +2569,13 @@ x=document.createElement("div");
    document.getElementsByClassName("thirdcost14")[2].style.marginTop = 31 + "px";
 
 
-
+if (document.documentElement.clientWidth >= 1300){
    document.getElementById("costhyperdiv2").style.marginTop = 650 + "px";
+
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768){
+   document.getElementById("costhyperdiv2").style.marginTop = 476 + "px";
+
+}
 
 
 document.getElementById("costhyper2").innerHTML = "Свернуть";
@@ -2347,6 +2593,7 @@ document.getElementById("costhyper2").innerHTML = "Свернуть";
   costcount2++;
 } else {                                    // открывается скобка на 1624 строке
 if (costbool2 == false){
+  if (document.documentElement.clientWidth >= 1300){
   animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -2354,6 +2601,18 @@ if (costbool2 == false){
           document.getElementById("cost2").style.height = 726 + -progress * 726 + "px";
         }
       });
+
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768){
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost2").style.height = 476 + -progress * 476 + "px";
+        }
+      });
+
+}
+
   x=document.createElement("button");
   x.setAttribute("id","costbutton2");
 
@@ -2386,7 +2645,7 @@ animate({
 } else {
   e3 = document.getElementById('costbutton2');
             e3.parentNode.removeChild(e3);
-
+  if (document.documentElement.clientWidth >= 1300){
   animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -2394,6 +2653,18 @@ animate({
           document.getElementById("cost2").style.height = progress * 726 + "px";
         }
       });
+
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768){
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost2").style.height = progress * 526 + "px";
+        }
+      });
+
+}
+
 }
 
 }
@@ -2406,6 +2677,7 @@ animate({
 
 function AddCost3(){
 if (costcount3 == 0){
+if (document.documentElement.clientWidth >= 1300){
   animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -2415,6 +2687,18 @@ if (costcount3 == 0){
       });
 
     document.getElementById("leftcostdown2").style.paddingTop = 55 + "px";
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768){
+            document.getElementsByClassName("six")[0].style.marginTop = 50 + "px";
+    animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost3").style.height = progress * 140 + "px";
+        }
+      });
+
+    document.getElementById("leftcostdown2").style.paddingTop = 35 + "px";
+}
 
 
 
@@ -2434,8 +2718,12 @@ if (costcount3 == 0){
 
 
 
-
-   document.getElementById("costhyperdiv3").style.marginTop = 55 + "px";
+if (document.documentElement.clientWidth >= 1300){
+document.getElementById("costhyperdiv3").style.marginTop = 55 + "px";
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768){
+document.getElementById("costhyperdiv3").style.marginTop = 35 + "px";
+}
+   
 
 
 document.getElementById("costhyper3").innerHTML = "Свернуть";
@@ -2453,13 +2741,22 @@ document.getElementById("costhyper3").innerHTML = "Свернуть";
   costcount3++;
 } else {                                    // открывается скобка на 1624 строке
 if (costbool3 == false){
+  if (document.documentElement.clientWidth >= 1300){
   animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
           document.getElementById("cost3").style.height = 213 + -progress * 213 + "px";
         }
-      });
+      });} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768){
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost3").style.height = 140 + -progress * 140 + "px";
+        }
+      });}
+
   x=document.createElement("button");
   x.setAttribute("id","costbutton3");
 
@@ -2472,6 +2769,11 @@ if (costbool3 == false){
   x.setAttribute("id","downarrow");
   x.setAttribute("src","down_arrow.png");
   document.getElementById("costbutton3").appendChild(x);
+
+   if ($('#showmore3').length == 1)
+    document.getElementById("costbutton3").style.marginTop = 100 + 'px';
+  else 
+        document.getElementById("costbutton3").style.marginTop = 40 + 'px';
 
   setTimeout(appear,1200);
 
@@ -2489,6 +2791,10 @@ animate({
 } else {
   e3 = document.getElementById('costbutton3');
             e3.parentNode.removeChild(e3);
+
+
+
+if (document.documentElement.clientWidth >= 1300){
   animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -2496,6 +2802,16 @@ animate({
           document.getElementById("cost3").style.height = progress * 213 + "px";
         }
       });
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768){
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost3").style.height = progress * 140 + "px";
+        }
+      });
+}
+
 }
 
 }
@@ -2646,6 +2962,7 @@ animate({
     <img id="f7" src="pics/37.png">
     <img id="f8" src="pics/38.png">
     <img id="f9" src="pics/39.png">
+    <img id="f10" src="pics/40.png">
     
     
 
