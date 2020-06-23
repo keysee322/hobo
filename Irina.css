@@ -770,7 +770,9 @@ line-height: 148.18%;
     left: calc(50% - 23px);
 
 }
-
+#knopka2{
+  width: 100%;
+}
 #knopk{
   color: white;
 }
@@ -1394,7 +1396,7 @@ h1 {
 #costhyper1{
   font-size: 15px;
 }
-#order1, #order2{
+#order, #order1, #order2, #order3{
   font-size: 15px;
 }
 #secondcost31{
@@ -1863,9 +1865,11 @@ height: 40px;
 
     }
   #showmore, #showmore1, #showmore2, #showmore3{
-    width: 685px;
-        left: calc(50% - 347.5px);
-        font-size: 12px;
+    width: 100vw;
+left: calc(0px);
+        font-size: 14px;
+        font-weight: bold;
+        height: 40px;
   }
   .main5{
   padding-top: 40px;
@@ -1874,39 +1878,55 @@ height: 40px;
 }
 #leftcost{
   position: absolute;
-  left: calc(50% - 400px);
+  left: calc(50% - 350px);
   width: 400px;
-  height: 350px;
+  height: 286px;
   font-weight: bold;
-font-size: 18px;
+font-size: 14px;
 line-height: 148.18%;
 z-index: 2;
 }
 #rightcost{
   width: 400px;
-  height: 350px;
-  margin-left: calc(50% + 0px);
+  height: 286px;
+  margin-left: calc(50% + -54px);
   font-weight: bold;
-font-size: 18px;
+font-size: 14px;
 line-height: 148.18%;
 z-index: 2;
 }
 .leftcost1{
   position: absolute;
-  margin-top: 40px;
+  margin-top: 30px;
   font-weight: normal;
-font-size: 18px;
+font-size: 14px;
 line-height: 148.18%;
-margin-left: 68px;
+margin-left: 120px;
 z-index: 2;
 }
 .leftcost2{
-    margin-top: 40px;
+    margin-top: 30px;
   font-weight: normal;
-font-size: 18px;
+font-size: 14px;
 line-height: 148.18%;
-margin-left: 140px;
+margin-left: 86px;
 z-index: 2;
+}
+#hidesmall{
+  position: absolute;
+  background-color: white;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+  margin-top: 24px;
+  left: calc(50% + 65px);
+  opacity: 1;
+}
+#hidesmallpic{
+  width: 12px;
+  margin-top: 6.1px;
+  margin-left: 4px;
+  opacity: 1;
 }
 #costbutton {
     position: absolute;

@@ -180,8 +180,7 @@ if (j==0){
 
 if (costcount > 0 && costbool == true)
   document.getElementById('costbutton').style.marginTop = 100 + 'px';
-
-
+if (document.documentElement.clientWidth >= 1300){
             var x=document.createElement("a");
         x.setAttribute("href","#3");
         x.setAttribute("id","hide");
@@ -199,13 +198,19 @@ if (costcount > 0 && costbool == true)
           document.getElementById("hide").style.opacity = progress;
         }
       });}
+                  } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
+hideheigh= 200;
+
                     var hideheigh= 0;
 if (document.documentElement.clientWidth >= 1300)
 hideheigh= 1121;
 if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
-hideheigh= 757;
+hideheigh= 200;
+if (document.documentElement.clientWidth >= 1300)
                     setTimeout(kek2 ,200);
-     function kek2(){animate({
+     function kek2(){
+
+      animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
@@ -216,13 +221,13 @@ hideheigh= 757;
 if (document.documentElement.clientWidth >= 1300)
 h1+= 565;
 if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
-h1+= 386;
+h1+= 366;
 if (document.documentElement.clientWidth >= 1300)
 hideheigh1= 560;
 if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
-hideheigh1= 376;
+hideheigh1= 0;
 if ((j>0) && ((N-k) > 5)) {
-                       
+          if (document.documentElement.clientWidth >= 1300)             
      animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -230,7 +235,7 @@ if ((j>0) && ((N-k) > 5)) {
           document.getElementById("hide").style.height = progress * hideheigh1 + h1 + 'px';
         }
       });
-     if ((N1-k1) < 9){
+     if ((N-k) < 9){
      if(costbool == true && costcount > 0)
      document.getElementById("costbutton").style.marginTop = 40 + "px";
      document.getElementById("cost").style.marginTop = 40 + "px";
@@ -244,15 +249,7 @@ if ((j>0) && ((N-k) > 5)) {
           document.getElementById("hide").style.height = progress * 295 + h1 + 'px';
         }
       });
-   } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 786){
-    animate({
-        duration: 750,
-        timing: quadEaseOut,
-        draw: function(progress) {
-          document.getElementById("hide").style.height = progress * 180 + h1 + 'px';
-        }
-      });
-   }
+   } 
      if(costbool == true && costcount > 0)
      document.getElementById("costbutton").style.marginTop = 40 + "px";
      document.getElementById("cost").style.marginTop = 40 + "px";
@@ -432,15 +429,42 @@ if (document.documentElement.clientWidth > 1300){
         j+=1;
 
     if (j == 1){
+
         var newbut=document.createElement("input");
         newbut.setAttribute("value","Показать еще");
         newbut.setAttribute("id","showmore");
         newbut.setAttribute("type","button");
         newbut.setAttribute("onClick","AddItem()");
         document.getElementById("knopka").appendChild(newbut);
+
+        if (document.documentElement.clientWidth >= 768 && document.documentElement.clientWidth < 1300){
+          var newbut=document.createElement("a");
+        newbut.setAttribute("id","hidesmall");
+        newbut.setAttribute("href","#3");
+        newbut.setAttribute("onClick","DelItems()");
+        document.getElementById("knopka").appendChild(newbut);
+        var newbut1=document.createElement("img");
+        newbut1.setAttribute("id","hidesmallpic");
+        newbut1.setAttribute("src","arrow_up.png");
+document.getElementById('hidesmall').appendChild(newbut1);
+        }
 }else if (k>N){
         var e2 = document.getElementById('showmore');
-        e2.parentNode.removeChild(e2);
+        
+
+if (document.documentElement.clientWidth > 1300){
+e2.parentNode.removeChild(e2);
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+ var e2 = document.getElementById('showmore');
+        e2.setAttribute("value","");
+        e2.setAttribute("onClick","DelItems()");
+        e2.setAttribute("href","#3");
+        if ((costbool == true) && (costcount > 0))
+           document.getElementById("costbutton").style.marginTop = 100 + "px"; 
+          document.getElementById("cost").style.marginTop = 100 + "px";
+}
+
+                
 }
 if (j==1){
     var el = document.getElementById('show');
@@ -494,6 +518,7 @@ function DelItems() {
         }
       });
         if (document.documentElement.clientWidth > 1300){
+
                         animate({
         duration: 1400,
         timing: quadEaseOut,
@@ -501,15 +526,6 @@ function DelItems() {
           document.getElementById("hide").style.height = -progress * (h1) + h1 + "px";
         }
       });
-} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
-                        animate({
-        duration: 1400,
-        timing: quadEaseOut,
-        draw: function(progress) {
-          document.getElementById("hide").style.height = -progress * (h1) + h1 + "px";
-        }
-      });
-}
                         animate({
         duration: 1300,
         timing: quadEaseOut,
@@ -517,6 +533,16 @@ function DelItems() {
           document.getElementById("hide").style.opacity = -progress + 1;
         }
       });
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
+                        animate({
+        duration: 1400,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("hidesmall").style.opacity = -progress + 1;
+        }
+      });
+}
+
 
       let blocks = document.getElementsByClassName( "main3" ); // находим элементы с классом block
       for( let i = 0; i < blocks.length; i++){ // проходим циклом по всем элементам массивоподобного объекта
@@ -538,11 +564,25 @@ function DelItems() {
         for (var i=0; i<j; i++){
             e2 = document.getElementsByClassName('main3')[0];
             e2.parentNode.removeChild(e2);
+
         }
         if (k < N){
+          if (document.documentElement.clientWidth > 1300){
         e3 = document.getElementById('showmore');
             e3.parentNode.removeChild(e3);
+        e2 = document.getElementById('hide');
+            e2.parentNode.removeChild(e2);
+} 
+
         }
+
+if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
+          e3 = document.getElementById('showmore');
+            e3.parentNode.removeChild(e3);
+        e3 = document.getElementById('hidesmall');
+            e3.parentNode.removeChild(e3);
+}
+
         var x=document.createElement("nav");
         x.setAttribute("id","show");
         document.getElementsByClassName("right3")[0].appendChild(x);
@@ -562,8 +602,7 @@ function DelItems() {
           document.getElementById("show").style.opacity = progress;
         }
       });
-        e2 = document.getElementById('hide');
-            e2.parentNode.removeChild(e2);
+
         animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -1803,13 +1842,13 @@ if (costcount == 0){
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("cost").style.height = progress * 480 + "px";
+          document.getElementById("cost").style.height = progress * 389 + "px";
         }
       });
   }
 
 
-    document.getElementById("insidecost").style.paddingTop = 55 + "px";
+    document.getElementById("insidecost").style.paddingTop = 35 + "px";
 
 
 
@@ -1826,13 +1865,24 @@ if (costcount == 0){
   x1 = document.createTextNode("30х40 см");
   document.getElementById("leftcost").appendChild(x);
    document.getElementsByClassName("leftcost1")[0].appendChild(x1);
-   document.getElementsByClassName("leftcost1")[0].style.marginTop = 55 + "px";
+
+
+
+
    x=document.createElement("div");
   x.setAttribute("class","leftcost2");
     x1 = document.createTextNode("6 500 руб.");
       document.getElementById("leftcost").appendChild(x);
    document.getElementsByClassName("leftcost2")[0].appendChild(x1);
-      document.getElementsByClassName("leftcost2")[0].style.marginTop = 55 + "px";
+     if (document.documentElement.clientWidth >= 1300) {
+   document.getElementsByClassName("leftcost1")[0].style.marginTop = 55 + "px";
+   document.getElementsByClassName("leftcost2")[0].style.marginTop = 55 + "px";
+
+  } else if (document.documentElement.clientWidth >= 768 && document.documentElement.clientWidth < 1300){
+     document.getElementsByClassName("leftcost1")[0].style.marginTop = 41 + "px";
+    document.getElementsByClassName("leftcost2")[0].style.marginTop = 41 + "px";
+
+  }
 
       x=document.createElement("div");
   x.setAttribute("class","leftcost1");
@@ -1881,13 +1931,23 @@ x=document.createElement("div");
   x1 = document.createTextNode("30х40 см");
   document.getElementById("rightcost").appendChild(x);
    document.getElementsByClassName("leftcost1")[4].appendChild(x1);
-      document.getElementsByClassName("leftcost1")[4].style.marginTop = 55 + "px";
+
    x=document.createElement("div");
   x.setAttribute("class","leftcost2");
     x1 = document.createTextNode("3 500 руб.");
       document.getElementById("rightcost").appendChild(x);
    document.getElementsByClassName("leftcost2")[4].appendChild(x1);
       document.getElementsByClassName("leftcost2")[4].style.marginTop = 55 + "px";
+
+     if (document.documentElement.clientWidth >= 1300) {
+      document.getElementsByClassName("leftcost2")[4].style.marginTop = 55 + "px";
+      document.getElementsByClassName("leftcost1")[4].style.marginTop = 55 + "px";
+
+  } else if (document.documentElement.clientWidth >= 768 && document.documentElement.clientWidth < 1300){
+     document.getElementsByClassName("leftcost1")[4].style.marginTop = 41 + "px";
+    document.getElementsByClassName("leftcost2")[4].style.marginTop = 41 + "px";
+
+  }
 
    x=document.createElement("div");
   x.setAttribute("class","leftcost1");
@@ -1953,7 +2013,7 @@ if (costbool == false){
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("cost").style.height = 480 + -progress * 480 + "px";
+          document.getElementById("cost").style.height = 389 + -progress * 389 + "px";
         }
       });
   }
@@ -2010,7 +2070,7 @@ animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("cost").style.height = progress * 480 + "px";
+          document.getElementById("cost").style.height = progress * 389 + "px";
         }
       });
   }
@@ -2048,13 +2108,16 @@ if (costcount1 == 0){
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("cost1").style.height = progress * 480 + "px";
+          document.getElementById("cost1").style.height = progress * 465 + "px";
         }
       });
   }
 
-    document.getElementById("leftcostdown").style.paddingTop = 55 + "px";
-
+            if (document.documentElement.clientWidth >= 1300) {
+document.getElementById("leftcostdown").style.paddingTop = 55 + "px";
+  } else if (document.documentElement.clientWidth >= 768 && document.documentElement.clientWidth < 1300) {
+document.getElementById("leftcostdown").style.paddingTop = 35 + "px";
+  }
 
 
   document.getElementById("cost1").style.background = "#D8D8D8";
@@ -2219,7 +2282,7 @@ if (document.documentElement.clientWidth < 1300 && document.documentElement.clie
       if (document.documentElement.clientWidth >= 1300)
    document.getElementById("costhyperdiv1").style.marginTop = 515 + "px";
 if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768)
-   document.getElementById("costhyperdiv1").style.marginTop = 415 + "px";
+   document.getElementById("costhyperdiv1").style.marginTop = 400 + "px";
 
 document.getElementById("costhyper1").innerHTML = "Свернуть";
   x=document.createElement("img");
@@ -2249,7 +2312,7 @@ if (costbool1 == false){
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("cost1").style.height = 480 + -progress * 480 + "px";
+          document.getElementById("cost1").style.height = 465 + -progress * 465 + "px";
         }
       });
   }
@@ -2299,7 +2362,7 @@ animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("cost1").style.height = progress * 480 + "px";
+          document.getElementById("cost1").style.height = progress * 465 + "px";
         }
       });
   }
