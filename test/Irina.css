@@ -1970,15 +1970,10 @@ z-index: 2;
 
 
 @media (max-width: 768px){
-
-  .first{
-    top: 4vw;
-  }
 .navbar-brand {
-    width: 200px;
     font-size: 2.8vw;
     font-weight: bold;
-    margin-left: calc(6vw + 14px);
+    margin-left: calc(50% - 320px);
 }
 p#bruh1 {
     font-style: normal;
@@ -2015,22 +2010,20 @@ li {
 }
 .phone {
     position: absolute;
-    top: 4px;
-    left: calc(75vw + -3px);
+    top: 0px;
+    left: calc(66.5% + 53px);
     color: black;
     font-size: 2.2vw;
     font-weight: normal;
 }
-.navbar-header {
-    width: 100vw;
-    margin-right: calc( 100vw - 802px);
+.navbar-header{
+  margin-right: calc( 100vw - 802px);
 }
 #bruh {
     position: absolute;
-    left: 3vw;
-    width: calc(2vw + 15px);
+    left: calc(50% - 346px);
+    width: 4vw;
     height: 3.4vw;
-    margin-top: calc(1vw - 6px);
 }
 .ramka {
     width: 40vw;
@@ -2043,25 +2036,26 @@ li {
   width: 40vw;
   height: 40vw;
 }
-.insideright {
-    position: absolute;
-    left: calc(59vw - 5px);
-    top: 12vw;
+.insideright{
+  position: absolute;
+    left: calc(50% + 52px);
+      top: 10vw;
 }
 h1 {
-    font-size: 3.5vw;
+    font-size: 24px;
     width: 100%;
 }
 .insideleft {
     position: absolute;
-    width: 45vw;
-    left: 3vw;
-    top: calc(23vw + -8px);
-    font-size: 1.9vw;
+    width: 307px;
+    left: calc(50% - 346px);
+    top: 129px;
+    font-size: 12px;
 }
 .left1 {
-    height: 52vw;
+    height: 450px;
     background-color: white;
+
 }
 .secondcost1, #secondcost2, #secondcost3{
   font-size: 14px;
@@ -2078,16 +2072,6 @@ h1 {
     font-size: 18px;
     line-height: 148.18%;
     z-index: 2;
-}
-#learnmore {
-    margin-top: 5vw;
-    font-size: 2.2vw;
-}
-.strelka {
-    position: absolute;
-    margin-top: calc(1vw + 1px);
-    margin-left: 1vw;
-        width: 0px;
 }
 #secondcost2 {
     margin-left: 310px;
@@ -2181,14 +2165,16 @@ z-index: 2;
     margin-left: calc(50% - 30px);
     letter-spacing: -0.04em;
 }
-#second {
-    width: 40vw;
-    height: 40vw;
+#second{
+  width: 265px;
+  height: 265px;
 }
-.insideleft2 {
-    position: absolute;
-    width: 40vw;
-    left: 3vw;
+.insideleft2{
+  position: absolute;
+  width: 265px;
+  left: calc(50% - 346px);
+
+
 }
 .ramka1{
   position: absolute;
@@ -2220,15 +2206,11 @@ z-index: 2;
 }
 .insideright2 {
     position: absolute;
-    width: 70vw;
-    text-align: center;
-    left: calc(17vw - 5px);
+    width: 307px;
+    left: calc(50% + 44px);
     margin-top: 15px;
-    font-size: 2.5vw;
+    font-size: 12px;
     line-height: 150%;
-}
-#social {
-    margin-top: 5vw;
 }
 .palka1 {
     margin-bottom: 3px;
@@ -2241,17 +2223,15 @@ z-index: 2;
 }
 
 .socialimg {
-    width: 2.8vw;
-    height: 2.3vw;
     margin-bottom: -1px;
-    margin-left: 1.5vw;
+    margin-left: 10px;
 }
 .socialimg1 {
     margin-right: 8px;
     margin-top: -5px;
 }
 .second {
-    height: 52vw;
+    height: 350px;
     background-color: white;
 }
 .left3 {

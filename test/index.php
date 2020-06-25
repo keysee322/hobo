@@ -144,13 +144,11 @@ while($file = readdir($dir)){
 
 <script type="text/javascript">
 
-if (document.documentElement.clientWidth <=768){
-document.getElementsByClassName("insideleft")[0].innerHTML = "<h1> Воплотим в вашем интерьере настоящее произведение искусства</h1>";
+
     
 
-var e2 = document.getElementsByClassName("insideleft2")[0];
-e2.parentNode.removeChild(e2);
-}
+
+
 var N = '<?php echo $count;?>';
 /*document.write(N2);*/
 var j=0;
