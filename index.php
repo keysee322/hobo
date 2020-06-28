@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width; initial-scale=1">
 	<title>irina</title>
@@ -10,7 +9,7 @@
        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 </head>
-<body> 
+<body onload="funonload();"> 
 
  <script type="text/javascript">
 /* $(document).ready(function(){
@@ -71,7 +70,7 @@
 <div class="left1">
 	<div class="insideleft">
 	<h1>Воплотим в вашем интерьере настоящее произведение искусства</h1>
-Воплотим в реальность любую Вашу идею от росписи одежды, до фактурного панно на стенах.
+<p id="description">Воплотим в реальность любую Вашу идею от росписи одежды, до фактурного панно на стенах.</p>
 <p id="learnmore"><a id="learnmore" href="#2"> <section id="2"></section>Узнать больше <img class="strelka" src="strelka.png"></a></p>
 </div>
 <div class="insideright">
@@ -145,13 +144,17 @@ while($file = readdir($dir)){
 
 <script type="text/javascript">
 
-if (document.documentElement.clientWidth <=768){
-document.getElementsByClassName("insideleft")[0].innerHTML = "<h1> Воплотим в вашем интерьере настоящее произведение искусства</h1>";
-    
 
+
+function funonload() {
+  if (document.documentElement.clientWidth <=768){
+document.getElementsByClassName("insideleft")[0].innerHTML = "<h1> Воплотим в вашем интерьере настоящее произведение искусства</h1>";
 var e2 = document.getElementsByClassName("insideleft2")[0];
-e2.parentNode.removeChild(e2);
+document.getElementsByClassName("stroke")[1].remove();
+document.getElementsByClassName("insideleft2")[0].remove();
 }
+}
+
 var N = '<?php echo $count;?>';
 /*document.write(N2);*/
 var j=0;
@@ -178,6 +181,9 @@ let quadEaseOut = makeEaseOut(quad);
         if (k<=N){
 
 if (j==0){
+
+
+
 
 
   document.getElementById('cost').style.marginTop = 100 + 'px';

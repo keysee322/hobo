@@ -2082,6 +2082,10 @@ h1 {
 #learnmore {
     margin-top: 5vw;
     font-size: 2.2vw;
+    opacity: 0;
+}
+#description{
+  opacity: 0;
 }
 .strelka {
     position: absolute;
@@ -2189,6 +2193,7 @@ z-index: 2;
     position: absolute;
     width: 40vw;
     left: 3vw;
+    opacity: 0;
 }
 .ramka1{
   position: absolute;
@@ -2247,8 +2252,10 @@ z-index: 2;
     margin-left: 1.5vw;
 }
 .socialimg1 {
-    margin-right: 8px;
+    margin-right: 2vw;
     margin-top: -5px;
+    width: 5vw;
+    height: 4vw;
 }
 .second {
     height: 52vw;
@@ -2257,26 +2264,33 @@ z-index: 2;
 .left3 {
     width: 50%;
     position: absolute;
-    left: calc(50% - 346px);
-    font-size: 18px;
+    left: 3vw;
+    font-size: 3.2vw;
     line-height: 148.18%;
     font-style: normal;
     font-weight: bold;
 }
 .right3 {
-    margin-top: 6px;
+    margin-top: calc(3vw - 12px);
     text-align: right;
-    width: 330px;
+    width: 285px;
     position: absolute;
-    right: calc(50% - 338px);
     font-size: 12px;
+    left: calc(100vw + -294px);
     line-height: 148.18%;
     font-style: normal;
+}
+#show, #show1, #show2, #show3 {
+    float: right;
+    left: calc(50% - 478px);
+    width: 20vw;
+    cursor: pointer;
+    font-size: 15px;
 }
 a {
     color: #000;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 2.4vw;
 
 }
 #costhyper, #costhyper2, #costhyper3, #costhyper4{
@@ -2284,23 +2298,23 @@ a {
 }
 .strelka2 {
     margin-bottom: -8px;
-    width: 42px;
+    width: 0px;
 }
 .main31, .main21, .main11, .main01 {
     position: relative;
-    width: 695px;
-    height: 366px;
-    margin-top: 15px;
+    margin-top: 0px;
+    width: 97vw;
+    height: 131.8vw;
     background-color: white;
-    left: calc(50% - 347.5px);
+    left: calc(50% - 47vw);
 }
 
-#f1{
-  position: absolute;
-  height: 178px;
-  width: calc(20% - 10px);
-  left: 0px;
-  transition: linear 0.2s;
+#f1 {
+    position: absolute;
+    height: 47%;
+    width: calc(47%);
+    left: 0px;
+    transition: linear 0.2s;
 }
 #f1:hover {
     margin-top: -5.475px;
@@ -2310,11 +2324,11 @@ a {
 
 }
 #f2{
-  position: absolute;
-  height: 178px;
-  width: calc(20% - 10px);
-  left: calc(20%); 
-   transition: linear 0.2s;
+    position: absolute;
+    height: 47%;
+    width: calc(47%);
+    left: 50%;
+    transition: linear 0.2s;
 }
 #f2:hover {
     margin-top: -5.475px;
@@ -2323,13 +2337,13 @@ a {
   margin-left: calc(-5.35px); 
 
 }
-#f3{
-  position: absolute;
-  height: 178px;
-  width: calc(20% - 10px);
-  top: 0px;
-  left: 40%;
-  transition: linear 0.2s;
+#f3 {
+    position: absolute;
+    height: 47%;
+    width: 47%;
+    top: 49.3%;
+    left: 0px;
+    transition: linear 0.2s;
 }
 #f3:hover {
     margin-top: -5.475px;
@@ -2338,13 +2352,13 @@ a {
   margin-left: calc(-5.35px); 
 
 }
-#f4{
-  position: absolute;
-  left: calc(60%);
-  top: 0px;
-  height: 178px;
-  width: calc(20% - 10px);
-  transition: linear 0.2s;
+#f4 {
+    position: absolute;
+    height: 47%;
+    width: 47%;
+    top: 49.3%;
+    left: 50%;
+    transition: linear 0.2s;
 }
 #f4:hover {
     margin-top: -5.475px;
@@ -2353,122 +2367,53 @@ a {
   margin-left: calc(-5.35px); 
 
 }
-#f5{
+#f5, #f6, #f7, #f8, #f9, #f10{
   position: absolute;
-  left: calc(80%);
-  height: 178px;
-  width: calc(20% - 10px);
-  transition: linear 0.2s;
+  width: calc(0px);
 }
-#f5:hover {
-    margin-top: -5.475px;
-  height: 188px;
-  width: calc(20%);
-  margin-left: calc(-5.35px); 
-
-}
-
-#f6{
+#f5:hover, #f6:hover, #f7:hover, #f8:hover, #f9:hover, #f10:hover{
   position: absolute;
-  height: 178px;
-  width: calc(20% - 10px);
-    left: calc(0%);
-    top: 188px;
-  transition: linear 0.2s;
-}
-#f6:hover, #f7:hover {
-    margin-top: -5.475px;
-  height: 188px;
-  width: calc(20%);
-  margin-left: calc(-5.35px); 
-
-}
-#f7{
-  position: absolute;;
-    left: calc(20%);
-  height: 178px;
-  top: 188px;
-  width: calc(20% - 10px);
-  transition: linear 0.2s;
+  width: calc(0px);
 }
 
-#f8{
-  position: absolute;
-  height: 178px;
-  width: calc(20% - 10px);
-  top: 188px;
-    left: calc(40%);
-  transition: linear 0.2s;
-}
-#f9{
-  position: absolute;
-   height: 178px;
-  width: calc(20% - 10px);
-  top: 188px;
-    left: calc(60%);
-  transition: linear 0.2s;
-}
-#f8:hover, #f9:hover {
-    margin-top: -5.475px;
-  height: 188px;
-  width: calc(20%);
-  margin-left: calc(-5.35px); 
-
-
-}
-#f10{
-  position: absolute;
-  left: calc(80%);
-  height: 178px;
-  width: calc(20% - 10px);
-  transition: linear 0.2s;
-  top: 188px;
-  opacity: 1;
-}
-#f10:hover {
-    margin-top: -5.475px;
-  height: 188px;
-  width: calc(20%);
-  margin-left: calc(-5.35px); 
-
-}
 h1.sixh {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 3.2vw;
+    margin-bottom: 6vw;
 }
-.insideleft6{
-  font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 150%;
-width: 315px;
-bottom: 200px;
-left: calc(50% - 346px);
-margin-bottom: -45px;
+.insideleft6 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.4vw;
+    line-height: 150%;
+    width: 62vw;
+    text-align: center;
+    left: calc(50% - 30vw);
+    margin-bottom: -45px;
+    bottom: auto;
 }
 .input {
-    padding-left: 15px;
-width: 245px;
-height: 40px;
-    margin-top: 20px;
+    padding-left: 5vw;
+    width: 100%;
+    height: 13vw;
+    margin-top: 6vw;
     border: 0px;
-    font-size: 12px;
+    font-size: 4vw;
 }
 .six {
     margin-top: 56px;
     position: relative;
-    height: 344px;
+    height: 127vw;
     width: 100%;
     background-color: #D8D8D8;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
     line-height: 150%;
+
 }
 #learnmore6 {
     font-weight: bold;
-    margin-top: 10px;
-
+    margin-top: 4vw;
 }
 .kek {
     position: absolute;
@@ -2478,18 +2423,22 @@ height: 40px;
     bottom: 0px;
     padding-top: 20px;
 }
-.insideright6{
-      margin-top: 16px;
-      width: 350px;
-      bottom: 130px;
+.insideright6 {
+    margin-top: 16px;
+    width: 87vw;
+    margin-top: 35vw;
+    left: 4vw;
 }
 .order {
-    margin-top: 19px;
+    margin-top: 5vw;
+    width: 28vw;
+    font-size: 4vw;
+    height: 9vw;
 }
 .file{
   position: absolute;
   left: calc(296px);
-  width: 42px;
+  width: 0px;
   top: calc(-15px + 50%);
 }
 
@@ -2596,7 +2545,7 @@ left: calc(0px);
         height: 40px;
   }
   .main5{
-  padding-top: 40px;
+  padding-top: 10vw;
   background-color: white;
   z-index: 3;
 }
