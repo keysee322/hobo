@@ -2294,7 +2294,7 @@ a {
 
 }
 #costhyper, #costhyper2, #costhyper3, #costhyper4{
-  font-size: 15px;
+  font-size: 3vw;
 }
 .strelka2 {
     margin-bottom: -8px;
@@ -2311,61 +2311,63 @@ a {
 
 #f1 {
     position: absolute;
-    height: 47%;
+    height: auto;
     width: calc(47%);
     left: 0px;
-    transition: linear 0.2s;
 }
 #f1:hover {
-    margin-top: -5.475px;
-  height: 188px;
-  width: calc(20%);
-  margin-left: calc(-5.35px); 
-
+    position: absolute;
+    margin-top: 0px;
+    margin-left: calc(0px);
+    height: auto;
+    width: calc(47%);
+    left: 0px;
 }
 #f2{
     position: absolute;
-    height: 47%;
+    height: auto;
     width: calc(47%);
     left: 50%;
-    transition: linear 0.2s;
 }
 #f2:hover {
-    margin-top: -5.475px;
-  height: 188px;
-  width: calc(20%);
-  margin-left: calc(-5.35px); 
-
+    position: absolute;
+    margin-top: 0px;
+    margin-left: calc(0px);
+    height: auto;
+    width: calc(47%);
+    left: 50%;
 }
 #f3 {
     position: absolute;
-    height: 47%;
+    height: auto;
     width: 47%;
-    top: 49.3%;
+    top: 50.5%;
     left: 0px;
-    transition: linear 0.2s;
 }
 #f3:hover {
-    margin-top: -5.475px;
-  height: 188px;
-  width: calc(20%);
-  margin-left: calc(-5.35px); 
-
+    position: absolute;
+    margin-top: 0px;
+    margin-left: calc(0px);
+    height: auto;
+    width: 47%;
+    top: 50.5%;
+    left: 0px;
 }
 #f4 {
     position: absolute;
-    height: 47%;
+    height: auto;
     width: 47%;
-    top: 49.3%;
+    top: 50.5%;
     left: 50%;
-    transition: linear 0.2s;
 }
 #f4:hover {
-    margin-top: -5.475px;
-  height: 188px;
-  width: calc(20%);
-  margin-left: calc(-5.35px); 
-
+    position: absolute;
+    margin-top: 0px;
+    margin-left: calc(0px);
+    height: auto;
+    width: 47%;
+    top: 50.5%;
+    left: 50%;
 }
 #f5, #f6, #f7, #f8, #f9, #f10{
   position: absolute;
@@ -2375,7 +2377,34 @@ a {
   position: absolute;
   width: calc(0px);
 }
-
+#d1 {
+    position: absolute;
+    height: 96%;
+    width: calc(47%);
+    left: 0px;
+}
+#d1:hover {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: calc(0px);
+    height: 47%;
+    width: calc(47%);
+    left: 0px;
+}
+#d2{
+    position: absolute;
+    height: 96%;
+    width: calc(47%);
+    left: 50%;
+}
+#d2:hover {
+    position: absolute;
+    margin-top: 0px;
+    margin-left: calc(0px);
+    height: 47%;
+    width: calc(47%);
+    left: 50%;
+}
 h1.sixh {
     font-size: 3.2vw;
     margin-bottom: 6vw;
@@ -2530,20 +2559,21 @@ h1.sixh {
 }
     .main3, .main2, .main1{
     position: relative;
-    width: 695px;
-    height: 366px;
-    margin-top: 10px;
+    width: 97vw;
+    height: 131.8vw;
+    margin-top: 1vw;
     background-color: white;
-    left: calc(50% - 347.5px);
+    left: calc(50% - 47vw);
 
     }
-  #showmore, #showmore1, #showmore2, #showmore3{
+#showmore, #showmore1, #showmore2, #showmore3 {
     width: 100vw;
-left: calc(0px);
-        font-size: 14px;
-        font-weight: bold;
-        height: 40px;
-  }
+    left: calc(0px);
+    font-size: 2vw;
+    font-weight: bold;
+    height: 8vw;
+    margin-top: 1vw;
+}
   .main5{
   padding-top: 10vw;
   background-color: white;
@@ -2585,21 +2615,21 @@ line-height: 148.18%;
 margin-left: 86px;
 z-index: 2;
 }
-#hidesmall, #hidesmall1, #hidesmall2, #hidesmall3{
-  position: absolute;
-  background-color: white;
-  width: 20px;
-  height: 20px;
-  z-index: 10;
-  margin-top: 24px;
-  left: calc(50% + 65px);
-  opacity: 1;
+#hidesmall, #hidesmall1, #hidesmall2, #hidesmall3 {
+    position: absolute;
+    background-color: white;
+    width: 5vw;
+    height: 5vw;
+    z-index: 10;
+    margin-top: 2.5vw;
+    left: calc(90vw);
+    opacity: 1;
 }
-#hidesmallpic, #hidesmallpic1, #hidesmallpic2, #hidesmallpic3{
-  width: 12px;
-  margin-top: 6.1px;
-  margin-left: 4px;
-  opacity: 1;
+#hidesmallpic, #hidesmallpic1, #hidesmallpic2, #hidesmallpic3 {
+    width: 3vw;
+    margin-top: 1.5vw;
+    margin-left: 1vw;
+    opacity: 1;
 }
 #costbutton {
     position: absolute;
@@ -2619,12 +2649,12 @@ z-index: 2;
         opacity: 0;
 
     }
-#cost, #cost1 {
+#cost, #cost1, #cost2, #cost3 {
     position: relative;
     text-align: center;
     height: 30px;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 0px;
     z-index: 2;
     overflow: hidden;
 }

@@ -93,9 +93,9 @@
 Представляем свои услуги в Москве и Подмосковье.
 <p id="social">Социальные сети<img class="palka" src="palka.png"> 
 	<a href="https://telegram.org"><img class="socialimg" src="tel.svg"></a>
-	<a href="https://www.whatsapp.com"><img class="socialimg" src="wut.svg"></a>
-	<a href="https://www.instagram.com"><img class="socialimg" src="insta.svg"></a>
-	<a href="www.facebook.com"><img class="socialimg" src="facebook.svg"></a>
+	<a href="https://web.whatsapp.com/send?phone=79296322641"><img class="socialimg" src="wut.svg"></a>
+	<a href="https://www.instagram.com/irenniko.art"><img class="socialimg" src="insta.svg"></a>
+	<a href="https://www.facebook.com/profile.php?id=100018340840815"><img class="socialimg" src="facebook.svg"></a>
 	<a href="https://vk.com"><img class="socialimg" src="vk.svg"></a>
 </p>
 </div>
@@ -182,14 +182,15 @@ let quadEaseOut = makeEaseOut(quad);
 
 if (j==0){
 
-
-
-
-
-  document.getElementById('cost').style.marginTop = 100 + 'px';
-
+if (document.documentElement.clientWidth > 768){
 if (costcount > 0 && costbool == true)
   document.getElementById('costbutton').style.marginTop = 100 + 'px';
+  document.getElementById('cost').style.marginTop = 100 + 'px';
+} else {
+if (costcount > 0 && costbool == true)
+  document.getElementById('costbutton').style.marginTop = 12 + 'vw';
+  document.getElementById('cost').style.marginTop = 12 + 'vw';
+}
 if (document.documentElement.clientWidth >= 1300){
             var x=document.createElement("a");
         x.setAttribute("href","#3");
@@ -228,15 +229,30 @@ if (document.documentElement.clientWidth >= 1300)
         }
       });}
 } 
-if (document.documentElement.clientWidth >= 1300)
-h1+= 565;
-if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
-h1+= 366;
-if (document.documentElement.clientWidth >= 1300)
+if (document.documentElement.clientWidth >= 1300){
 hideheigh1= 560;
-if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
+h1+= 565;
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
 hideheigh1= 0;
-if ((j>0) && ((N-k) > 5)) {
+h1+= 366;
+} else if (document.documentElement.clientWidth <= 768){
+hideheigh1= 0;
+h1+= 131.8;
+}
+          var lastheighsmall;
+          var countheigh;
+          if (document.documentElement.clientWidth > 1300){
+            lastheighsmall = '272.5px';
+            countheigh = 5;
+          }
+          else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
+            lastheighsmall = '183px';
+            countheigh = 4;
+          } else if (document.documentElement.clientWidth <= 768){
+            lastheighsmall = '65.9vw';
+            countheigh = 1;
+          }
+if ((j>0) && ((N-k) > countheigh)) {
           if (document.documentElement.clientWidth >= 1300)             
      animate({
         duration: 1500,
@@ -245,11 +261,20 @@ if ((j>0) && ((N-k) > 5)) {
           document.getElementById("hide").style.height = progress * hideheigh1 + h1 + 'px';
         }
       });
-     if ((N-k) < 9){
+
+    if (document.documentElement.clientWidth <= 768) {
+     if ((N-k) < 4){
+     if(costbool == true && costcount > 0)
+     document.getElementById("costbutton").style.marginTop = 0 + "px";
+     document.getElementById("cost").style.marginTop = 0 + "px";
+   }
+ } else {
+  if ((N-k) < 9){
      if(costbool == true && costcount > 0)
      document.getElementById("costbutton").style.marginTop = 40 + "px";
      document.getElementById("cost").style.marginTop = 40 + "px";
    }
+ }
 } else if ((j>0) && ((N-k) <= 5)) {
                      if (document.documentElement.clientWidth >= 1300){ 
      animate({
@@ -271,26 +296,30 @@ if ((j>0) && ((N-k) > 5)) {
 
 
         	if (m3==true){
-            var lastheighsmall;
+          var lastheighsmall;
           var countheigh;
           if (document.documentElement.clientWidth > 1300){
-            lastheighsmall = 272.5;
+            lastheighsmall = '272.5px';
             countheigh = 5;
           }
-          else {
-            lastheighsmall = 183;
-            countheigh = 4
+          else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
+            lastheighsmall = '183px';
+            countheigh = 4;
+          } else if (document.documentElement.clientWidth <= 768){
+            lastheighsmall = '65.9vw';
+            countheigh = 1;
           }
         	        var newimg;
         var newdiv=document.createElement("div");
         newdiv.setAttribute("class","main3");
         document.getElementById("items").appendChild(newdiv);
         if ((N-k) <= countheigh){
+          alert(N-z);
               animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          newdiv.style.height = progress * lastheighsmall + 'px';
+          newdiv.style.height = progress * lastheighsmall;
         }
       });
           } else {
@@ -302,12 +331,22 @@ if ((j>0) && ((N-k) > 5)) {
           newdiv.style.height = progress * 545 + 'px';
         }
       });
-        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 786){
+        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth >= 768){
           animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
           newdiv.style.height = progress * 366 + 'px';
+        }
+      });
+        
+        }
+        else if (document.documentElement.clientWidth <= 768){
+          animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 131.8 + 'vw';
         }
       });
         
@@ -335,7 +374,7 @@ if (document.documentElement.clientWidth > 1300){
     }
         document.getElementsByClassName("main3")[j].appendChild(newimg);
     }
-  } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+  } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
               for (var i = z; i <= 10+(z-1); i++) {
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
@@ -350,6 +389,24 @@ if (document.documentElement.clientWidth > 1300){
         document.getElementsByClassName("main3")[j].appendChild(newimg);
 }
   }
+  else if (document.documentElement.clientWidth <= 768){
+              for (var i = z; i <= 4+(z-1); i++) {
+        if (k<=N) {k++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic/"+i+".png");
+                if ((z-1)+4<=N){
+        newimg.setAttribute("id","f"+(i-z+1));
+    }
+        else {
+      newimg.setAttribute("id","f"+(i-z+1));
+      if (N-z <= 1) {
+        newimg.setAttribute("id","d"+(i-z+1));
+       document.getElementsByClassName("main3")[j].style.height = "65.9vw";
+    }
+  }
+        document.getElementsByClassName("main3")[j].appendChild(newimg);
+}
+  }
 }
         
 
@@ -357,12 +414,15 @@ if (document.documentElement.clientWidth > 1300){
           var lastheighsmall;
           var countheigh;
           if (document.documentElement.clientWidth > 1300){
-            lastheighsmall = 272.5;
+            lastheighsmall = '272.5px';
             countheigh = 6;
           }
-          else {
-            lastheighsmall = 183;
-            countheigh = 4
+          else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
+            lastheighsmall = '183px';
+            countheigh = 4;
+          } else if (document.documentElement.clientWidth <= 768){
+            lastheighsmall = '65.9vw';
+            countheigh = 1;
           }
         	        var newimg;
         var newdiv=document.createElement("div");
@@ -370,15 +430,16 @@ if (document.documentElement.clientWidth > 1300){
         document.getElementById("items").appendChild(newdiv);
 
          if ((N-z) <= countheigh){
+          alert(N-z);
               animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          newdiv.style.height = progress * lastheighsmall + 'px';
+          newdiv.style.height = progress * lastheighsmall;
         }
       });
           } else {
-            if (document.documentElement.clientWidth > 1300){
+            if (document.documentElement.clientWidth >= 1300){
           animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -386,12 +447,22 @@ if (document.documentElement.clientWidth > 1300){
           newdiv.style.height = progress * 545 + 'px';
         }
       });
-        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
           animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
           newdiv.style.height = progress * 366 + 'px';
+        }
+      });
+        
+        }
+        else if (document.documentElement.clientWidth <= 768){
+          animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * 131.8 + 'vw';
         }
       });
         
@@ -419,7 +490,7 @@ if (document.documentElement.clientWidth > 1300){
     }
         document.getElementsByClassName("main3")[j].appendChild(newimg);
 }
-} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
           for (var i = z; i <= 10+(z-1); i++) {
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
@@ -433,7 +504,25 @@ if (document.documentElement.clientWidth > 1300){
     }
         document.getElementsByClassName("main3")[j].appendChild(newimg);
 }
+} else if (document.documentElement.clientWidth <= 768){
+          for (var i = z; i <= 4+(z-1); i++) {
+        if (k<=N) {k++;} else {break;}
+        newimg=document.createElement("img");
+        newimg.setAttribute("src","new_pic/"+i+".png");
+                if ((z-1)+4<=N){
+        newimg.setAttribute("id","f"+(i-z+1));
+    }
+        else {
+      newimg.setAttribute("id","f"+(i-z+1));
+      if (N-z <= 1){
+        newimg.setAttribute("id","d"+(i-z+1));
+       document.getElementsByClassName("main3")[j].style.height = "65.9vw";
+     }
+    }
+        document.getElementsByClassName("main3")[j].appendChild(newimg);
 }
+}
+
         }
         m3=!(m3);
         j+=1;
@@ -447,7 +536,7 @@ if (document.documentElement.clientWidth > 1300){
         newbut.setAttribute("onClick","AddItem()");
         document.getElementById("knopka").appendChild(newbut);
 
-        if (document.documentElement.clientWidth > 768 && document.documentElement.clientWidth < 1300){
+        if (document.documentElement.clientWidth > 0 && document.documentElement.clientWidth < 1300){
           var newbut=document.createElement("a");
         newbut.setAttribute("id","hidesmall");
         newbut.setAttribute("href","#3");
@@ -464,14 +553,20 @@ document.getElementById('hidesmall').appendChild(newbut1);
 
 if (document.documentElement.clientWidth > 1300){
 e2.parentNode.removeChild(e2);
-} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 0){
         e2.setAttribute("value","");
         e2.setAttribute("onClick","DelItems()");
         document.getElementById("hidesmall").style.marginLeft = -77 + "px";
         e2.setAttribute("href","#3");
+        if (document.documentElement.clientWidth > 768){
         if ((costbool == true) && (costcount > 0))
            document.getElementById("costbutton").style.marginTop = 100 + "px"; 
           document.getElementById("cost").style.marginTop = 100 + "px";
+        } else if (document.documentElement.clientWidth <= 768){
+        if ((costbool == true) && (costcount > 0))
+           document.getElementById("costbutton").style.marginTop = 12 + "vw"; 
+          document.getElementById("cost").style.marginTop = 12 + "vw";
+        }
 }
 
                 
@@ -484,15 +579,23 @@ el.parentNode.removeChild(el);
 }
 
 function DelItems() {
-
+          if (document.documentElement.clientWidth > 768){
+            var h1heigh = "px";
           if ((costbool == true) && (costcount > 0))
            document.getElementById("costbutton").style.marginTop = 40 + "px"; 
           document.getElementById("cost").style.marginTop = 40 + "px";
+        } else
+          if (document.documentElement.clientWidth <= 768){
+            var h1heigh = "vw";
+          if ((costbool == true) && (costcount > 0))
+           document.getElementById("costbutton").style.marginTop = 0 + "px"; 
+          document.getElementById("cost").style.marginTop = 0 + "px";
+        }
         animate({
         duration: 2500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("items").style.height = -progress * (h1) + h1 + "px";
+          document.getElementById("items").style.height = -progress * (h1) + h1 + h1heigh;
         }
       });
 
@@ -543,7 +646,7 @@ function DelItems() {
           document.getElementById("hide").style.opacity = -progress + 1;
         }
       });
-} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 0){
                         animate({
         duration: 1400,
         timing: quadEaseOut,
@@ -586,7 +689,7 @@ function DelItems() {
 
         }
 
-if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
+if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 0){
           e3 = document.getElementById('showmore');
             e3.parentNode.removeChild(e3);
         e3 = document.getElementById('hidesmall');
@@ -731,13 +834,16 @@ if ((j1>0) && ((N1-k1) > 5)) {
             if (m31==true){
           var lastheighsmall1;
           var countheigh1;
-          if (document.documentElement.clientWidth > 1300){
+          if (document.documentElement.clientWidth >= 1300){
             lastheighsmall1 = 272.5;
             countheigh1 = 5;
           }
-          else {
+          else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
             lastheighsmall1 = 183;
-            countheigh1 = 4
+            countheigh1 = 4;
+          } else if (document.documentElement.clientWidth <= 768){
+            lastheighsmall1 = 131.8;
+            countheigh1 = 1;
           }
                     var newimg;
         var newdiv=document.createElement("div");
@@ -842,7 +948,7 @@ if (document.documentElement.clientWidth > 1300){
           newdiv.style.height = progress * 545 + 'px';
         }
       });
-         } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+         } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
           animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -874,7 +980,7 @@ if (document.documentElement.clientWidth > 1300){
     }
         document.getElementsByClassName("main2")[j1].appendChild(newimg);
 }
-} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
           for (var i = z1; i <= 10+(z1-1); i++) {
         if (k1<=N1) {k1++;} else {break;}
         newimg=document.createElement("img");
@@ -919,7 +1025,7 @@ document.getElementById('hidesmall1').appendChild(newbut1);
 
 if (document.documentElement.clientWidth > 1300){
 e2.parentNode.removeChild(e2);
-} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
         e2.setAttribute("value","");
         e2.setAttribute("onClick","DelItems1()");
         document.getElementById("hidesmall1").style.marginLeft = -77 + "px";
@@ -1294,7 +1400,7 @@ if (document.documentElement.clientWidth > 1300){
           newdiv.style.height = progress * 545 + 'px';
         }
       });
-        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
           animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -1326,7 +1432,7 @@ if (document.documentElement.clientWidth > 1300){
     }
         document.getElementsByClassName("main1")[j2].appendChild(newimg);
 }
-        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
           for (var i = z2; i <= 10+(z2-1); i++) {
         if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
@@ -1369,7 +1475,7 @@ document.getElementById('hidesmall2').appendChild(newbut1);
         var e2 = document.getElementById('showmore2');
         if (document.documentElement.clientWidth > 1300){
 e2.parentNode.removeChild(e2);
-} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
         e2.setAttribute("value","");
         e2.setAttribute("onClick","DelItems2()");
         document.getElementById("hidesmall2").style.marginLeft = -77 + "px";
@@ -1772,7 +1878,7 @@ if (document.documentElement.clientWidth > 1300){
     }
         document.getElementsByClassName("main0")[j3].appendChild(newimg);
 }
-        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+        } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
           for (var i = z3; i <= 10+(z3-1); i++) {
         if (k3<=N3) {k3++;} else {break;}
         newimg=document.createElement("img");
@@ -1815,7 +1921,7 @@ document.getElementById('hidesmall3').appendChild(newbut1);
         var e2 = document.getElementById('showmore3');
         if (document.documentElement.clientWidth > 1300){
 e2.parentNode.removeChild(e2);
-} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 786){
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
         e2.setAttribute("value","");
         e2.setAttribute("onClick","DelItems3()");
         e2.setAttribute("href","#6");
