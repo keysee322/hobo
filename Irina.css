@@ -2557,7 +2557,7 @@ h1.sixh {
   width: 33%;
 
 }
-    .main3, .main2, .main1{
+    .main3, .main2, .main1, .main0{
     position: relative;
     width: 97vw;
     height: 131.8vw;
@@ -2639,22 +2639,13 @@ z-index: 2;
     opacity: 0;
     font-family: "Noto Sans";
 }
-    .main0{
-  position: relative;
-  width: 695px;
-  height: 545px;
-  margin-top:15px;
-  background-color: white;
-        left: calc(50% - 347.5px);
-        opacity: 0;
 
-    }
 #cost, #cost1, #cost2, #cost3 {
     position: relative;
     text-align: center;
     height: 30px;
     width: 100%;
-    margin-top: 0px;
+    margin-top: 3vw;
     z-index: 2;
     overflow: hidden;
 }
