@@ -2427,10 +2427,21 @@ if (costcount == 0){
           document.getElementById("cost").style.height = progress * 389 + "px";
         }
       });
+  } else if (document.documentElement.clientWidth <= 768) {
+      animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost").style.height = progress * 59 + "vw";
+        }
+      });
   }
 
-
+if (document.documentElement.clientWidth > 768)
     document.getElementById("insidecost").style.paddingTop = 35 + "px";
+
+  if (document.documentElement.clientWidth <= 768)
+    document.getElementById("insidecost").style.paddingTop = 5 + "vw";
 
 
 
@@ -2519,7 +2530,6 @@ x=document.createElement("div");
     x1 = document.createTextNode("3 500 руб.");
       document.getElementById("rightcost").appendChild(x);
    document.getElementsByClassName("leftcost2")[4].appendChild(x1);
-      document.getElementsByClassName("leftcost2")[4].style.marginTop = 55 + "px";
 
      if (document.documentElement.clientWidth >= 1300) {
       document.getElementsByClassName("leftcost2")[4].style.marginTop = 55 + "px";
@@ -2598,14 +2608,16 @@ if (costbool == false){
           document.getElementById("cost").style.height = 389 + -progress * 389 + "px";
         }
       });
-  }
-  animate({
+  } else if (document.documentElement.clientWidth <= 768) {
+      animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("cost").style.height = 530 + -progress * 530 + "px";
+          document.getElementById("cost").style.height = 59 + -progress * 59 + "vw";
         }
       });
+  }
+
   x=document.createElement("button");
   x.setAttribute("id","costbutton");
 
@@ -2618,10 +2630,20 @@ if (costbool == false){
   x.setAttribute("id","downarrow");
   x.setAttribute("src","down_arrow.png");
   document.getElementById("costbutton").appendChild(x);
-  if ($('#showmore').length == 1)
+  if ($('#showmore').length == 1){
+    if (document.documentElement.clientWidth > 768)
     document.getElementById("costbutton").style.marginTop = 100 + 'px';
-  else 
-        document.getElementById("costbutton").style.marginTop = 40 + 'px';
+    if (document.documentElement.clientWidth <= 768)
+      document.getElementById("costbutton").style.marginTop = '12vw';
+}
+  else {
+    if (document.documentElement.clientWidth > 768)
+    document.getElementById("costbutton").style.marginTop = '40px';
+    if (document.documentElement.clientWidth <= 768)
+      document.getElementById("costbutton").style.marginTop = 'calc(4vw - 9px)';
+      }
+if (document.documentElement.clientWidth <= 768)
+      document.getElementsByClassName("four")[0].style.marginTop = 'calc(30px + 5vw)';
 
   setTimeout(appear,1200);
 
@@ -2653,6 +2675,14 @@ animate({
         timing: quadEaseOut,
         draw: function(progress) {
           document.getElementById("cost").style.height = progress * 389 + "px";
+        }
+      });
+  } else if (document.documentElement.clientWidth <= 768) {
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost").style.height = progress * 59 + "vw";
         }
       });
   }
@@ -2693,11 +2723,22 @@ if (costcount1 == 0){
           document.getElementById("cost1").style.height = progress * 465 + "px";
         }
       });
+  } else if (document.documentElement.clientWidth <= 768) {
+      animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost1").style.height = progress * 137 + "vw";
+        }
+      });
   }
+      document.getElementById("costhyperdiv1").style.marginTop = 126 + "vw";
 
             if (document.documentElement.clientWidth >= 1300) {
 document.getElementById("leftcostdown").style.paddingTop = 55 + "px";
   } else if (document.documentElement.clientWidth > 768 && document.documentElement.clientWidth < 1300) {
+document.getElementById("leftcostdown").style.paddingTop = 35 + "px";
+  } else if (document.documentElement.clientWidth <= 768) {
 document.getElementById("leftcostdown").style.paddingTop = 35 + "px";
   }
 
@@ -2717,8 +2758,10 @@ document.getElementById("leftcostdown").style.paddingTop = 35 + "px";
    document.getElementsByClassName("secondcost11")[0].appendChild(x1);
    if (document.documentElement.clientWidth >= 1300)
    document.getElementsByClassName("secondcost11")[0].style.marginTop = 65 + "px";
-if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
+else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768) 
      document.getElementsByClassName("secondcost11")[0].style.marginTop = 51 + "px";
+   else if (document.documentElement.clientWidth <= 768)
+    document.getElementsByClassName("secondcost11")[0].style.marginTop = 8.5 + "vw";
 
 
       x=document.createElement("div");
@@ -2726,35 +2769,51 @@ if (document.documentElement.clientWidth < 1300 && document.documentElement.clie
   x1 = document.createTextNode("нанесение логотипа");
   document.getElementById("leftcostdown").appendChild(x);
    document.getElementsByClassName("secondcost11")[1].appendChild(x1);
+         if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost11")[1].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+  document.getElementsByClassName("secondcost11")[1].style.marginTop = 4 + "vw";
+
 
 x=document.createElement("div");
   x.setAttribute("class","secondcost11");
   x1 = document.createTextNode("детская тематика");
   document.getElementById("leftcostdown").appendChild(x);
    document.getElementsByClassName("secondcost11")[2].appendChild(x1);
+      if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost11")[2].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+  document.getElementsByClassName("secondcost11")[2].style.marginTop = 4 + "vw";
 
     x=document.createElement("div");
   x.setAttribute("class","secondcost11");
   x1 = document.createTextNode("простой пейзаж");
   document.getElementById("leftcostdown").appendChild(x);
    document.getElementsByClassName("secondcost11")[3].appendChild(x1);
+      if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost11")[3].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+  document.getElementsByClassName("secondcost11")[3].style.marginTop = 4 + "vw";
 
    x=document.createElement("div");
   x.setAttribute("class","secondcost11");
   x1 = document.createTextNode("небо");
   document.getElementById("leftcostdown").appendChild(x);
    document.getElementsByClassName("secondcost11")[4].appendChild(x1);
+   if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost11")[4].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+  document.getElementsByClassName("secondcost11")[4].style.marginTop = 4 + "vw";
 
       x=document.createElement("div");
   x.setAttribute("class","secondcost1");
   x1 = document.createTextNode("от 1 500 руб.");
   document.getElementById("leftcostdown").appendChild(x);
    document.getElementsByClassName("secondcost1")[1].appendChild(x1);
-   document.getElementsByClassName("secondcost1")[1].style.marginTop = 35 + "px";
+   if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
+   document.getElementsByClassName("secondcost1")[1].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+  document.getElementsByClassName("secondcost1")[1].style.marginTop = 4 + "vw";
    if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost1")[1].style.marginLeft = -23 + "px";
 
@@ -2775,42 +2834,60 @@ var x=document.createElement("div");
   x1 = document.createTextNode("детальная трафаретная роспись");
   document.getElementById("secondcost2").appendChild(x);
    document.getElementsByClassName("secondcost12")[0].appendChild(x1);
+         if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost12")[0].style.marginTop = 31 + "px";
+ else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+  document.getElementsByClassName("secondcost12")[0].style.marginTop = 4 + "vw";
 
       x=document.createElement("div");
   x.setAttribute("class","secondcost12");
   x1 = document.createTextNode("нанесение логотипа с прорисовкой");
   document.getElementById("secondcost2").appendChild(x);
    document.getElementsByClassName("secondcost12")[1].appendChild(x1);
+         if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost12")[1].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+  document.getElementsByClassName("secondcost12")[1].style.marginTop = 4 + "vw";
 
 x=document.createElement("div");
   x.setAttribute("class","secondcost12");
   x1 = document.createTextNode("детская тематика с деталзиацией");
   document.getElementById("secondcost2").appendChild(x);
    document.getElementsByClassName("secondcost12")[2].appendChild(x1);
+         if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost12")[2].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+  document.getElementsByClassName("secondcost12")[2].style.marginTop = 4 + "vw";
 
     x=document.createElement("div");
   x.setAttribute("class","secondcost12");
   x1 = document.createTextNode("пейзаж с архитектурой");
   document.getElementById("secondcost2").appendChild(x);
    document.getElementsByClassName("secondcost12")[3].appendChild(x1);
+         if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost12")[3].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+  document.getElementsByClassName("secondcost12")[3].style.marginTop = 3.9 + "vw";
 
    x=document.createElement("div");
   x.setAttribute("class","secondcost12");
   x1 = document.createTextNode("детальная прорисовка неба");
   document.getElementById("secondcost2").appendChild(x);
    document.getElementsByClassName("secondcost12")[4].appendChild(x1);
+         if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost12")[4].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+  document.getElementsByClassName("secondcost12")[4].style.marginTop = 4 + "vw";
 
       x=document.createElement("div");
   x.setAttribute("id","secondcost21");
   x1 = document.createTextNode("от 3 500 руб.");
   document.getElementById("secondcost2").appendChild(x);
    document.getElementById("secondcost21").appendChild(x1);
-   document.getElementById("secondcost21").style.marginTop = 35 + "px";
+         if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
+   document.getElementById("secondcost21").style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+  document.getElementById("secondcost21").style.marginTop = 4 + "vw";
 
 
 
@@ -2857,7 +2934,7 @@ x=document.createElement("div");
       if (document.documentElement.clientWidth >= 1300)
    document.getElementById("secondcost31").style.marginTop = 94 + "px";
 if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
-        document.getElementById("secondcost31").style.marginTop = 80 + "px";
+        document.getElementById("secondcost31").style.marginTop = 70 + "px";
 
 
 
@@ -2897,6 +2974,14 @@ if (costbool1 == false){
           document.getElementById("cost1").style.height = 465 + -progress * 465 + "px";
         }
       });
+  } else if (document.documentElement.clientWidth <= 768) {
+      animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost1").style.height = 137 + -progress * 137 + "vw";
+        }
+      });
   }
   x=document.createElement("button");
   x.setAttribute("id","costbutton1");
@@ -2910,10 +2995,20 @@ if (costbool1 == false){
   x.setAttribute("id","downarrow");
   x.setAttribute("src","down_arrow.png");
   document.getElementById("costbutton1").appendChild(x);
- if ($('#showmore1').length == 1)
+  if ($('#showmore1').length == 1){
+    if (document.documentElement.clientWidth > 768)
     document.getElementById("costbutton1").style.marginTop = 100 + 'px';
-  else 
-        document.getElementById("costbutton1").style.marginTop = 40 + 'px';
+    if (document.documentElement.clientWidth <= 768)
+      document.getElementById("costbutton1").style.marginTop = '12vw';
+}
+  else {
+    if (document.documentElement.clientWidth > 768)
+    document.getElementById("costbutton1").style.marginTop = '40px';
+    if (document.documentElement.clientWidth <= 768)
+      document.getElementById("costbutton1").style.marginTop = 'calc(4vw - 9px)';
+      }
+if (document.documentElement.clientWidth <= 768)
+      document.getElementsByClassName("five")[0].style.marginTop = 'calc(30px + 5vw)';
 
   setTimeout(appear,1200);
 
@@ -2945,6 +3040,14 @@ animate({
         timing: quadEaseOut,
         draw: function(progress) {
           document.getElementById("cost1").style.height = progress * 465 + "px";
+        }
+      });
+  } else if (document.documentElement.clientWidth <= 768) {
+      animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost1").style.height = progress * 137 + "vw";
         }
       });
   }
@@ -2983,73 +3086,131 @@ if (document.documentElement.clientWidth >= 1300){
       });
 
     document.getElementById("leftcostdown1").style.paddingTop = 35 + "px";
+} else if (document.documentElement.clientWidth <= 768){
+    animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost2").style.height = progress * 124 + "vw";
+        }
+      });
+    document.getElementById("costhyperdiv2").style.marginTop ="113vw";
+    document.getElementById("leftcostdown1").style.paddingTop = 3 + "vw";
 }
 
 
   document.getElementById("cost2").style.background = "#D8D8D8";
 
-  var x=document.createElement("div");
-  x.setAttribute("class","thirdcost1");
-  x1 = document.createTextNode("");
+   x=document.createElement("div");
+  x.setAttribute("id","thirdcost1");
   document.getElementById("leftcostdown1").appendChild(x);
-   document.getElementsByClassName("thirdcost1")[0].appendChild(x1);
 
    x=document.createElement("div");
   x.setAttribute("class","thirdcost11");
   x1 = document.createTextNode("свитшот, худи и т.д.");
-  document.getElementById("leftcostdown1").appendChild(x);
+  document.getElementById("thirdcost1").appendChild(x);
    document.getElementsByClassName("thirdcost11")[0].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost11")[0].style.marginTop = 65 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost11")[0].style.marginTop = "12vw";
 
       x=document.createElement("div");
   x.setAttribute("class","thirdcost11");
   x1 = document.createTextNode("джинсовые шорты");
-  document.getElementById("leftcostdown1").appendChild(x);
+  document.getElementById("thirdcost1").appendChild(x);
    document.getElementsByClassName("thirdcost11")[1].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost11")[1].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost11")[1].style.marginTop = "4vw";
 
 x=document.createElement("div");
   x.setAttribute("class","thirdcost11");
   x1 = document.createTextNode("кожаные куртки");
-  document.getElementById("leftcostdown1").appendChild(x);
-   document.getElementsByClassName("thirdcost11")[2].appendChild(x1);
+  document.getElementById("thirdcost1").appendChild(x);
+     document.getElementsByClassName("thirdcost11")[2].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost11")[2].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost11")[2].style.marginTop = "4vw";
 
     x=document.createElement("div");
   x.setAttribute("class","thirdcost11");
   x1 = document.createTextNode("куртки (ткань)");
-  document.getElementById("leftcostdown1").appendChild(x);
+  document.getElementById("thirdcost1").appendChild(x);
    document.getElementsByClassName("thirdcost11")[3].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost11")[3].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost11")[3].style.marginTop = "4vw";
 
    x=document.createElement("div");
   x.setAttribute("class","thirdcost11");
   x1 = document.createTextNode("джинсовки");
-  document.getElementById("leftcostdown1").appendChild(x);
+  document.getElementById("thirdcost1").appendChild(x);
    document.getElementsByClassName("thirdcost11")[4].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost11")[4].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost11")[4].style.marginTop = "4vw";
 
    x=document.createElement("div");
   x.setAttribute("class","thirdcost11");
   x1 = document.createTextNode("футболки");
-  document.getElementById("leftcostdown1").appendChild(x);
+  document.getElementById("thirdcost1").appendChild(x);
    document.getElementsByClassName("thirdcost11")[5].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost11")[5].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost11")[5].style.marginTop = "4vw";
 
       x=document.createElement("div");
   x.setAttribute("class","thirdcost11");
   x1 = document.createTextNode("джинсы");
-  document.getElementById("leftcostdown1").appendChild(x);
+  document.getElementById("thirdcost1").appendChild(x);
    document.getElementsByClassName("thirdcost11")[6].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost11")[6].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost11")[6].style.marginTop = "4vw";
 
       x=document.createElement("div");
   x.setAttribute("class","thirdcost11");
   x1 = document.createTextNode("пальто");
-  document.getElementById("leftcostdown1").appendChild(x);
+  document.getElementById("thirdcost1").appendChild(x);
    document.getElementsByClassName("thirdcost11")[7].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost11")[7].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost11")[7].style.marginTop = "4vw";
 
+
+
+   if (document.documentElement.clientWidth <= 768){
+       x=document.createElement("div");
+  x.setAttribute("class","thirdcost11");
+  x1 = document.createTextNode("Детское");
+  document.getElementById("thirdcost1").appendChild(x);
+   document.getElementsByClassName("thirdcost11")[8].appendChild(x1);
+   document.getElementsByClassName("thirdcost11")[8].style.marginTop = "4vw";
+
+          x=document.createElement("div");
+  x.setAttribute("class","thirdcost11");
+  x1 = document.createTextNode("всё от 500 руб.");
+  document.getElementById("thirdcost1").appendChild(x);
+   document.getElementsByClassName("thirdcost11")[9].appendChild(x1);
+   document.getElementsByClassName("thirdcost11")[9].style.marginTop = "4vw";
+   document.getElementsByClassName("thirdcost11")[9].style.fontWeight = "normal";
+
+             x=document.createElement("div");
+  x.setAttribute("class","thirdcost11");
+  x1 = document.createTextNode("_");
+  document.getElementById("thirdcost1").appendChild(x);
+   document.getElementsByClassName("thirdcost11")[10].appendChild(x1);
+   document.getElementsByClassName("thirdcost11")[10].style.marginTop = "4vw";
+   document.getElementsByClassName("thirdcost11")[10].style.opacity = 0;
+}
 
 
 
@@ -3065,57 +3226,106 @@ var x=document.createElement("div");
   x1 = document.createTextNode("от 2 100 руб.");
   document.getElementById("thirdcost2").appendChild(x);
    document.getElementsByClassName("thirdcost12")[0].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost12")[0].style.marginTop = 31 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost12")[0].style.marginTop = "4vw";
 
       x=document.createElement("div");
   x.setAttribute("class","thirdcost12");
   x1 = document.createTextNode("от 1 500 руб.");
   document.getElementById("thirdcost2").appendChild(x);
    document.getElementsByClassName("thirdcost12")[1].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost12")[1].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost12")[1].style.marginTop = "4vw";
 
 x=document.createElement("div");
   x.setAttribute("class","thirdcost12");
   x1 = document.createTextNode("от 2 500 руб.");
   document.getElementById("thirdcost2").appendChild(x);
    document.getElementsByClassName("thirdcost12")[2].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost12")[2].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost12")[2].style.marginTop = "4vw";
 
     x=document.createElement("div");
   x.setAttribute("class","thirdcost12");
   x1 = document.createTextNode("от 2 100 руб.");
   document.getElementById("thirdcost2").appendChild(x);
    document.getElementsByClassName("thirdcost12")[3].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost12")[3].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost12")[3].style.marginTop = "4vw";
 
    x=document.createElement("div");
   x.setAttribute("class","thirdcost12");
   x1 = document.createTextNode("от 2 100 руб.");
   document.getElementById("thirdcost2").appendChild(x);
    document.getElementsByClassName("thirdcost12")[4].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost12")[4].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost12")[4].style.marginTop = "4vw";
 
    x=document.createElement("div");
   x.setAttribute("class","thirdcost12");
   x1 = document.createTextNode("от 1 100 руб.");
   document.getElementById("thirdcost2").appendChild(x);
    document.getElementsByClassName("thirdcost12")[5].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost12")[5].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost12")[5].style.marginTop = "4vw";
 
       x=document.createElement("div");
   x.setAttribute("class","thirdcost12");
   x1 = document.createTextNode("от 1 300 руб.");
   document.getElementById("thirdcost2").appendChild(x);
    document.getElementsByClassName("thirdcost12")[6].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost12")[6].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost12")[6].style.marginTop = "4vw";
 
    x=document.createElement("div");
   x.setAttribute("class","thirdcost12");
   x1 = document.createTextNode("от 3 000 руб.");
   document.getElementById("thirdcost2").appendChild(x);
    document.getElementsByClassName("thirdcost12")[7].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost12")[7].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost12")[7].style.marginTop = "4vw";
 
+ if (document.documentElement.clientWidth <= 768){
+    x=document.createElement("div");
+  x.setAttribute("class","thirdcost12");
+  x1 = document.createTextNode("Разное");
+  document.getElementById("thirdcost2").appendChild(x);
+   document.getElementsByClassName("thirdcost12")[8].appendChild(x1);
+   document.getElementsByClassName("thirdcost12")[8].style.marginTop = "4vw";
+    document.getElementsByClassName("thirdcost12")[8].style.fontWeight = "bold";
+
+    x=document.createElement("div");
+  x.setAttribute("class","thirdcost12");
+  x1 = document.createTextNode("cумки, кошельки от 1 000 руб.");
+  document.getElementById("thirdcost2").appendChild(x);
+   document.getElementsByClassName("thirdcost12")[9].appendChild(x1);
+   document.getElementsByClassName("thirdcost12")[9].style.marginTop = "4vw";
+   document.getElementsByClassName("thirdcost12")[9].style.width = "40vw";
+
+       x=document.createElement("div");
+  x.setAttribute("class","thirdcost12");
+  x1 = document.createTextNode("обувь от 1 200 руб.");
+  document.getElementById("thirdcost2").appendChild(x);
+   document.getElementsByClassName("thirdcost12")[10].appendChild(x1);
+   document.getElementsByClassName("thirdcost12")[10].style.marginTop = "4vw";
+   document.getElementsByClassName("thirdcost12")[10].style.width = "40vw";
+}
 
 
    var x=document.createElement("div");
@@ -3129,56 +3339,106 @@ x=document.createElement("div");
   x1 = document.createTextNode("от 1 500 руб.");
   document.getElementById("thirdcost3").appendChild(x);
    document.getElementsByClassName("thirdcost13")[0].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost13")[0].style.marginTop = 31 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost13")[0].style.marginTop = "4vw";
 
       x=document.createElement("div");
   x.setAttribute("class","thirdcost13");
   x1 = document.createTextNode("от 1 000 руб.");
   document.getElementById("thirdcost3").appendChild(x);
    document.getElementsByClassName("thirdcost13")[1].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost13")[1].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost13")[1].style.marginTop = "4vw";
 
 x=document.createElement("div");
   x.setAttribute("class","thirdcost13");
   x1 = document.createTextNode("от 2 500 руб.");
   document.getElementById("thirdcost3").appendChild(x);
    document.getElementsByClassName("thirdcost13")[2].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost13")[2].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost13")[2].style.marginTop = "4vw";
 
     x=document.createElement("div");
   x.setAttribute("class","thirdcost13");
   x1 = document.createTextNode("от 1 800 руб.");
   document.getElementById("thirdcost3").appendChild(x);
    document.getElementsByClassName("thirdcost13")[3].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost13")[3].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost13")[3].style.marginTop = "4vw";
 
     x=document.createElement("div");
   x.setAttribute("class","thirdcost13");
   x1 = document.createTextNode("от 1 800 руб.");
   document.getElementById("thirdcost3").appendChild(x);
    document.getElementsByClassName("thirdcost13")[4].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost13")[4].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost13")[4].style.marginTop = "4vw";
 
        x=document.createElement("div");
   x.setAttribute("class","thirdcost13");
   x1 = document.createTextNode("от 800 руб.");
   document.getElementById("thirdcost3").appendChild(x);
    document.getElementsByClassName("thirdcost13")[5].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost13")[5].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost13")[5].style.marginTop = "4vw";
 
        x=document.createElement("div");
   x.setAttribute("class","thirdcost13");
   x1 = document.createTextNode("от 1 000 руб.");
   document.getElementById("thirdcost3").appendChild(x);
    document.getElementsByClassName("thirdcost13")[6].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost13")[6].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost13")[6].style.marginTop = "4vw";
 
        x=document.createElement("div");
   x.setAttribute("class","thirdcost13");
   x1 = document.createTextNode("от 3 000 руб.");
   document.getElementById("thirdcost3").appendChild(x);
    document.getElementsByClassName("thirdcost13")[7].appendChild(x1);
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("thirdcost13")[7].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+   document.getElementsByClassName("thirdcost13")[7].style.marginTop = "4vw";
+
+  if (document.documentElement.clientWidth <= 768){
+    x=document.createElement("div");
+  x.setAttribute("class","thirdcost13");
+  x1 = document.createTextNode("_");
+  document.getElementById("thirdcost3").appendChild(x);
+   document.getElementsByClassName("thirdcost13")[8].appendChild(x1);
+   document.getElementsByClassName("thirdcost13")[8].style.marginTop = "4vw";
+    document.getElementsByClassName("thirdcost13")[8].style.opacity = 0;
+
+    x=document.createElement("div");
+  x.setAttribute("class","thirdcost13");
+  x1 = document.createTextNode("_");
+  document.getElementById("thirdcost3").appendChild(x);
+   document.getElementsByClassName("thirdcost13")[9].appendChild(x1);
+   document.getElementsByClassName("thirdcost13")[9].style.marginTop = "4vw";
+   document.getElementsByClassName("thirdcost13")[9].style.opacity = 0;
+
+       x=document.createElement("div");
+  x.setAttribute("class","thirdcost13");
+  x1 = document.createTextNode("_");
+  document.getElementById("thirdcost3").appendChild(x);
+   document.getElementsByClassName("thirdcost13")[10].appendChild(x1);
+   document.getElementsByClassName("thirdcost13")[10].style.marginTop = "4vw";
+   document.getElementsByClassName("thirdcost13")[10].style.opacity = 0;
+}
 
   var x=document.createElement("div");
   x.setAttribute("id","thirdcost4");
@@ -3220,7 +3480,7 @@ if (document.documentElement.clientWidth >= 1300){
 } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
    document.getElementById("costhyperdiv2").style.marginTop = 476 + "px";
 
-}
+} 
 
 
 document.getElementById("costhyper2").innerHTML = "Свернуть";
@@ -3256,6 +3516,15 @@ if (costbool2 == false){
         }
       });
 
+} else if (document.documentElement.clientWidth <= 768){
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost2").style.height = 124 + -progress * 124 + "vw";
+        }
+      });
+
 }
 
   x=document.createElement("button");
@@ -3269,10 +3538,20 @@ if (costbool2 == false){
   x.setAttribute("id","downarrow");
   x.setAttribute("src","down_arrow.png");
   document.getElementById("costbutton2").appendChild(x);
-    if ($('#showmore2').length == 1)
+      if ($('#showmore2').length == 1){
+    if (document.documentElement.clientWidth > 768)
     document.getElementById("costbutton2").style.marginTop = 100 + 'px';
-  else 
-        document.getElementById("costbutton2").style.marginTop = 40 + 'px';
+    if (document.documentElement.clientWidth <= 768)
+      document.getElementById("costbutton2").style.marginTop = '12vw';
+}
+  else {
+    if (document.documentElement.clientWidth > 768)
+    document.getElementById("costbutton2").style.marginTop = '40px';
+    if (document.documentElement.clientWidth <= 768)
+      document.getElementById("costbutton2").style.marginTop = 'calc(4vw - 9px)';
+      }
+if (document.documentElement.clientWidth <= 768)
+      document.getElementsByClassName("six1")[0].style.marginTop = 'calc(30px + 5vw)';
 
   setTimeout(appear,1200);
 
@@ -3305,6 +3584,15 @@ animate({
         timing: quadEaseOut,
         draw: function(progress) {
           document.getElementById("cost2").style.height = progress * 526 + "px";
+        }
+      });
+
+} else if (document.documentElement.clientWidth <= 768){
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost2").style.height = progress * 124 + "vw";
         }
       });
 
@@ -3343,6 +3631,18 @@ if (document.documentElement.clientWidth >= 1300){
       });
 
     document.getElementById("leftcostdown2").style.paddingTop = 35 + "px";
+} else if (document.documentElement.clientWidth <= 768){
+            document.getElementsByClassName("six")[0].style.marginTop = 8 + "vw";
+    animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost3").style.height = progress * 30 + "vw";
+        }
+      });
+
+    document.getElementById("leftcostdown2").style.paddingTop = 4 + "vw";
+    document.getElementById("costhyperdiv3").style.marginTop = 7 + "vw";
 }
 
 
@@ -3400,6 +3700,13 @@ if (costbool3 == false){
         draw: function(progress) {
           document.getElementById("cost3").style.height = 140 + -progress * 140 + "px";
         }
+      });} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768){
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost3").style.height = 30 + -progress * 30 + "vw";
+        }
       });}
 
   x=document.createElement("button");
@@ -3415,10 +3722,20 @@ if (costbool3 == false){
   x.setAttribute("src","down_arrow.png");
   document.getElementById("costbutton3").appendChild(x);
 
-   if ($('#showmore3').length == 1)
+      if ($('#showmore3').length == 1){
+    if (document.documentElement.clientWidth > 768)
     document.getElementById("costbutton3").style.marginTop = 100 + 'px';
-  else 
-        document.getElementById("costbutton3").style.marginTop = 40 + 'px';
+    if (document.documentElement.clientWidth <= 768)
+      document.getElementById("costbutton3").style.marginTop = '12vw';
+}
+  else {
+    if (document.documentElement.clientWidth > 768)
+    document.getElementById("costbutton3").style.marginTop = '40px';
+    if (document.documentElement.clientWidth <= 768)
+      document.getElementById("costbutton3").style.marginTop = 'calc(4vw - 9px)';
+      }
+if (document.documentElement.clientWidth <= 768)
+      document.getElementsByClassName("six")[0].style.marginTop = 'calc(30px + 5vw)';
 
   setTimeout(appear,1200);
 
@@ -3453,6 +3770,14 @@ if (document.documentElement.clientWidth >= 1300){
         timing: quadEaseOut,
         draw: function(progress) {
           document.getElementById("cost3").style.height = progress * 140 + "px";
+        }
+      });
+} else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768){
+  animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          document.getElementById("cost3").style.height = progress * 30 + "vw";
         }
       });
 }
@@ -3637,7 +3962,7 @@ if (document.documentElement.clientWidth >= 1300){
   <a id="end" href="https://www.whatsapp.com"><img class="socialimg1" src="wut.svg"></a>
   <a id="end" href="https://www.instagram.com"><img class="socialimg1" src="insta.svg"></a>
   <a id="end" href="www.facebook.com"><img class="socialimg1" src="facebook.svg"></a>
-  <a id="end" href="https://vk.com"><img class="socialimg1" src="vk.svg"></a></p>
+
 </div>
 <div class="insideright6">	
     <form action="mail.php" method="POST">
