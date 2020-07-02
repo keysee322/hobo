@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width; initial-scale=1">
 	<title>irina</title>
-	 <link rel="stylesheet" type="text/css" href="irina.css">
+	 <link rel="stylesheet" type="text/css" href="Irina.css">
        <script src="animate.js"></script>
        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -2769,9 +2769,9 @@ else if (document.documentElement.clientWidth < 1300 && document.documentElement
   x1 = document.createTextNode("нанесение логотипа");
   document.getElementById("leftcostdown").appendChild(x);
    document.getElementsByClassName("secondcost11")[1].appendChild(x1);
-         if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
+         if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost11")[1].style.marginTop = 25 + "px";
- else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+ else if (document.documentElement.clientWidth <= 768)
   document.getElementsByClassName("secondcost11")[1].style.marginTop = 4 + "vw";
 
 
@@ -2780,9 +2780,9 @@ x=document.createElement("div");
   x1 = document.createTextNode("детская тематика");
   document.getElementById("leftcostdown").appendChild(x);
    document.getElementsByClassName("secondcost11")[2].appendChild(x1);
-      if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
+      if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost11")[2].style.marginTop = 25 + "px";
- else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+ else if (document.documentElement.clientWidth <= 768)
   document.getElementsByClassName("secondcost11")[2].style.marginTop = 4 + "vw";
 
     x=document.createElement("div");
@@ -2790,9 +2790,9 @@ x=document.createElement("div");
   x1 = document.createTextNode("простой пейзаж");
   document.getElementById("leftcostdown").appendChild(x);
    document.getElementsByClassName("secondcost11")[3].appendChild(x1);
-      if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
+      if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost11")[3].style.marginTop = 25 + "px";
- else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+ else if (document.documentElement.clientWidth <= 768)
   document.getElementsByClassName("secondcost11")[3].style.marginTop = 4 + "vw";
 
    x=document.createElement("div");
@@ -2800,9 +2800,9 @@ x=document.createElement("div");
   x1 = document.createTextNode("небо");
   document.getElementById("leftcostdown").appendChild(x);
    document.getElementsByClassName("secondcost11")[4].appendChild(x1);
-   if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost11")[4].style.marginTop = 25 + "px";
- else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+ else if (document.documentElement.clientWidth <= 768)
   document.getElementsByClassName("secondcost11")[4].style.marginTop = 4 + "vw";
 
       x=document.createElement("div");
@@ -2810,9 +2810,9 @@ x=document.createElement("div");
   x1 = document.createTextNode("от 1 500 руб.");
   document.getElementById("leftcostdown").appendChild(x);
    document.getElementsByClassName("secondcost1")[1].appendChild(x1);
-   if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
+   if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost1")[1].style.marginTop = 25 + "px";
- else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+ else if (document.documentElement.clientWidth <= 768)
   document.getElementsByClassName("secondcost1")[1].style.marginTop = 4 + "vw";
    if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost1")[1].style.marginLeft = -23 + "px";
@@ -2834,9 +2834,9 @@ var x=document.createElement("div");
   x1 = document.createTextNode("детальная трафаретная роспись");
   document.getElementById("secondcost2").appendChild(x);
    document.getElementsByClassName("secondcost12")[0].appendChild(x1);
-         if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
+         if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost12")[0].style.marginTop = 31 + "px";
- else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+ else if (document.documentElement.clientWidth <= 768)
   document.getElementsByClassName("secondcost12")[0].style.marginTop = 4 + "vw";
 
       x=document.createElement("div");
@@ -2844,9 +2844,9 @@ var x=document.createElement("div");
   x1 = document.createTextNode("нанесение логотипа с прорисовкой");
   document.getElementById("secondcost2").appendChild(x);
    document.getElementsByClassName("secondcost12")[1].appendChild(x1);
-         if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
+         if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost12")[1].style.marginTop = 25 + "px";
- else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+ else if (document.documentElement.clientWidth <= 768)
   document.getElementsByClassName("secondcost12")[1].style.marginTop = 4 + "vw";
 
 x=document.createElement("div");
@@ -2854,9 +2854,9 @@ x=document.createElement("div");
   x1 = document.createTextNode("детская тематика с деталзиацией");
   document.getElementById("secondcost2").appendChild(x);
    document.getElementsByClassName("secondcost12")[2].appendChild(x1);
-         if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
+         if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost12")[2].style.marginTop = 25 + "px";
- else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+ else if (document.documentElement.clientWidth <= 768)
   document.getElementsByClassName("secondcost12")[2].style.marginTop = 4 + "vw";
 
     x=document.createElement("div");
@@ -2864,9 +2864,9 @@ x=document.createElement("div");
   x1 = document.createTextNode("пейзаж с архитектурой");
   document.getElementById("secondcost2").appendChild(x);
    document.getElementsByClassName("secondcost12")[3].appendChild(x1);
-         if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
+         if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost12")[3].style.marginTop = 25 + "px";
- else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+ else if (document.documentElement.clientWidth <= 768)
   document.getElementsByClassName("secondcost12")[3].style.marginTop = 3.9 + "vw";
 
    x=document.createElement("div");
@@ -2874,9 +2874,9 @@ x=document.createElement("div");
   x1 = document.createTextNode("детальная прорисовка неба");
   document.getElementById("secondcost2").appendChild(x);
    document.getElementsByClassName("secondcost12")[4].appendChild(x1);
-         if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
+         if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost12")[4].style.marginTop = 25 + "px";
- else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+ else if (document.documentElement.clientWidth <= 768)
   document.getElementsByClassName("secondcost12")[4].style.marginTop = 4 + "vw";
 
       x=document.createElement("div");
@@ -2884,9 +2884,9 @@ x=document.createElement("div");
   x1 = document.createTextNode("от 3 500 руб.");
   document.getElementById("secondcost2").appendChild(x);
    document.getElementById("secondcost21").appendChild(x1);
-         if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
+         if (document.documentElement.clientWidth > 768)
    document.getElementById("secondcost21").style.marginTop = 25 + "px";
- else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth <= 768)
+ else if (document.documentElement.clientWidth <= 768)
   document.getElementById("secondcost21").style.marginTop = 4 + "vw";
 
 
@@ -3965,13 +3965,14 @@ if (document.documentElement.clientWidth >= 1300){
 
 </div>
 <div class="insideright6">	
-    <form action="mail.php" method="POST">
-	<input required class="input" name="username" type="text" placeholder="Ваше имя"> </input>
-	<input required class="input" name="userphone" type="tel" placeholder="Телефон"> </input>
+    <form action="mail.php" method="POST" enctype="multipart/form-data">
+	<input required class="input" name="user_name" type="text" placeholder="Ваше имя"> </input>
+	<input required class="input" name="user_phone" type="text" placeholder="Телефон"> </input>
 	<input required class="input" name="email" type="email" placeholder="Email"> </input>
+  <input onClick="ChangePic" class="file-upload" name="upload" type="file">
+  <div id="psevdo"></div>
 	<button type="submit" class="order">Заказать</button>
 
-	<img class="file" src="file.png">
 </form>
 </div>
 <div class="kek">

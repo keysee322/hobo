@@ -22,6 +22,7 @@ margin: 0px;
 transition: linear 1s;
 font-size: 18px;
 }
+input {outline:none;}
  nav.stroke ul li a{
   position: relative;
 }
@@ -202,7 +203,7 @@ margin-top: 2px;
 }
 h1{
   font-size: 36px;
-  width: 541px;
+  width: 500px;
 }
 .insideright{
   position: absolute;
@@ -964,6 +965,7 @@ color: white;
 margin-top: 30px;
 border: 0px;
 text-align: center;
+cursor: pointer;
 }
 .file{
   position: absolute;
@@ -1274,7 +1276,26 @@ line-height: 148.18%;
 letter-spacing: -0.04em;
 }
 
-
+.file-upload {
+    background-repeat: no-repeat;
+    background-image: url(file.png);
+    left: calc(50% + 332px);
+    margin-top: -144px;
+    cursor: pointer;
+    height: 23px;
+    padding-top: 110px;
+    width: 89px;
+    background-position: center top;
+    position: absolute;
+}
+#psevdo {
+    width: 129px;
+    height: 30px;
+    position: absolute;
+    background: #D8D8D8;
+    left: calc(50% + 294px);
+    margin-top: -35px;
+}
 
 @media (min-width: 768.00001px) and (max-width: 1300px){
 .navbar-brand {
@@ -1768,6 +1789,22 @@ height: 40px;
   left: calc(296px);
   width: 42px;
   top: calc(-15px + 50%);
+}
+.file-upload {
+    position: absolute;
+    left: calc(296px);
+    width: 42px;
+    padding-top: 55px;
+    top: calc(130px + 50%);
+    background-size: 100%;
+}
+#psevdo {
+    width: 57px;
+    height: 30px;
+    position: absolute;
+    background: #D8D8D8;
+    left: calc(50% + 109px);
+    margin-top: -29px;
 }
 
 #f11{
@@ -2736,5 +2773,11 @@ h1.sixh {
     margin-top: 6vw;
     padding-top: 8vw;
     z-index: 3;
+}
+.file-upload {
+width: 0px;
+  }
+#psevdo{
+  width: 0px;
 }
 }
