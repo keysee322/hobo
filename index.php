@@ -2732,7 +2732,7 @@ if (costcount1 == 0){
         }
       });
   }
-      document.getElementById("costhyperdiv1").style.marginTop = 126 + "vw";
+      document.getElementById("costhyperdiv1").style.marginTop = 124 + "vw";
 
             if (document.documentElement.clientWidth >= 1300) {
 document.getElementById("leftcostdown").style.paddingTop = 55 + "px";
@@ -2903,28 +2903,40 @@ x=document.createElement("div");
   x1 = document.createTextNode("художественная роспись");
   document.getElementById("secondcost3").appendChild(x);
    document.getElementsByClassName("secondcost13")[0].appendChild(x1);
+         if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost13")[0].style.marginTop = 31 + "px";
-
+ else if (document.documentElement.clientWidth <= 768)
+  document.getElementsByClassName("secondcost13")[0].style.marginTop = 4 + "vw";
       x=document.createElement("div");
+
   x.setAttribute("class","secondcost13");
   x1 = document.createTextNode("сложная архитектру");
   document.getElementById("secondcost3").appendChild(x);
    document.getElementsByClassName("secondcost13")[1].appendChild(x1);
+         if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost13")[1].style.marginTop = 25 + "px";
-
+ else if (document.documentElement.clientWidth <= 768)
+  document.getElementsByClassName("secondcost13")[1].style.marginTop = 4 + "vw";
 x=document.createElement("div");
+
   x.setAttribute("class","secondcost13");
   x1 = document.createTextNode("фотореализм");
   document.getElementById("secondcost3").appendChild(x);
    document.getElementsByClassName("secondcost13")[2].appendChild(x1);
+         if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost13")[2].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+  document.getElementsByClassName("secondcost13")[2].style.marginTop = 4 + "vw";
 
     x=document.createElement("div");
   x.setAttribute("class","secondcost13");
   x1 = document.createTextNode("3D рисунок");
   document.getElementById("secondcost3").appendChild(x);
    document.getElementsByClassName("secondcost13")[3].appendChild(x1);
+         if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost13")[3].style.marginTop = 25 + "px";
+ else if (document.documentElement.clientWidth <= 768)
+  document.getElementsByClassName("secondcost13")[3].style.marginTop = 4 + "vw";
 
       x=document.createElement("div");
   x.setAttribute("id","secondcost31");

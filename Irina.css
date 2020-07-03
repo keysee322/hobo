@@ -2012,7 +2012,7 @@ z-index: 2;
     top: 4vw;
   }
 .navbar-brand {
-    width: 200px;
+    width: 64vw;
     font-size: 2.8vw;
     font-weight: bold;
     margin-left: calc(6vw + 14px);
@@ -2022,7 +2022,7 @@ p#bruh1 {
     font-weight: normal;
     font-size: 1.5vw;
     line-height: 119.18%;
-    margin-top: 2px;
+    margin-top: calc(1.3vw - 10px);
 }
 .navbar-right {
 margin-top: -38px;
@@ -2067,7 +2067,7 @@ li {
     left: 3vw;
     width: calc(2vw + 15px);
     height: 3.4vw;
-    margin-top: calc(1vw - 6px);
+    margin-top: calc(-1vw - -7px);
 }
 .ramka {
     width: 40vw;
@@ -2551,9 +2551,9 @@ h1.sixh {
     position: absolute;
     width: 100%;
     background-color: white;
-    height: 62px;
+    height: 0px;
     bottom: 0px;
-    padding-top: 20px;
+    padding-top: 12vw;
 }
 .insideright6 {
     margin-top: 16px;
