@@ -32,7 +32,7 @@ $mail->Body    = '' .$name . ' оставил заявку.<br>Телефон: '
 $mail->AltBody = '';
 
 if(!$mail->send()) {
-	
+
 } else {
     
     echo 'OK';

@@ -4049,8 +4049,8 @@ if (document.documentElement.clientWidth >= 1300){
 </div>
 <div class="insideright6">	
     <form class="ajax-contact-form" enctype="multipart/form-data" method="POST">
-	<input required class="input" name="user_name" type="text" placeholder="Ваше имя"> </input>
-	<input required class="input" name="user_phone" type="text" placeholder="Телефон"> </input>
+	<input required class="input" name="user_name" pattern="^[А-Яа-яЁё\s]+$" type="text" placeholder="Ваше имя"> </input>
+	<input required class="input" type="tel" id="phone3" name="user_phone" type="text" placeholder="Телефон"> </input>
 	<input required class="input" name="email" type="email" placeholder="Email"> </input>
   <input onClick="ChangePic" class="file-upload" name="upload" type="file">
   <div id="psevdo"></div>
@@ -4082,5 +4082,11 @@ if (document.documentElement.clientWidth >= 1300){
 </div>
 </div>
 </div>
+    <script src="jquery.maskedinput.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#phone3").mask("+7 (999) 99-99-999");
+      });
+    </script>
 </body>
 </html>
