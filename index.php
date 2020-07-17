@@ -2,12 +2,15 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no">
   <meta name="viewport" content="width=device-width; initial-scale=1">
 	<title>irina</title>
 	 <link rel="stylesheet" type="text/css" href="irina.css">
+	 <link rel="icon" type="image/png" href="images/favicon.png" />
        <script src="animate.js"></script>
        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+       <script src="contactform.js"></script>
 </head>
 <body onload="funonload();"> 
 
@@ -213,7 +216,7 @@ hideheigh= 200;
 
                     var hideheigh= 0;
 if (document.documentElement.clientWidth >= 1300)
-hideheigh= 1121;
+hideheighz= 1121;
 if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
 hideheigh= 200;
 if (document.documentElement.clientWidth >= 1300)
@@ -224,7 +227,7 @@ if (document.documentElement.clientWidth >= 1300)
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("hide").style.height = progress * hideheigh + 'px';
+          document.getElementById("hide").style.height = progress * hideheighz + 'px';
         }
       });}
 } 
@@ -274,7 +277,7 @@ if ((j>0) && ((N-k) > countheigh)) {
      document.getElementById("cost").style.marginTop = 40 + "px";
    }
  }
-} else if ((j>0) && ((N-k) <= 5)) {
+} else {if ((j>0) && ((N-k) <= 5)) {
                      if (document.documentElement.clientWidth >= 1300){ 
      animate({
         duration: 750,
@@ -290,7 +293,7 @@ if ((j>0) && ((N-k) > countheigh)) {
 
    
 }
-
+}
 
 
 
@@ -298,14 +301,14 @@ if ((j>0) && ((N-k) > countheigh)) {
           var lastheighsmall;
           var countheigh;
           if (document.documentElement.clientWidth > 1300){
-            lastheighsmall = '272.5px';
+            lastheighsmall = 272.5;
             countheigh = 5;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
-            lastheighsmall = '183px';
+            lastheighsmall = 183;
             countheigh = 4;
           } else if (document.documentElement.clientWidth <= 768){
-            lastheighsmall = '65.9vw';
+            lastheighsmall = 65.9;
             countheigh = 1;
           }
         	        var newimg;
@@ -313,14 +316,23 @@ if ((j>0) && ((N-k) > countheigh)) {
         newdiv.setAttribute("class","main3");
         document.getElementById("items").appendChild(newdiv);
         if ((N-k) <= countheigh){
-          alert(N-z);
+          if (document.documentElement.clientWidth > 768){
               animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          newdiv.style.height = progress * lastheighsmall;
+          newdiv.style.height = progress * lastheighsmall + 'px';
         }
       });
+            } else {
+              animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * lastheighsmall + 'vw';
+        }
+      });
+            }
           } else {
           if (document.documentElement.clientWidth >= 1300){
           animate({
@@ -413,14 +425,14 @@ if (document.documentElement.clientWidth > 1300){
           var lastheighsmall;
           var countheigh;
           if (document.documentElement.clientWidth > 1300){
-            lastheighsmall = '272.5px';
-            countheigh = 6;
+            lastheighsmall = 272.5;
+            countheigh = 5;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
-            lastheighsmall = '183px';
+            lastheighsmall = 183;
             countheigh = 4;
           } else if (document.documentElement.clientWidth <= 768){
-            lastheighsmall = '65.9vw';
+            lastheighsmall = 65.9;
             countheigh = 1;
           }
         	        var newimg;
@@ -429,14 +441,23 @@ if (document.documentElement.clientWidth > 1300){
         document.getElementById("items").appendChild(newdiv);
 
          if ((N-z) <= countheigh){
-          alert(N-z);
+          if (document.documentElement.clientWidth > 768){
               animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          newdiv.style.height = progress * lastheighsmall;
+          newdiv.style.height = progress * lastheighsmall + 'px';
         }
       });
+            } else {
+              animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * lastheighsmall + 'vw';
+        }
+      });
+            }
           } else {
             if (document.documentElement.clientWidth >= 1300){
           animate({
@@ -782,7 +803,7 @@ if (document.documentElement.clientWidth >= 1300){
                   } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
 var hideheigh1= 0;
 if (document.documentElement.clientWidth >= 1300)
-hideheigh1= 1121;
+hideheigh1z= 1121;
 if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
 hideheigh1= 757;
                     setTimeout(kek2 ,200);
@@ -790,7 +811,7 @@ hideheigh1= 757;
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("hide1").style.height = progress * hideheigh1 + 'px';
+          document.getElementById("hide1").style.height = progress * hideheigh1z + 'px';
         }
       });}
 } 
@@ -861,14 +882,14 @@ if ((j1>0) && ((N1-k1) > countheigh1)) {
           var lastheighsmall1;
           var countheigh1;
           if (document.documentElement.clientWidth >= 1300){
-            lastheighsmall1 = '272.5px';
+            lastheighsmall1 = 272.5;
             countheigh1 = 5;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
-            lastheighsmall1 = '183px';
+            lastheighsmall1 = 183;
             countheigh1 = 4;
           } else if (document.documentElement.clientWidth <= 768){
-            lastheighsmall1 = '65.9vw';
+            lastheighsmall1 = 65.9;
             countheigh1 = 1;
           }
                     var newimg;
@@ -876,13 +897,23 @@ if ((j1>0) && ((N1-k1) > countheigh1)) {
         newdiv.setAttribute("class","main2");
         document.getElementById("items1").appendChild(newdiv);
         if ((N1-k1) <= countheigh1){
+                        if (document.documentElement.clientWidth > 768){
               animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          newdiv.style.height = progress * lastheighsmall1;
+          newdiv.style.height = progress * lastheighsmall1 + 'px';
         }
       });
+            } else {
+              animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * lastheighsmall1 + 'vw';
+        }
+      });
+            }
           } else {
             if (document.documentElement.clientWidth >= 1300){
           animate({
@@ -971,14 +1002,14 @@ if (document.documentElement.clientWidth > 1300){
           var lastheighsmall1;
           var countheigh1;
           if (document.documentElement.clientWidth >= 1300){
-            lastheighsmall1 = '272.5px';
-            countheigh1 = 6;
+            lastheighsmall1 = 272.5;
+            countheigh1 = 5;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
-            lastheighsmall1 = '183px';
+            lastheighsmall1 = 183;
             countheigh1 = 4
           } else if (document.documentElement.clientWidth <= 768){
-            lastheighsmall1 = '65.9vw';
+            lastheighsmall1 = 65.9;
             countheigh1 = 1;
           }
                     var newimg;
@@ -987,13 +1018,23 @@ if (document.documentElement.clientWidth > 1300){
         document.getElementById("items1").appendChild(newdiv);
 
          if ((N1-z1) <= countheigh1){
+          if (document.documentElement.clientWidth > 768){
               animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          newdiv.style.height = progress * lastheighsmall1;
+          newdiv.style.height = progress * lastheighsmall1 + 'px';
         }
       });
+            } else {
+              animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * lastheighsmall1 + 'vw';
+        }
+      });
+            }
           } else {
             if (document.documentElement.clientWidth >= 1300){
           animate({
@@ -1338,7 +1379,7 @@ if (costcount2 > 0 && costbool2 == true)
                   } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
 var hideheigh2= 0;
 if (document.documentElement.clientWidth >= 1300)
-hideheigh2= 1121;
+hideheigh2z= 1121;
 if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
 hideheigh2= 757;
                     setTimeout(kek2 ,200);
@@ -1346,7 +1387,7 @@ hideheigh2= 757;
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("hide2").style.height = progress * hideheigh2 + 'px';
+          document.getElementById("hide2").style.height = progress * hideheigh2z + 'px';
         }
       });}
 } 
@@ -1417,7 +1458,7 @@ if ((j2>0) && ((N2-k2) > countheigh2)) {
               var lastheighsmall2;
           var countheigh2;
           if (document.documentElement.clientWidth >= 1300){
-            lastheighsmall2 = '272.5px';
+            lastheighsmall2 = 272.5;
             countheigh2 = 5;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
@@ -1436,7 +1477,7 @@ if ((j2>0) && ((N2-k2) > countheigh2)) {
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          newdiv.style.height = progress * lastheighsmall2;
+          newdiv.style.height = progress * lastheighsmall2 + 'px';
         }
       });
           } else {
@@ -1527,14 +1568,14 @@ if (document.documentElement.clientWidth > 1300){
           var lastheighsmall2;
           var countheigh2;
           if (document.documentElement.clientWidth > 1300){
-            lastheighsmall2 = '272.5px';
+            lastheighsmall2 = 272.5;
             countheigh2 = 6;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
-            lastheighsmall2 = '183px';
+            lastheighsmall2 = 183;
             countheigh2 = 4
           } else if (document.documentElement.clientWidth <= 768){
-            lastheighsmall2 = '65.9vw';
+            lastheighsmall2 = 65.9;
             countheigh2 = 1;
           }
                     var newimg;
@@ -1543,6 +1584,7 @@ if (document.documentElement.clientWidth > 1300){
         document.getElementById("items2").appendChild(newdiv);
 
          if ((N2-z2) <= countheigh2){
+          if (document.documentElement.clientWidth > 768){
               animate({
         duration: 1500,
         timing: quadEaseOut,
@@ -1550,6 +1592,15 @@ if (document.documentElement.clientWidth > 1300){
           newdiv.style.height = progress * lastheighsmall2 + 'px';
         }
       });
+            } else {
+              animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * lastheighsmall2 + 'vw';
+        }
+      });
+            }
           } else {
             if (document.documentElement.clientWidth > 1300){
           animate({
@@ -1895,7 +1946,7 @@ if (costcount3 > 0 && costbool3 == true)
 } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
 var hideheigh3= 0;
 if (document.documentElement.clientWidth >= 1300)
-hideheigh3= 1121;
+hideheigh3z= 1121;
 if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
 hideheigh3= 757;
                     setTimeout(kek2 ,200);
@@ -1903,7 +1954,7 @@ hideheigh3= 757;
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          document.getElementById("hide3").style.height = progress * hideheigh3 + 'px';
+          document.getElementById("hide3").style.height = progress * hideheigh3z + 'px';
         }
       });}
 } 
@@ -1974,14 +2025,14 @@ if ((j3>0) && ((N3-k3) > countheigh3)) {
           var lastheighsmall3;
           var countheigh3;
           if (document.documentElement.clientWidth >= 1300){
-            lastheighsmall3 = '272.5px';
+            lastheighsmall3 = 272.5;
             countheigh3 = 5;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
-            lastheighsmall3 = '183px';
+            lastheighsmall3 = 183;
             countheigh3 = 4
           } else if (document.documentElement.clientWidth <= 768){
-            lastheighsmall3 = '65.9vw';
+            lastheighsmall3 = 65.9;
             countheigh3 = 1;
           }
                   var newimg;
@@ -1989,13 +2040,23 @@ if ((j3>0) && ((N3-k3) > countheigh3)) {
         newdiv.setAttribute("class","main0");
         document.getElementById("items3").appendChild(newdiv);
         if ((N3-k3) <= countheigh3){
+          if (document.documentElement.clientWidth > 768){
               animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          newdiv.style.height = progress * lastheighsmall3;
+          newdiv.style.height = progress * lastheighsmall3 + 'px';
         }
       });
+            } else {
+              animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * lastheighsmall3 + 'vw';
+        }
+      });
+            }
           } else {
             if (document.documentElement.clientWidth >= 1300){
           animate({
@@ -2085,14 +2146,14 @@ if (document.documentElement.clientWidth >= 1300){
           var lastheighsmall3;
           var countheigh3;
           if (document.documentElement.clientWidth >= 1300){
-            lastheighsmall3 = '272.5px';
-            countheigh3 = 6;
+            lastheighsmall3 = 272.5;
+            countheigh3 = 5;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
-            lastheighsmall3 = '183px';
+            lastheighsmall3 = 183;
             countheigh3 = 4
           } else if (document.documentElement.clientWidth <= 768){
-            lastheighsmall3 = '65.9vw';
+            lastheighsmall3 = 65.9;
             countheigh3 = 1;
           }
                   var newimg;
@@ -2101,13 +2162,23 @@ if (document.documentElement.clientWidth >= 1300){
         document.getElementById("items3").appendChild(newdiv);
 
          if ((N3-z3) <= countheigh3){
+          if (document.documentElement.clientWidth > 768){
               animate({
         duration: 1500,
         timing: quadEaseOut,
         draw: function(progress) {
-          newdiv.style.height = progress * lastheighsmall3;
+          newdiv.style.height = progress * lastheighsmall3 + 'px';
         }
       });
+            } else {
+              animate({
+        duration: 1500,
+        timing: quadEaseOut,
+        draw: function(progress) {
+          newdiv.style.height = progress * lastheighsmall3 + 'vw';
+        }
+      });
+            }
           } else {
             if (document.documentElement.clientWidth >= 1300){
           animate({
@@ -2739,7 +2810,7 @@ document.getElementById("leftcostdown").style.paddingTop = 55 + "px";
   } else if (document.documentElement.clientWidth > 768 && document.documentElement.clientWidth < 1300) {
 document.getElementById("leftcostdown").style.paddingTop = 35 + "px";
   } else if (document.documentElement.clientWidth <= 768) {
-document.getElementById("leftcostdown").style.paddingTop = 35 + "px";
+document.getElementById("leftcostdown").style.paddingTop = 5 + "vw";
   }
 
 
@@ -2754,20 +2825,20 @@ document.getElementById("leftcostdown").style.paddingTop = 35 + "px";
    x=document.createElement("div");
   x.setAttribute("class","secondcost11");
   x1 = document.createTextNode("трафаретная роспись");
-  document.getElementById("leftcostdown").appendChild(x);
+  document.getElementsByClassName("secondcost1")[0].appendChild(x);
    document.getElementsByClassName("secondcost11")[0].appendChild(x1);
    if (document.documentElement.clientWidth >= 1300)
-   document.getElementsByClassName("secondcost11")[0].style.marginTop = 65 + "px";
+   document.getElementsByClassName("secondcost11")[0].style.marginTop = 31 + "px";
 else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768) 
-     document.getElementsByClassName("secondcost11")[0].style.marginTop = 51 + "px";
+     document.getElementsByClassName("secondcost11")[0].style.marginTop = 31 + "px";
    else if (document.documentElement.clientWidth <= 768)
-    document.getElementsByClassName("secondcost11")[0].style.marginTop = 8.5 + "vw";
+    document.getElementsByClassName("secondcost11")[0].style.marginTop = 4 + "vw";
 
 
       x=document.createElement("div");
   x.setAttribute("class","secondcost11");
   x1 = document.createTextNode("нанесение логотипа");
-  document.getElementById("leftcostdown").appendChild(x);
+  document.getElementsByClassName("secondcost1")[0].appendChild(x);
    document.getElementsByClassName("secondcost11")[1].appendChild(x1);
          if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost11")[1].style.marginTop = 25 + "px";
@@ -2778,7 +2849,7 @@ else if (document.documentElement.clientWidth < 1300 && document.documentElement
 x=document.createElement("div");
   x.setAttribute("class","secondcost11");
   x1 = document.createTextNode("детская тематика");
-  document.getElementById("leftcostdown").appendChild(x);
+  document.getElementsByClassName("secondcost1")[0].appendChild(x);
    document.getElementsByClassName("secondcost11")[2].appendChild(x1);
       if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost11")[2].style.marginTop = 25 + "px";
@@ -2788,7 +2859,7 @@ x=document.createElement("div");
     x=document.createElement("div");
   x.setAttribute("class","secondcost11");
   x1 = document.createTextNode("простой пейзаж");
-  document.getElementById("leftcostdown").appendChild(x);
+  document.getElementsByClassName("secondcost1")[0].appendChild(x);
    document.getElementsByClassName("secondcost11")[3].appendChild(x1);
       if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost11")[3].style.marginTop = 25 + "px";
@@ -2798,7 +2869,7 @@ x=document.createElement("div");
    x=document.createElement("div");
   x.setAttribute("class","secondcost11");
   x1 = document.createTextNode("небо");
-  document.getElementById("leftcostdown").appendChild(x);
+  document.getElementsByClassName("secondcost1")[0].appendChild(x);
    document.getElementsByClassName("secondcost11")[4].appendChild(x1);
    if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost11")[4].style.marginTop = 25 + "px";
@@ -2808,14 +2879,14 @@ x=document.createElement("div");
       x=document.createElement("div");
   x.setAttribute("class","secondcost1");
   x1 = document.createTextNode("от 1 500 руб.");
-  document.getElementById("leftcostdown").appendChild(x);
+  document.getElementsByClassName("secondcost1")[0].appendChild(x);
    document.getElementsByClassName("secondcost1")[1].appendChild(x1);
    if (document.documentElement.clientWidth > 768)
    document.getElementsByClassName("secondcost1")[1].style.marginTop = 25 + "px";
  else if (document.documentElement.clientWidth <= 768)
   document.getElementsByClassName("secondcost1")[1].style.marginTop = 4 + "vw";
    if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
-   document.getElementsByClassName("secondcost1")[1].style.marginLeft = -23 + "px";
+   document.getElementsByClassName("secondcost1")[1].style.marginLeft = 13 + "px";
 
 
 
@@ -3969,29 +4040,29 @@ if (document.documentElement.clientWidth >= 1300){
  <div class="six">
  	<div class="insideleft6">
   <h1 class="sixh">Контакты</h1>
-Предоставляем свои услуги в Москве и Подмосковье. По всем вопросам Вы можете связаться с нами по телефону 8 (929) 632-26-4 или 8 (925) 310-51-15 или написать нам в социальных сетях
-<p id="learnmore6">  <a id="end" href="https://telegram.org"><img class="socialimg1" src="tel.svg"></a>
-  <a id="end" href="https://www.whatsapp.com"><img class="socialimg1" src="wut.svg"></a>
-  <a id="end" href="https://www.instagram.com"><img class="socialimg1" src="insta.svg"></a>
-  <a id="end" href="www.facebook.com"><img class="socialimg1" src="facebook.svg"></a>
+Предоставляем свои услуги в Москве и Подмосковье. По всем вопросам Вы можете связаться с нами по телефону 8 (929) 632-26-41 или 8 (925) 310-51-15 или написать нам в социальных сетях
+<p id="learnmore6">  <a target="_blank" href="https://telegram.org"><img class="socialimg1" src="tel.svg"></a>
+	<a target="_blank" href="https://wa.me/79296322641"><img class="socialimg1" src="wut.svg"></a>
+	<a target="_blank" href="https://www.instagram.com/irenniko.art"><img class="socialimg1" src="insta.svg"></a>
+	<a target="_blank" href="https://www.facebook.com/profile.php?id=100018340840815"><img class="socialimg1" src="facebook.svg"></a>
 
 </div>
 <div class="insideright6">	
-    <form action="mail.php" method="POST" enctype="multipart/form-data">
+    <form class="ajax-contact-form" enctype="multipart/form-data" method="POST">
 	<input required class="input" name="user_name" type="text" placeholder="Ваше имя"> </input>
 	<input required class="input" name="user_phone" type="text" placeholder="Телефон"> </input>
 	<input required class="input" name="email" type="email" placeholder="Email"> </input>
   <input onClick="ChangePic" class="file-upload" name="upload" type="file">
   <div id="psevdo"></div>
-	<button type="submit" class="order">Заказать</button>
+	<button type="submit" target="_parent" class="order">Заказать</button>
 
 </form>
 </div>
+
+  </div>
 <div class="kek">
     <div class="navbar-header1">
-      <div class="navbar-brand"><img id="bruh" src="bruh.svg"> Painting Workshop <p id="bruh1">Мастерская живописи</p><div>
-      
-    </div>
+      <div class="navbar-brand"><img id="bruh" src="bruh.svg"> Painting Workshop <p id="bruh1">Мастерская живописи</p>
     <div class="navbar-right">
       <nav class="stroke">
       <ul class="navbar-right" align="center">
@@ -4007,8 +4078,6 @@ if (document.documentElement.clientWidth >= 1300){
 </div>
 </div>
 </div>
-  </div>
-
   </div>
 </div>
 </div>
