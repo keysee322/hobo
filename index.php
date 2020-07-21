@@ -375,7 +375,7 @@ if (document.documentElement.clientWidth > 1300){
         for (var i = z; i <= 9+(z-1); i++) {
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic/"+i+".png");
+        newimg.setAttribute("src","new_pic/"+i+".jpg");
 
         if ((z-1)+9<=N){
         newimg.setAttribute("id","f"+(i-z+1));
@@ -389,7 +389,7 @@ if (document.documentElement.clientWidth > 1300){
               for (var i = z; i <= 10+(z-1); i++) {
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic/"+i+".png");
+        newimg.setAttribute("src","new_pic/"+i+".jpg");
                 if ((z-1)+10<=N){
         newimg.setAttribute("id","f"+(i-z+1));
     }
@@ -404,7 +404,7 @@ if (document.documentElement.clientWidth > 1300){
               for (var i = z; i <= 4+(z-1); i++) {
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic/"+i+".png");
+        newimg.setAttribute("src","new_pic/"+i+".jpg");
                 if ((z-1)+4<=N){
         newimg.setAttribute("id","f"+(i-z+1));
     }
@@ -500,7 +500,7 @@ if (document.documentElement.clientWidth > 1300){
         for (var i = z; i <= 6+(z-1); i++) {
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic/"+i+".png");
+        newimg.setAttribute("src","new_pic/"+i+".jpg");
                 if ((z-1)+6<=N){
         newimg.setAttribute("id","f1"+(i-z+1));
     }
@@ -514,7 +514,7 @@ if (document.documentElement.clientWidth > 1300){
           for (var i = z; i <= 10+(z-1); i++) {
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic/"+i+".png");
+        newimg.setAttribute("src","new_pic/"+i+".jpg");
                 if ((z-1)+10<=N){
         newimg.setAttribute("id","f"+(i-z+1));
     }
@@ -528,7 +528,7 @@ if (document.documentElement.clientWidth > 1300){
           for (var i = z; i <= 4+(z-1); i++) {
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic/"+i+".png");
+        newimg.setAttribute("src","new_pic/"+i+".jpg");
                 if ((z-1)+4<=N){
         newimg.setAttribute("id","f"+(i-z+1));
     }
@@ -803,7 +803,9 @@ if (document.documentElement.clientWidth >= 1300){
                   } else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
 var hideheigh1= 0;
 if (document.documentElement.clientWidth >= 1300)
+  if (N1 > 5)
 hideheigh1z= 1121;
+else hideheigh1z= 860;
 if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768)
 hideheigh1= 757;
                     setTimeout(kek2 ,200);
@@ -953,7 +955,7 @@ if (document.documentElement.clientWidth > 1300){
         for (var i = z1; i <= 9+(z1-1); i++) {
         if (k1<=N1) {k1++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic1/"+i+".png");
+        newimg.setAttribute("src","new_pic1/"+i+".jpg");
 
         if ((z1-1)+9<=N1){
         newimg.setAttribute("id","f"+(i-z1+1));
@@ -967,7 +969,7 @@ if (document.documentElement.clientWidth > 1300){
               for (var i = z1; i <= 10+(z1-1); i++) {
         if (k1<=N1) {k1++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic1/"+i+".png");
+        newimg.setAttribute("src","new_pic1/"+i+".jpg");
                 if ((z1-1)+10<=N1){
         newimg.setAttribute("id","f"+(i-z1+1));
     }
@@ -981,7 +983,7 @@ if (document.documentElement.clientWidth > 1300){
               for (var i = z1; i <= 4+(z1-1); i++) {
         if (k1<=N1) {k1++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic1/"+i+".png");
+        newimg.setAttribute("src","new_pic1/"+i+".jpg");
                 if ((z1-1)+4<=N1){
         newimg.setAttribute("id","f"+(i-z1+1));
     }
@@ -1002,8 +1004,8 @@ if (document.documentElement.clientWidth > 1300){
           var lastheighsmall1;
           var countheigh1;
           if (document.documentElement.clientWidth >= 1300){
-            lastheighsmall1 = 272.5;
-            countheigh1 = 5;
+            lastheighsmall1 = 292.5;
+            countheigh1 = 4;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
             lastheighsmall1 = 183;
@@ -1075,7 +1077,7 @@ if (document.documentElement.clientWidth >= 1300){
         for (var i = z1; i <= 6+(z1-1); i++) {
         if (k1<=N1) {k1++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic1/"+i+".png");
+        newimg.setAttribute("src","new_pic1/"+i+".jpg");
                 if ((z1-1)+6<=N1){
         newimg.setAttribute("id","f1"+(i-z1+1));
     }
@@ -1089,7 +1091,7 @@ if (document.documentElement.clientWidth >= 1300){
           for (var i = z1; i <= 10+(z1-1); i++) {
         if (k1<=N1) {k1++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic1/"+i+".png");
+        newimg.setAttribute("src","new_pic1/"+i+".jpg");
                 if ((z1-1)+10<=N1){
         newimg.setAttribute("id","f"+(i-z1+1));
     }
@@ -1103,7 +1105,7 @@ if (document.documentElement.clientWidth >= 1300){
           for (var i = z1; i <= 4+(z1-1); i++) {
         if (k1<=N1) {k1++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic1/"+i+".png");
+        newimg.setAttribute("src","new_pic1/"+i+".jpg");
                 if ((z1-1)+4<=N1){
         newimg.setAttribute("id","f"+(i-z1+1));
     }
@@ -1122,12 +1124,26 @@ if (document.documentElement.clientWidth >= 1300){
         j1+=1;
 
     if (j1 == 1){
+      if (N1-z1>5 || document.documentElement.clientWidth < 1300){
         var newbut=document.createElement("input");
         newbut.setAttribute("value","Показать еще");
         newbut.setAttribute("id","showmore1");
         newbut.setAttribute("type","button");
         newbut.setAttribute("onClick","AddItem1()");
         document.getElementById("knopka1").appendChild(newbut);
+      if (N1-z1<4 && document.documentElement.clientWidth <= 768){
+        newbut.setAttribute("value","");
+        newbut.setAttribute("id","showmore1");
+        newbut.setAttribute("type","button");
+        newbut.setAttribute("onClick","DelItems1()");
+      }
+      if (N1-z1<11 && document.documentElement.clientWidth > 768 && document.documentElement.clientWidth < 1300){
+        newbut.setAttribute("value","");
+        newbut.setAttribute("id","showmore1");
+        newbut.setAttribute("type","button");
+        newbut.setAttribute("onClick","DelItems1()");
+      }
+
 
         if (document.documentElement.clientWidth > 0 && document.documentElement.clientWidth < 1300){
           var newbut=document.createElement("a");
@@ -1140,7 +1156,11 @@ if (document.documentElement.clientWidth >= 1300){
         newbut1.setAttribute("src","arrow_up.png");
 document.getElementById('hidesmall1').appendChild(newbut1);
         }
-
+      } else{
+        document.getElementById("cost1").style.marginTop = "40px";
+        if ($('#costbutton1').length)
+          document.getElementById("costbutton1").style.marginTop = "40px";
+      }
 }else if (k1>N1){
         var e2 = document.getElementById('showmore1');
         
@@ -1519,7 +1539,7 @@ if (document.documentElement.clientWidth > 1300){
         for (var i = z2; i <= 9+(z2-1); i++) {
         if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic2/"+i+".png");
+        newimg.setAttribute("src","new_pic2/"+i+".jpg");
 
         if ((z2-1)+9<=N2){
         newimg.setAttribute("id","f"+(i-z2+1));
@@ -1533,7 +1553,7 @@ if (document.documentElement.clientWidth > 1300){
               for (var i = z2; i <= 10+(z2-1); i++) {
         if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic2/"+i+".png");
+        newimg.setAttribute("src","new_pic2/"+i+".jpg");
                 if ((z2-1)+10<=N2){
         newimg.setAttribute("id","f"+(i-z2+1));
     }
@@ -1547,7 +1567,7 @@ if (document.documentElement.clientWidth > 1300){
               for (var i = z2; i <= 4+(z2-1); i++) {
         if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic2/"+i+".png");
+        newimg.setAttribute("src","new_pic2/"+i+".jpg");
                 if ((z2-1)+4<=N2){
         newimg.setAttribute("id","f"+(i-z2+1));
     }
@@ -1641,7 +1661,7 @@ if (document.documentElement.clientWidth >= 1300){
         for (var i = z2; i <= 6+(z2-1); i++) {
         if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic2/"+i+".png");
+        newimg.setAttribute("src","new_pic2/"+i+".jpg");
                 if ((z2-1)+6<=N2){
         newimg.setAttribute("id","f1"+(i-z2+1));
     }
@@ -1655,7 +1675,7 @@ if (document.documentElement.clientWidth >= 1300){
           for (var i = z2; i <= 10+(z2-1); i++) {
         if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic2/"+i+".png");
+        newimg.setAttribute("src","new_pic2/"+i+".jpg");
                 if ((z2-1)+10<=N2){
         newimg.setAttribute("id","f"+(i-z2+1));
     }
@@ -1669,7 +1689,7 @@ if (document.documentElement.clientWidth >= 1300){
           for (var i = z2; i <= 4+(z2-1); i++) {
         if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic2/"+i+".png");
+        newimg.setAttribute("src","new_pic2/"+i+".jpg");
                 if ((z2-1)+4<=N2){
         newimg.setAttribute("id","f"+(i-z2+1));
     }
@@ -2097,7 +2117,7 @@ if (document.documentElement.clientWidth >= 1300){
         for (var i = z3; i <= 9+(z3-1); i++) {
         if (k3<=N3) {k3++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic3/"+i+".png");
+        newimg.setAttribute("src","new_pic3/"+i+".jpg");
 
         if ((z3-1)+9<=N3){
         newimg.setAttribute("id","f"+(i-z3+1));
@@ -2111,7 +2131,7 @@ if (document.documentElement.clientWidth >= 1300){
               for (var i = z3; i <= 10+(z3-1); i++) {
         if (k3<=N3) {k3++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic3/"+i+".png");
+        newimg.setAttribute("src","new_pic3/"+i+".jpg");
                 if ((z3-1)+10<=N3){
         newimg.setAttribute("id","f"+(i-z3+1));
     }
@@ -2125,7 +2145,7 @@ if (document.documentElement.clientWidth >= 1300){
               for (var i = z3; i <= 4+(z3-1); i++) {
         if (k3<=N3) {k3++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic3/"+i+".png");
+        newimg.setAttribute("src","new_pic3/"+i+".jpg");
                 if ((z3-1)+4<=N3){
         newimg.setAttribute("id","f"+(i-z3+1));
     }
@@ -2220,7 +2240,7 @@ if (document.documentElement.clientWidth >= 1300){
         for (var i = z3; i <= 6+(z3-1); i++) {
         if (k3<=N3) {k3++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic3/"+i+".png");
+        newimg.setAttribute("src","new_pic3/"+i+".jpg");
                 if ((z3-1)+6<=N3){
         newimg.setAttribute("id","f1"+(i-z3+1));
     }
@@ -2234,7 +2254,7 @@ if (document.documentElement.clientWidth >= 1300){
           for (var i = z3; i <= 10+(z3-1); i++) {
         if (k3<=N3) {k3++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic3/"+i+".png");
+        newimg.setAttribute("src","new_pic3/"+i+".jpg");
                 if ((z3-1)+10<=N3){
         newimg.setAttribute("id","f"+(i-z3+1));
     }
@@ -2248,7 +2268,7 @@ if (document.documentElement.clientWidth >= 1300){
           for (var i = z3; i <= 4+(z3-1); i++) {
         if (k3<=N3) {k3++;} else {break;}
         newimg=document.createElement("img");
-        newimg.setAttribute("src","new_pic3/"+i+".png");
+        newimg.setAttribute("src","new_pic3/"+i+".jpg");
                 if ((z3-1)+4<=N3){
         newimg.setAttribute("id","f"+(i-z3+1));
     }
@@ -3896,8 +3916,8 @@ if (document.documentElement.clientWidth >= 1300){
 	<img id="f6" src="pics/6.png">
 	<img id="f7" src="pics/7.png">
 	<img id="f8" src="pics/8.png">
-	<img id="f9" src="pics/9.png">
-  <img id="f10" src="pics/10.png">
+	<img id="f9" src="pics/9.jpg">
+  <img id="f10" src="pics/10.jpg">
 
 
 </div>
@@ -3974,7 +3994,7 @@ if (document.documentElement.clientWidth >= 1300){
     <img id="f5" src="pics/25.png">
     <img id="f6" src="pics/26.png">
     <img id="f7" src="pics/27.png">
-    <img id="f8" src="pics/28.png">
+    <img id="f8" src="pics/28.jpg">
     <img id="f9" src="pics/29.png">
     <img id="f10" src="pics/30.png">
     

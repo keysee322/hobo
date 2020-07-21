@@ -10,6 +10,7 @@
   font-family: HelveticaNeueCyr;
   src: url(HelveticaNeueCyr-Roman.otf);
 }
+
 button, input {
     margin: 0;
     padding: 0;
@@ -675,6 +676,7 @@ left: calc(15.65% + 15px);
 #d13{
   position: absolute;
   height: 265px;
+  width: 15.65%;
   top: 0vw;
   left: calc(15.65% + 15.65% + 30px); 
   -webkit-transition: linear 0.2s; 
@@ -684,7 +686,7 @@ left: calc(15.65% + 15px);
 #d13:hover {
   margin-top: -7.475px;
   height: 280px;
-
+  width: 16.3%;
   margin-left: calc(-5.35px); 
 
 }
@@ -2586,63 +2588,71 @@ a {
 
 #f1 {
     position: absolute;
-    height: auto;
+    height: 48.3%;
     width: calc(47%);
     left: 0px;
+      object-fit: cover;
 }
 #f1:hover {
     position: absolute;
     margin-top: 0px;
     margin-left: calc(0px);
-    height: auto;
+    height: 48.3%;
     width: calc(47%);
     left: 0px;
+      object-fit: cover;
 }
 #f2{
     position: absolute;
-    height: auto;
+    height: 48.3%;
     width: calc(47%);
     left: 50%;
+      object-fit: cover;
 }
 #f2:hover {
     position: absolute;
     margin-top: 0px;
     margin-left: calc(0px);
-    height: auto;
+    height: 48.3%;
     width: calc(47%);
     left: 50%;
+      object-fit: cover;
 }
 #f3 {
     position: absolute;
-    height: auto;
+    height: 48.3%;
     width: 47%;
     top: 50.5%;
     left: 0px;
+      object-fit: cover;
 }
 #f3:hover {
     position: absolute;
     margin-top: 0px;
     margin-left: calc(0px);
-    height: auto;
+    height: 48.3%;
     width: 47%;
     top: 50.5%;
     left: 0px;
+      object-fit: cover;
 }
 #f4 {
     position: absolute;
-    height: auto;
+    height: 48.3%;
     width: 47%;
     top: 50.5%;
     left: 50%;
+      object-fit: cover;
 }
 #f4:hover {
     position: absolute;
     margin-top: 0px;
     margin-left: calc(0px);
-    height: auto;
+    height: 48.3%;
     width: 47%;
     top: 50.5%;
     left: 50%;
+      object-fit: cover;
 }
 #f5, #f6, #f7, #f8, #f9, #f10{
   position: absolute;
@@ -2662,7 +2672,7 @@ a {
     position: absolute;
     margin-top: 0px;
     margin-left: calc(0px);
-    height: 47%;
+    height: 96%;
     width: calc(47%);
     left: 0px;
 }
@@ -2676,7 +2686,7 @@ a {
     position: absolute;
     margin-top: 0px;
     margin-left: calc(0px);
-    height: 47%;
+    height: 96%;
     width: calc(47%);
     left: 50%;
 }
