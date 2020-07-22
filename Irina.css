@@ -16,6 +16,9 @@ button, input {
     padding: 0;
   border-radius: 0;
 }
+img{
+  object-fit: cover;
+}
 button{
   cursor: pointer;
 }
@@ -174,6 +177,7 @@ li {
 .socialimg1{
   margin-right: 8px;
   margin-top: -5px;
+  object-fit: contain;
 }
 .phone {
   position: absolute;
@@ -211,6 +215,7 @@ li {
 position: absolute;
 left: calc(50% - 605px);
 top: 6px;
+object-fit: contain;
 }
 p#bruh1{
 font-style: normal;
@@ -295,6 +300,7 @@ h1{
 .socialimg{
   margin-bottom: -1px;
   margin-left: 10px;
+  object-fit: contain;
 }
 #social{
   margin-top: 30px;
@@ -368,9 +374,19 @@ width: 1130px;
   height: 280px;
   width: 16.3%;
   margin-left: calc(-5.35px); 
-  -webkit-transition-timing-function: ease-in-out; 
-       -o-transition-timing-function: ease-in-out; 
-          transition-timing-function: ease-in-out;
+
+}
+img#f1:focus, img#f2:focus, img#f3:focus, img#f4:focus, img#f5:focus, img#f6:focus, img#f7:focus, img#f8:focus, img#f9:focus, img#f10:focus, img#f11:focus, img#f12:focus, img#f13:focus, img#f14:focus, img#f15:focus, img#f16:focus, img#d1:focus, img#d2:focus, img#d3:focus, img#d4:focus, img#d5:focus, img#d6:focus, img#d7:focus, img#d8:focus, img#d11:focus, img#d12:focus, img#d13:focus, img#d14:focus, img#d15:focus{
+  position: fixed;
+  height: 70%;
+  margin:auto;
+  z-index: 110;
+  top: 0;
+  bottom: 0;
+  left:0;
+  right:0;
+  width: auto;
+  max-width: 94%;
 }
 #f2{
   position: absolute;
@@ -1678,10 +1694,12 @@ z-index: 2;
 .socialimg {
     margin-bottom: -1px;
     margin-left: 10px;
+    object-fit: contain;
 }
 .socialimg1 {
     margin-right: 8px;
     margin-top: -5px;
+    object-fit: contain;
 }
 .second {
     height: 350px;
@@ -2162,7 +2180,6 @@ z-index: 2;
 .four, .five, .six1{
     margin-top: 60px;
     padding-top: 0px;
-    z-index: 3;
 }
 .six {
     margin-top: 20px;
@@ -2954,7 +2971,6 @@ h1.sixh {
 .four, .five, .six1 {
     margin-top: 5vw;
     padding-top: 0px;
-    z-index: 3;
 }
 #costhyperdiv1, #costhyperdiv2, #costhyperdiv3 {
     cursor: pointer;
