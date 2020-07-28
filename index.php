@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html id="HTML">
 <head>
 	<meta charset="utf-8">
 	<meta name="format-detection" content="telephone=no">
@@ -9,7 +9,7 @@
 	 <link rel="icon" type="image/png" href="images/favicon.png" />
        <script src="animate.js"></script>
        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-       <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
        <script src="contactform.js"></script>
 </head>
 <body onload="funonload();"> 
@@ -246,6 +246,8 @@ h1+= 131.8;
           if (document.documentElement.clientWidth > 1300){
             lastheighsmall = '272.5px';
             countheigh = 5;
+            if (m3 == false)
+              countheigh = 4;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
             lastheighsmall = '183px';
@@ -376,8 +378,8 @@ if (document.documentElement.clientWidth > 1300){
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
-
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
         if ((z-1)+9<=N){
         newimg.setAttribute("id","f"+(i-z+1));
     }
@@ -391,7 +393,8 @@ if (document.documentElement.clientWidth > 1300){
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z-1)+10<=N){
         newimg.setAttribute("id","f"+(i-z+1));
     }
@@ -407,7 +410,8 @@ if (document.documentElement.clientWidth > 1300){
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z-1)+4<=N){
         newimg.setAttribute("id","f"+(i-z+1));
     }
@@ -429,7 +433,7 @@ if (document.documentElement.clientWidth > 1300){
           var countheigh;
           if (document.documentElement.clientWidth > 1300){
             lastheighsmall = 272.5;
-            countheigh = 5;
+            countheigh = 4;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
             lastheighsmall = 183;
@@ -504,7 +508,8 @@ if (document.documentElement.clientWidth > 1300){
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z-1)+6<=N){
         newimg.setAttribute("id","f1"+(i-z+1));
     }
@@ -519,7 +524,8 @@ if (document.documentElement.clientWidth > 1300){
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z-1)+10<=N){
         newimg.setAttribute("id","f"+(i-z+1));
     }
@@ -534,7 +540,8 @@ if (document.documentElement.clientWidth > 1300){
         if (k<=N) {k++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z-1)+4<=N){
         newimg.setAttribute("id","f"+(i-z+1));
     }
@@ -838,6 +845,8 @@ h2+= 131.8;
           if (document.documentElement.clientWidth > 1300){
             lastheighsmall1 = '272.5px';
             countheigh1 = 5;
+            if (m31 == false)
+              countheigh = 4;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
             lastheighsmall1 = '183px';
@@ -962,7 +971,8 @@ if (document.documentElement.clientWidth > 1300){
         if (k1<=N1) {k1++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic1/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
         if ((z1-1)+9<=N1){
         newimg.setAttribute("id","f"+(i-z1+1));
     }
@@ -976,7 +986,8 @@ if (document.documentElement.clientWidth > 1300){
         if (k1<=N1) {k1++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic1/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z1-1)+10<=N1){
         newimg.setAttribute("id","f"+(i-z1+1));
     }
@@ -991,7 +1002,8 @@ if (document.documentElement.clientWidth > 1300){
         if (k1<=N1) {k1++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic1/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z1-1)+4<=N1){
         newimg.setAttribute("id","f"+(i-z1+1));
     }
@@ -1012,7 +1024,7 @@ if (document.documentElement.clientWidth > 1300){
           var lastheighsmall1;
           var countheigh1;
           if (document.documentElement.clientWidth >= 1300){
-            lastheighsmall1 = 292.5;
+            lastheighsmall1 = 272.5;
             countheigh1 = 4;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
@@ -1086,7 +1098,8 @@ if (document.documentElement.clientWidth >= 1300){
         if (k1<=N1) {k1++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic1/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z1-1)+6<=N1){
         newimg.setAttribute("id","f1"+(i-z1+1));
     }
@@ -1101,7 +1114,8 @@ if (document.documentElement.clientWidth >= 1300){
         if (k1<=N1) {k1++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic1/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z1-1)+10<=N1){
         newimg.setAttribute("id","f"+(i-z1+1));
     }
@@ -1116,7 +1130,8 @@ if (document.documentElement.clientWidth >= 1300){
         if (k1<=N1) {k1++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic1/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z1-1)+4<=N1){
         newimg.setAttribute("id","f"+(i-z1+1));
     }
@@ -1437,6 +1452,8 @@ h3+= 131.8;
           if (document.documentElement.clientWidth > 1300){
             lastheighsmall2 = '272.5px';
             countheigh2 = 5;
+            if (m32 == false)
+              countheigh = 4;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
             lastheighsmall2 = '183px';
@@ -1551,7 +1568,8 @@ if (document.documentElement.clientWidth > 1300){
         if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic2/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
 
         if ((z2-1)+9<=N2){
         newimg.setAttribute("id","f"+(i-z2+1));
@@ -1566,7 +1584,8 @@ if (document.documentElement.clientWidth > 1300){
         if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic2/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z2-1)+10<=N2){
         newimg.setAttribute("id","f"+(i-z2+1));
     }
@@ -1581,7 +1600,8 @@ if (document.documentElement.clientWidth > 1300){
         if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic2/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z2-1)+4<=N2){
         newimg.setAttribute("id","f"+(i-z2+1));
     }
@@ -1603,7 +1623,7 @@ if (document.documentElement.clientWidth > 1300){
           var countheigh2;
           if (document.documentElement.clientWidth > 1300){
             lastheighsmall2 = 272.5;
-            countheigh2 = 6;
+            countheigh2 = 4;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
             lastheighsmall2 = 183;
@@ -1676,7 +1696,8 @@ if (document.documentElement.clientWidth >= 1300){
         if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic2/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z2-1)+6<=N2){
         newimg.setAttribute("id","f1"+(i-z2+1));
     }
@@ -1691,7 +1712,8 @@ if (document.documentElement.clientWidth >= 1300){
         if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic2/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z2-1)+10<=N2){
         newimg.setAttribute("id","f"+(i-z2+1));
     }
@@ -1706,7 +1728,8 @@ if (document.documentElement.clientWidth >= 1300){
         if (k2<=N2) {k2++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic2/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z2-1)+4<=N2){
         newimg.setAttribute("id","f"+(i-z2+1));
     }
@@ -2010,6 +2033,8 @@ h4+= 131.8;
           if (document.documentElement.clientWidth > 1300){
             lastheighsmall3 = '272.5px';
             countheigh3 = 5;
+            if (m3 == false)
+              countheigh = 4;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
             lastheighsmall3 = '183px';
@@ -2135,7 +2160,8 @@ if (document.documentElement.clientWidth >= 1300){
         if (k3<=N3) {k3++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic3/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
 
         if ((z3-1)+9<=N3){
         newimg.setAttribute("id","f"+(i-z3+1));
@@ -2150,7 +2176,8 @@ if (document.documentElement.clientWidth >= 1300){
         if (k3<=N3) {k3++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic3/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z3-1)+10<=N3){
         newimg.setAttribute("id","f"+(i-z3+1));
     }
@@ -2165,7 +2192,8 @@ if (document.documentElement.clientWidth >= 1300){
         if (k3<=N3) {k3++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic3/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z3-1)+4<=N3){
         newimg.setAttribute("id","f"+(i-z3+1));
     }
@@ -2187,7 +2215,7 @@ if (document.documentElement.clientWidth >= 1300){
           var countheigh3;
           if (document.documentElement.clientWidth >= 1300){
             lastheighsmall3 = 272.5;
-            countheigh3 = 5;
+            countheigh3 = 4;
           }
           else if (document.documentElement.clientWidth < 1300 && document.documentElement.clientWidth > 768){
             lastheighsmall3 = 183;
@@ -2261,7 +2289,8 @@ if (document.documentElement.clientWidth >= 1300){
         if (k3<=N3) {k3++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic3/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z3-1)+6<=N3){
         newimg.setAttribute("id","f1"+(i-z3+1));
     }
@@ -2276,7 +2305,8 @@ if (document.documentElement.clientWidth >= 1300){
         if (k3<=N3) {k3++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic3/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z3-1)+10<=N3){
         newimg.setAttribute("id","f"+(i-z3+1));
     }
@@ -2291,7 +2321,8 @@ if (document.documentElement.clientWidth >= 1300){
         if (k3<=N3) {k3++;} else {break;}
         newimg=document.createElement("img");
         newimg.setAttribute("src","new_pic3/"+i+".jpg");
-        newimg.setAttribute("tabindex","1");
+        newimg.setAttribute("class","image");
+        newimg.setAttribute("onclick","LockScroll()");
                 if ((z3-1)+4<=N3){
         newimg.setAttribute("id","f"+(i-z3+1));
     }
@@ -3918,6 +3949,12 @@ if (document.documentElement.clientWidth >= 1300){
 
 }
 
+function LockScroll(){
+        document.getElementById("HTML").style.overflow = 'hidden';
+}
+function Close(){
+        document.getElementById("HTML").style.overflow = 'visible';
+}
 </script>
 
 
@@ -3931,16 +3968,16 @@ if (document.documentElement.clientWidth >= 1300){
 
 </div><div class="main5">
 <div class="main31">
-	<img id="f1" tabindex="1" src="pics/1.png">
-	<img id="f2" tabindex="1" src="pics/2.png">
-	<img id="f3" tabindex="1" src="pics/3.png">
-	<img id="f4" tabindex="1" src="pics/4.png">
-	<img id="f5" tabindex="1" src="pics/5.png">
-	<img id="f6" tabindex="1" src="pics/6.png">
-	<img id="f7" tabindex="1" src="pics/7.png">
-	<img id="f8" tabindex="1" src="pics/8.png">
-	<img id="f9" tabindex="1" src="pics/9.jpg">
-  <img id="f10" tabindex="1" src="pics/10.jpg">
+	<img id="f1" class="image" onclick="LockScroll()" src="pics/1.png">
+	<img id="f2" class="image" onclick="LockScroll()" src="pics/2.png">
+	<img id="f3" class="image" onclick="LockScroll()" src="pics/3.png">
+	<img id="f4" class="image" onclick="LockScroll()" src="pics/4.png">
+	<img id="f5" class="image" onclick="LockScroll()" src="pics/5.png">
+	<img id="f6" class="image" onclick="LockScroll()" src="pics/6.png">
+	<img id="f7" class="image" onclick="LockScroll()" src="pics/7.png">
+	<img id="f8" class="image" onclick="LockScroll()" src="pics/8.png">
+	<img id="f9" class="image" onclick="LockScroll()" src="pics/9.jpg">
+  <img id="f10" class="image" onclick="LockScroll()" src="pics/10.jpg">
 
 
 </div>
@@ -3971,16 +4008,16 @@ if (document.documentElement.clientWidth >= 1300){
 
 </div><div class="main5">
 <div class="main21">
-    <img id="f1" tabindex="1" src="pics/11.png">
-    <img id="f2" tabindex="1" src="pics/12.png">
-    <img id="f3" tabindex="1" src="pics/13.png">
-    <img id="f4" tabindex="1" src="pics/14.png">
-    <img id="f5" tabindex="1" src="pics/15.png">
-    <img id="f6" tabindex="1" src="pics/16.png">
-    <img id="f7" tabindex="1" src="pics/17.png">
-    <img id="f8" tabindex="1" src="pics/18.png">
-    <img id="f9" tabindex="1" src="pics/19.png">
-    <img id="f10" tabindex="1" src="pics/20.png">
+    <img id="f1" class="image" onclick="LockScroll()" src="pics/11.png">
+    <img id="f2" class="image" onclick="LockScroll()" src="pics/12.png">
+    <img id="f3" class="image" onclick="LockScroll()" src="pics/13.png">
+    <img id="f4" class="image" onclick="LockScroll()" src="pics/14.png">
+    <img id="f5" class="image" onclick="LockScroll()" src="pics/15.png">
+    <img id="f6" class="image" onclick="LockScroll()" src="pics/16.png">
+    <img id="f7" class="image" onclick="LockScroll()" src="pics/17.png">
+    <img id="f8" class="image" onclick="LockScroll()" src="pics/18.png">
+    <img id="f9" class="image" onclick="LockScroll()" src="pics/19.png">
+    <img id="f10" class="image" onclick="LockScroll()" src="pics/20.png">
     
 
 </div>
@@ -4010,16 +4047,16 @@ if (document.documentElement.clientWidth >= 1300){
 
 </div><div class="main5">
 <div class="main11">
-    <img id="f1" tabindex="1" src="pics/21.png">
-    <img id="f2" tabindex="1" src="pics/22.png">
-    <img id="f3" tabindex="1" src="pics/23.png">
-    <img id="f4" tabindex="1" src="pics/24.png">
-    <img id="f5" tabindex="1" src="pics/25.png">
-    <img id="f6" tabindex="1" src="pics/26.png">
-    <img id="f7" tabindex="1" src="pics/27.png">
-    <img id="f8" tabindex="1" src="pics/28.jpg">
-    <img id="f9" tabindex="1" src="pics/29.png">
-    <img id="f10" tabindex="1" src="pics/30.png">
+    <img id="f1" class="image" onclick="LockScroll()" src="pics/21.png">
+    <img id="f2" class="image" onclick="LockScroll()" src="pics/22.png">
+    <img id="f3" class="image" onclick="LockScroll()" src="pics/23.png">
+    <img id="f4" class="image" onclick="LockScroll()" src="pics/24.png">
+    <img id="f5" class="image" onclick="LockScroll()" src="pics/25.png">
+    <img id="f6" class="image" onclick="LockScroll()" src="pics/26.png">
+    <img id="f7" class="image" onclick="LockScroll()" src="pics/27.png">
+    <img id="f8" class="image" onclick="LockScroll()" src="pics/28.jpg">
+    <img id="f9" class="image" onclick="LockScroll()" src="pics/29.png">
+    <img id="f10" class="image" onclick="LockScroll()" src="pics/30.png">
     
 
 </div>
@@ -4049,16 +4086,16 @@ if (document.documentElement.clientWidth >= 1300){
 
 </div><div class="main5">
 <div class="main01">
-    <img id="f1" tabindex="1" src="pics/31.png">
-    <img id="f2" tabindex="1" src="pics/32.png">
-    <img id="f3" tabindex="1" src="pics/33.png">
-    <img id="f4" tabindex="1" src="pics/34.png">
-    <img id="f5" tabindex="1" src="pics/35.png">
-    <img id="f6" tabindex="1" src="pics/36.png">
-    <img id="f7" tabindex="1" src="pics/37.png">
-    <img id="f8" tabindex="1" src="pics/38.png">
-    <img id="f9" tabindex="1" src="pics/39.png">
-    <img id="f10" tabindex="1" src="pics/40.png">
+    <img id="f1" class="image" onclick="LockScroll()" src="pics/31.png">
+    <img id="f2" class="image" onclick="LockScroll()" src="pics/32.png">
+    <img id="f3" class="image" onclick="LockScroll()" src="pics/33.png">
+    <img id="f4" class="image" onclick="LockScroll()" src="pics/34.png">
+    <img id="f5" class="image" onclick="LockScroll()" src="pics/35.png">
+    <img id="f6" class="image" onclick="LockScroll()" src="pics/36.png">
+    <img id="f7" class="image" onclick="LockScroll()" src="pics/37.png">
+    <img id="f8" class="image" onclick="LockScroll()" src="pics/38.png">
+    <img id="f9" class="image" onclick="LockScroll()" src="pics/39.png">
+    <img id="f10" class="image" onclick="LockScroll()" src="pics/40.png">
     
     
 
@@ -4125,11 +4162,14 @@ if (document.documentElement.clientWidth >= 1300){
 </div>
 </div>
 </div>
+       <SCRIPT type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></SCRIPT>
+       <SCRIPT defer type="text/javascript" src="popup_img.js"></SCRIPT>
     <script src="jquery.maskedinput.min.js"></script>
     <script>
       $(document).ready(function() {
         $("#phone3").mask("+7 (999) 99-99-999");
       });
     </script>
+
 </body>
 </html>

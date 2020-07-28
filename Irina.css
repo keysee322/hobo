@@ -38,17 +38,17 @@ html{
   -webkit-overflow-scrolling: touch;
   scroll-behavior: smooth;
   margin: 0px;
-  overflow-x: hidden;
 }
 a{
   cursor: pointer;
 }
 body{
-margin: 0px;
+margin-left: 110px;
 -webkit-transition: linear 1s;
 -o-transition: linear 1s;
 transition: linear 1s;
 font-size: 18px;
+
 }
 input {outline:none;}
  nav.stroke ul li a{
@@ -205,11 +205,12 @@ li {
   background-position: center;
     position: absolute;
   top: 40px;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
-
+  overflow: visible;
   min-height: 1000px;
+
 }
 #bruh{
 position: absolute;
@@ -360,6 +361,39 @@ width: 1130px;
     margin-left: 5px;
 }
 
+.popup {
+  position: fixed;
+  height:100%;
+  width:100%;
+  top:0;
+  bottom: 0;
+  left:0;
+  display:none;
+  z-index: 100;
+  text-align:center;
+  overflow: visible;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+.popup_bg {
+  background:rgba(0,0,0,0.4);
+  overflow: hidden;
+  position: fixed;
+  z-index:1;
+  height:100%;
+  width:100%;
+}
+
+
+.popup_img {
+  position: absolute;
+  z-index:2;
+  max-height:84%;
+  max-width:84%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 #f1{
   position: absolute;
   height: 265px;
@@ -376,18 +410,7 @@ width: 1130px;
   margin-left: calc(-5.35px); 
 
 }
-img#f1:focus, img#f2:focus, img#f3:focus, img#f4:focus, img#f5:focus, img#f6:focus, img#f7:focus, img#f8:focus, img#f9:focus, img#f10:focus, img#f11:focus, img#f12:focus, img#f13:focus, img#f14:focus, img#f15:focus, img#f16:focus, img#d1:focus, img#d2:focus, img#d3:focus, img#d4:focus, img#d5:focus, img#d6:focus, img#d7:focus, img#d8:focus, img#d11:focus, img#d12:focus, img#d13:focus, img#d14:focus, img#d15:focus{
-  position: fixed;
-  height: 70%;
-  margin:auto;
-  z-index: 110;
-  top: 0;
-  bottom: 0;
-  left:0;
-  right:0;
-  width: auto;
-  max-width: 94%;
-}
+
 #f2{
   position: absolute;
   height: 265px;
@@ -446,14 +469,12 @@ margin-top: -7.475px;
   -webkit-transition: linear 0.2s;
   -o-transition: linear 0.2s;
   transition: linear 0.2s;
-  z-index: 3;
 }
 #f5:hover {
   margin-top: -7.5px;
   margin-left: -4px;
   height: 560px;
   width: 33.1%;
-  z-index: 3;
 }
 
 #f6{
@@ -1108,7 +1129,7 @@ cursor: pointer;
   height: 30px;
   width: 100%;
   margin-top: 40px;
-  z-index: 2;
+  z-index: 0;
   overflow: hidden;
 
 }
@@ -1432,7 +1453,7 @@ letter-spacing: -0.04em;
     top: 0px;
     display: block;
     text-align: center;
-    padding-top: 92px;
+    padding-top: 50px;
     margin-top: calc(50vh - 180px);
     background: white;
     z-index: 101;
